@@ -28,4 +28,4 @@ trow:
         hosts:
           - *host
   volumeClaim:
-    storageClassName: longhorn
+    storageClassName: local-path

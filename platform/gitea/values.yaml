@@ -23,7 +23,7 @@ gitea:
         LANDING_PAGE: explore
         ROOT_URL: https://git.172-28-0-3.nip.io
   persistence:
-    storageClass: longhorn
+    storageClass: local-path
   postgresql:
     persistence:
-      storageClass: longhorn
+      storageClass: local-path
