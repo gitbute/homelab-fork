@@ -27,7 +27,7 @@ hajimari:
       - name: Homelab
         links:
           - name: Documentation
-            url: https://homelab.khuedoan.com
+            url: https://homelab.172-28-0-3.nip.io
           - name: Public GitHub repository
             url: https://github.com/khuedoan/homelab
       - name: Managed services
