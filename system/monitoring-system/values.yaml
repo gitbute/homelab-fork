@@ -9,7 +9,7 @@ kube-prometheus-stack:
         hajimari.io/appName: Grafana
         hajimari.io/icon: chart-bar
       hosts:
-        - &host grafana.khuedoan.com
+        - &host grafana.172-28-0-3.nip.io
       tls:
         - secretName: grafana-general-tls
           hosts:

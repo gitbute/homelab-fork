@@ -8,7 +8,7 @@ jellyfin:
         hajimari.io/appName: Jellyfin
         hajimari.io/icon: filmstrip
       hosts:
-        - host: &host jellyfin.khuedoan.com
+        - host: &host jellyfin.172-28-0-3.nip.io
           paths:
             - path: /
               pathType: Prefix

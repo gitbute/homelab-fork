@@ -2,7 +2,7 @@
 
 VALUES="values.yaml"
 
-curl -fks --connect-timeout 5 https://git.khuedoan.com \
+curl -fks --connect-timeout 5 https://git.172-28-0-3.nip.io \
     || VALUES="values-seed.yaml"
 
 helm template \

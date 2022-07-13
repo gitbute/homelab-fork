@@ -11,7 +11,7 @@ hajimari:
         cert-manager.io/cluster-issuer: letsencrypt-prod
         hajimari.io/enable: 'false'
       hosts:
-        - host: &host home.khuedoan.com
+        - host: &host home.172-28-0-3.nip.io
           paths:
             - path: /
               pathType: Prefix
