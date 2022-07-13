@@ -1,5 +1,5 @@
 data "cloudflare_zone" "zone" {
-  name = "172-28-0-3.nip.io"
+  name = "127-0-0-1.nip.io"
 }
 
 data "cloudflare_api_token_permission_groups" "all" {}

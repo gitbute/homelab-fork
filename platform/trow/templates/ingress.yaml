@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: &host registry.172-28-0-3.nip.io
+  - host: &host registry.127-0-0-1.nip.io
     http:
       paths:
       - pathType: ImplementationSpecific

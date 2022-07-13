@@ -14,4 +14,10 @@ options:
       - arg: --disable-cloud-controller
         nodeFilters:
           - server:*
-subnet: 172.28.0.0/16
+ports:
+  - port: 80:80
+    nodeFilters:
+      - loadbalancer
+  - port: 443:443
+    nodeFilters:
+      - loadbalancer

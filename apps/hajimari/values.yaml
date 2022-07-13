@@ -11,7 +11,7 @@ hajimari:
         cert-manager.io/cluster-issuer: letsencrypt-prod
         hajimari.io/enable: 'false'
       hosts:
-        - host: &host home.172-28-0-3.nip.io
+        - host: &host home.127-0-0-1.nip.io
           paths:
             - path: /
               pathType: Prefix
@@ -27,7 +27,7 @@ hajimari:
       - name: Homelab
         links:
           - name: Documentation
-            url: https://homelab.172-28-0-3.nip.io
+            url: https://homelab.127-0-0-1.nip.io
           - name: Public GitHub repository
             url: https://github.com/khuedoan/homelab
       - name: Managed services
