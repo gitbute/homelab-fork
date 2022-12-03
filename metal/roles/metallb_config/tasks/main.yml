@@ -5,6 +5,18 @@
     name: "{{ metallb_namespace }}"
     state: present
 
+# Download and apply manifest
+- name: Download MetalLB manifest to the cluster.
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/metallb/metallb/v0.13.7/config/manifests/metallb-native.yaml
+    dest: ~/metallb-native.yaml
+    mode: '0664'
+
+- name: Apply MetalLB manifest to the cluster.
+  kubernetes.core.k8s:
+    state: present
+    src: ~/metallb-native.yaml
+
 - name: Create MetalLB addresspool base on network info
   kubernetes.core.k8s:
     definition: "{{ lookup('template', 'addresspool.yaml.j2') | from_yaml }}"
