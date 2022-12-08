@@ -16,10 +16,19 @@
   kubernetes.core.k8s:
     state: present
     src: ~/metallb-native.yaml
+  
+# - name: Remove an existing Service object
+#   kubernetes.core.k8s:
+#     state: absent
+#     api_version: v1
+#     kind: Service
+#     namespace: testing
+#     name: web
 
 - name: Create MetalLB addresspool base on network info
   kubernetes.core.k8s:
     definition: "{{ lookup('template', 'addresspool.yaml.j2') | from_yaml }}"
+
 - name: Create MetalLB l2 advertisement
   kubernetes.core.k8s:
     definition: "{{ lookup('template', 'advertisement.yaml.j2') | from_yaml }}"
