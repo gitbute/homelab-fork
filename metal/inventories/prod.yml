@@ -5,6 +5,6 @@ metal:
         metal0: {ansible_host: 192.168.1.14, mac: 'ec:b1:d7:72:9f:f9', disk: sda, network_interface: eno1}
         metal1: {ansible_host: 192.168.1.201, mac: 'ec:b1:d7:72:5f:a3', disk: sda, network_interface: eno1}
         master2: {ansible_host: 192.168.1.202, mac: 'ec:b1:d7:6b:66:d6', disk: sda, network_interface: eno1}
-    # workers:
-    #   hosts:
-    #     metal3: {ansible_host: 192.168.1.203, mac: 'ec:b1:d7:72:5f:c8', disk: sda, network_interface: eno1}
+    workers:
+      hosts:
+        worker0: {ansible_host: 192.168.1.203, mac: 'ec:b1:d7:72:5f:c8', disk: sda, network_interface: eno1}
