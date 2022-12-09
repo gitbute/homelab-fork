@@ -103,6 +103,8 @@ def setup_gitea_oauth_app(name: str, redirect_uri: str) -> None:
 
 def main() -> None:
 
+    print(f"hm")
+
     with Console().status("Completing the remaining sorcery"):
         gitea_access_tokens = [
             'renovate'
