@@ -50,6 +50,7 @@ def setup_gitea_access_token(name: str) -> None:
     print(f"{current_tokens}")
 
     if not any(token['name'] == name for token in current_tokens):
+        print("in if")
         resp = requests.post(
             url=f"{gitea_url}/api/v1/users/{gitea_user}/tokens",
             headers={
@@ -60,6 +61,7 @@ def setup_gitea_access_token(name: str) -> None:
             })
         )
 
+        print(f"{resp}")
         if resp.status_code == 201:
             create_vault_secret(
                 f"gitea/{name}",
