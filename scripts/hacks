@@ -30,7 +30,7 @@ vault_url = f"https://{vault_host}"
 
 
 def create_vault_secret(path: str, data) -> None:
-    print(f"Creating {path} with {data}")
+    print(f"Creating {path} with {data} on {vault_url} with {vault_token}")
     requests.post(
         url=f"{vault_url}/v1/secret/data/{path}",
         headers={
@@ -49,30 +49,30 @@ def setup_gitea_access_token(name: str) -> None:
 
     print(f"{current_tokens}")
 
-    if not any(token['name'] == name for token in current_tokens):
-        print("in if")
-        resp = requests.post(
-            url=f"{gitea_url}/api/v1/users/{gitea_user}/tokens",
-            headers={
-                'Content-Type': 'application/json'
-            },
-            data=json.dumps({
-                'name': name
-            })
-        )
+    # if not any(token['name'] == name for token in current_tokens):
+    print("in if")
+    resp = requests.post(
+        url=f"{gitea_url}/api/v1/users/{gitea_user}/tokens",
+        headers={
+            'Content-Type': 'application/json'
+        },
+        data=json.dumps({
+            'name': name
+        })
+    )
 
-        print(f"{resp}")
-        if resp.status_code == 201:
-            create_vault_secret(
-                f"gitea/{name}",
-                {
-                    'token': resp.json()['sha1']
-                }
-            )
-        else:
-            print(f"Error creating access token {name} ({resp.status_code})")
-            print(resp.content)
-            sys.exit(1)
+    print(f"{resp}")
+    if resp.status_code == 201:
+        create_vault_secret(
+            f"gitea/{name}",
+            {
+                'token': resp.json()['sha1']
+            }
+        )
+    else:
+        print(f"Error creating access token {name} ({resp.status_code})")
+        print(resp.content)
+        sys.exit(1)
 
 
 def setup_gitea_oauth_app(name: str, redirect_uri: str) -> None:
