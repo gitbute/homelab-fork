@@ -62,17 +62,17 @@ def setup_gitea_access_token(name: str) -> None:
     )
 
     print(f"{resp}")
-    if resp.status_code == 201:
-        create_vault_secret(
-            f"gitea/{name}",
-            {
-                'token': resp.json()['sha1']
-            }
-        )
-    else:
-        print(f"Error creating access token {name} ({resp.status_code})")
-        print(resp.content)
-        sys.exit(1)
+    # if resp.status_code == 201:
+    create_vault_secret(
+        f"gitea/{name}",
+        {
+            'token': resp.json()['sha1']
+        }
+    )
+    # else:
+    #     print(f"Error creating access token {name} ({resp.status_code})")
+    #     print(resp.content)
+    #     sys.exit(1)
 
 
 def setup_gitea_oauth_app(name: str, redirect_uri: str) -> None:
