@@ -17,6 +17,24 @@
     state: present
     src: ~/metallb-native.yaml
   
+- name: Wait for MetalLB deployment.
+  kubernetes.core.k8s_info:
+    kind: Deployment
+    name: controller
+    namespace: metallb-system
+    wait: yes
+    wait_condition:
+      type: Available
+
+
+- name: Create MetalLB addresspool base on network info
+  kubernetes.core.k8s:
+    definition: "{{ lookup('template', 'addresspool.yaml.j2') | from_yaml }}"
+
+- name: Create MetalLB l2 advertisement
+  kubernetes.core.k8s:
+    definition: "{{ lookup('template', 'advertisement.yaml.j2') | from_yaml }}"
+
 - name: Remove wrong MetalLB Controller
   kubernetes.core.k8s:
     state: absent
@@ -32,12 +50,3 @@
     kind: DaemonSet
     namespace: metallb-system
     name: speaker
-
-- name: Create MetalLB addresspool base on network info
-  kubernetes.core.k8s:
-    definition: "{{ lookup('template', 'addresspool.yaml.j2') | from_yaml }}"
-
-- name: Create MetalLB l2 advertisement
-  kubernetes.core.k8s:
-    definition: "{{ lookup('template', 'advertisement.yaml.j2') | from_yaml }}"
-
