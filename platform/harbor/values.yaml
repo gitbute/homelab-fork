@@ -1,8 +1,11 @@
 harbor:
   chartmuseum:
     replicas: 1
+    revisionHistoryLimit: 1
   registry:
     replicas: 1
+    revisionHistoryLimit: 1
+  
   expose:
     type: ingress
     ingress:
