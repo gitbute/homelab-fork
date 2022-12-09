@@ -1,4 +1,8 @@
 harbor:
+  chartmuseum:
+    replicas: 1
+  registry:
+    replicas: 1
   expose:
     type: ingress
     ingress:
