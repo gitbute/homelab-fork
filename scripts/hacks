@@ -47,7 +47,7 @@ def setup_gitea_access_token(name: str) -> None:
         url=f"{gitea_url}/api/v1/users/{gitea_user}/tokens",
     ).json()
 
-    print(f"{current_tokens}")
+    print(f"{current_tokens} {gitea_user}")
 
     # if not any(token['name'] == name for token in current_tokens):
     print("in if")
