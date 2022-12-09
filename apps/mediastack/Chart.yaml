@@ -2,27 +2,27 @@ apiVersion: v2
 name: mediastack
 version: 0.2.0
 dependencies:
-  - name: qbittorrent
-    version: "> 0.0.0"
-    repository: https://aste88.github.io/helm-charts/
-  - name: radarr
-    version: "> 1.0.0"
-    repository: https://k8s-at-home.com/charts/
-  - name: jellyfin
-    version: ">= 9.5.3"
-    repository: https://k8s-at-home.com/charts/
-  - name: lidarr
-    version: "> 1.0.0"
-    repository: https://k8s-at-home.com/charts/
-  - name: sonarr
-    version: "> 1.0.0"
-    repository: https://k8s-at-home.com/charts/
-  - name: readarr
-    version: "> 1.0.0"
-    repository: https://k8s-at-home.com/charts/
+  # - name: qbittorrent
+  #   version: "> 0.0.0"
+  #   repository: https://aste88.github.io/helm-charts/
+  # - name: radarr
+  #   version: "> 1.0.0"
+  #   repository: https://k8s-at-home.com/charts/
+  # - name: jellyfin
+  #   version: ">= 9.5.3"
+  #   repository: https://k8s-at-home.com/charts/
+  # - name: lidarr
+  #   version: "> 1.0.0"
+  #   repository: https://k8s-at-home.com/charts/
+  # - name: sonarr
+  #   version: "> 1.0.0"
+  #   repository: https://k8s-at-home.com/charts/
+  # - name: readarr
+  #   version: "> 1.0.0"
+  #   repository: https://k8s-at-home.com/charts/
   - name: prowlarr
     version: "> 1.0.0"
     repository: https://k8s-at-home.com/charts/
-  - name: bazarr
-    repository: https://geek-cookbook.github.io/charts/
-    version: "> 0.0.0"
+  # - name: bazarr
+  #   repository: https://geek-cookbook.github.io/charts/
+  #   version: "> 0.0.0"
