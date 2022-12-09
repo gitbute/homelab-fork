@@ -35,6 +35,14 @@
   kubernetes.core.k8s:
     definition: "{{ lookup('template', 'advertisement.yaml.j2') | from_yaml }}"
 
+- name: Remove wrong MetalLB service
+  kubernetes.core.k8s:
+    state: absent
+    api_version: v1
+    kind: Service
+    namespace: metallb-system
+    name: webhook-service
+
 - name: Remove wrong MetalLB Controller
   kubernetes.core.k8s:
     state: absent
@@ -50,3 +58,5 @@
     kind: DaemonSet
     namespace: metallb-system
     name: speaker
+
+
