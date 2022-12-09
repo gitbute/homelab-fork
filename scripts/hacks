@@ -30,6 +30,7 @@ vault_url = f"https://{vault_host}"
 
 
 def create_vault_secret(path: str, data) -> None:
+    print(f"Creating {path} with {data}")
     requests.post(
         url=f"{vault_url}/v1/secret/data/{path}",
         headers={
@@ -103,7 +104,7 @@ def setup_gitea_oauth_app(name: str, redirect_uri: str) -> None:
 
 def main() -> None:
 
-    print(f"hm")
+    print(f"Completing the remaining sorcery")
 
     with Console().status("Completing the remaining sorcery"):
         gitea_access_tokens = [
