@@ -30,12 +30,14 @@
 - name: Create MetalLB addresspool base on network info
   kubernetes.core.k8s:
     definition: "{{ lookup('template', 'addresspool.yaml.j2') | from_yaml }}"
+    state: patched
   retries: 10
   delay: 10
 
 - name: Create MetalLB l2 advertisement
   kubernetes.core.k8s:
     definition: "{{ lookup('template', 'advertisement.yaml.j2') | from_yaml }}"
+    state: patched
   retries: 10
   delay: 10
 
