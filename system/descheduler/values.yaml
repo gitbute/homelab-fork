@@ -14,5 +14,3 @@ descheduler:
         enabled: true
       LowNodeUtilization:
         enabled: true
-      HighNodeUtilization:
-        enabled: true
