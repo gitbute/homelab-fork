@@ -30,7 +30,6 @@ vault_url = f"https://{vault_host}"
 
 
 def create_vault_secret(path: str, data) -> None:
-    print(f"Creating {path} with {data} on {vault_url} with {vault_token}")
     requests.post(
         url=f"{vault_url}/v1/secret/data/{path}",
         headers={
@@ -47,39 +46,34 @@ def setup_gitea_access_token(name: str) -> None:
         url=f"{gitea_url}/api/v1/users/{gitea_user}/tokens",
     ).json()
 
-    print(f"{current_tokens} {gitea_user}")
+    if not any(token['name'] == name for token in current_tokens):
+        resp = requests.post(
+            url=f"{gitea_url}/api/v1/users/{gitea_user}/tokens",
+            headers={
+                'Content-Type': 'application/json'
+            },
+            data=json.dumps({
+                'name': name
+            })
+        )
 
-    # if not any(token['name'] == name for token in current_tokens):
-    print("in if")
-    resp = requests.post(
-        url=f"{gitea_url}/api/v1/users/{gitea_user}/tokens",
-        headers={
-            'Content-Type': 'application/json'
-        },
-        data=json.dumps({
-            'name': name
-        })
-    )
-
-    print(f"{resp}")
-    # if resp.status_code == 201:
-    create_vault_secret(
-        f"gitea/{name}",
-        {
-            'token': resp.json()['sha1']
-        }
-    )
-    # else:
-    #     print(f"Error creating access token {name} ({resp.status_code})")
-    #     print(resp.content)
-    #     sys.exit(1)
+        if resp.status_code == 201:
+            create_vault_secret(
+                f"gitea/{name}",
+                {
+                    'token': resp.json()['sha1']
+                }
+            )
+        else:
+            print(f"Error creating access token {name} ({resp.status_code})")
+            print(resp.content)
+            sys.exit(1)
 
 
 def setup_gitea_oauth_app(name: str, redirect_uri: str) -> None:
     current_apps = requests.get(
         url=f"{gitea_url}/api/v1/user/applications/oauth2",
     ).json()
-
 
     if not any(app['name'] == name for app in current_apps):
         resp = requests.post(
@@ -108,8 +102,6 @@ def setup_gitea_oauth_app(name: str, redirect_uri: str) -> None:
 
 
 def main() -> None:
-
-    print(f"Completing the remaining sorcery")
 
     with Console().status("Completing the remaining sorcery"):
         gitea_access_tokens = [
