@@ -5,7 +5,10 @@ harbor:
   registry:
     replicas: 1
     revisionHistoryLimit: 1
-  
+  notary:
+    server:
+      replicas: 1
+      revisionHistoryLimit: 1
   expose:
     type: ingress
     ingress:
