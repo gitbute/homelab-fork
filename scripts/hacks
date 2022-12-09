@@ -47,6 +47,8 @@ def setup_gitea_access_token(name: str) -> None:
         url=f"{gitea_url}/api/v1/users/{gitea_user}/tokens",
     ).json()
 
+    print(f"{current_tokens}")
+
     if not any(token['name'] == name for token in current_tokens):
         resp = requests.post(
             url=f"{gitea_url}/api/v1/users/{gitea_user}/tokens",
@@ -76,7 +78,6 @@ def setup_gitea_oauth_app(name: str, redirect_uri: str) -> None:
         url=f"{gitea_url}/api/v1/user/applications/oauth2",
     ).json()
 
-    print(f"{current_apps}")
 
     if not any(app['name'] == name for app in current_apps):
         resp = requests.post(
