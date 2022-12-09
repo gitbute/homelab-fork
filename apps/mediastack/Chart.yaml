@@ -2,9 +2,6 @@ apiVersion: v2
 name: mediastack
 version: 0.2.0
 dependencies:
-  - name: kube-plex
-    version: "> 0.0.0"
-    repository: https://ressu.github.io/kube-plex
   - name: qbittorrent
     version: "> 0.0.0"
     repository: https://aste88.github.io/helm-charts/

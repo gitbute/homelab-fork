@@ -65,26 +65,6 @@ radarr:
         - secretName: radarr-tls-certificate
           hosts:
             - *host
-kube-plex:
-  # use this when expanding config disk, this frees the PVC from the pod
-  controller:
-    replicas: 1
-  timezone: Europe/Zurich
-  claimToken: claim-CJkYTtiRhSuVgqFaU3rm
-  persistence:
-    transcode:
-      enabled: true
-      size: 2Gi
-    config:
-      enabled: true
-      size: 5Gi
-    data:
-      enabled: true
-      mountPath: /data/media
-      claimName: mediastack-data
-      subPath: media/
-  ingress:
-    enabled: false
 jellyfin:
   # use this when expanding config disk, this frees the PVC from the pod
   controller:
