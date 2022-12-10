@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: landingpage
+  labels:
+    app: landingpage
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: landingpage
+  template:
+    metadata:
+      labels:
+        app: landingpage
+    spec:
+      containers:
+        - name: landingpage
+          image: core.harbor.tribz.cloud/homelab/landingpage:latest
+          ports:
+            - containerPort: 80
