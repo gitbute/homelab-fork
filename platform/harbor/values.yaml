@@ -1,14 +1,11 @@
 harbor:
   chartmuseum:
-    replicas: 1
-    revisionHistoryLimit: 1
+    revisionHistoryLimit: 3
   registry:
-    replicas: 1
-    revisionHistoryLimit: 1
+    revisionHistoryLimit: 3
   notary:
     server:
-      replicas: 1
-      revisionHistoryLimit: 1
+      revisionHistoryLimit: 3
   expose:
     type: ingress
     ingress:
@@ -27,3 +24,5 @@ harbor:
         secretName: harbor-tls-certificate
         notarySecretName: harbor-notary-tls-certificate
   externalURL: https://core.harbor.tribz.cloud
+  updateStrategy:
+    type: Recreate
