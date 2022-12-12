@@ -17,6 +17,8 @@ harbor:
         cert-manager.io/cluster-issuer: letsencrypt-prod
         hajimari.io/appName: Harbor
         hajimari.io/icon: git
+        nginx.ingress.kubernetes.io/proxy-body-size: "10g"
+        nginx.ingress.kubernetes.io/proxy-connect-timeout: "120"
     tls:
       enabled: true
       certSource: secret
