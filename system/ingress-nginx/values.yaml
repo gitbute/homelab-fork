@@ -1,5 +1,6 @@
 ingress-nginx:
   controller:
+    kind: daemonset
     admissionWebhooks:
       timeoutSeconds: 30
     metrics:
