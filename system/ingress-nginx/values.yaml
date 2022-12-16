@@ -1,5 +1,7 @@
 ingress-nginx:
   controller:
+    ingressClassResource:
+      controllerValue: "nginx.org/ingress-controller"
     kind: daemonset
     admissionWebhooks:
       timeoutSeconds: 30
