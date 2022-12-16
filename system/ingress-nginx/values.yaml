@@ -2,7 +2,7 @@ ingress-nginx:
   controller:
     ingressClassResource:
       controllerValue: "nginx.org/ingress-controller"
-    kind: daemonset
+    kind: DaemonSet
     admissionWebhooks:
       timeoutSeconds: 30
     metrics:
