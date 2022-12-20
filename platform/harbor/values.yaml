@@ -1,4 +1,8 @@
 harbor:
+  core:
+    revisionHistoryLimit: 3
+  jobservice:
+    revisionHistoryLimit: 3
   chartmuseum:
     revisionHistoryLimit: 3
   registry:
