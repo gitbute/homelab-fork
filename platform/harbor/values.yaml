@@ -8,8 +8,9 @@ harbor:
   registry:
     revisionHistoryLimit: 3
   notary:
-    server:
-      revisionHistoryLimit: 3
+    enabled: false
+    # server:
+    #   revisionHistoryLimit: 3
   expose:
     type: ingress
     ingress:
