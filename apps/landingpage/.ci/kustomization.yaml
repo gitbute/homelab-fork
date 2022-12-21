@@ -3,4 +3,4 @@ kind: Kustomization
 
 resources:
   - task.yaml
-  - tasktaskrun.yaml
+  - taskrun.yaml
