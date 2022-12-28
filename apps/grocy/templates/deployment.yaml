@@ -26,9 +26,9 @@ spec:
             - containerPort: 9283
           env:
             - name: PUID
-              value: 1000
+              value: "1000"
             - name: PGID
-              value: 1000
+              value: "1000"
             - name: PGID
               value: Europe/London
           volumeMounts:
