@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name:  grocy
+  namespace: grocy
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    hajimari.io/appName: grocy
+    hajimari.io/icon: multimedia
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - grocy.tribz.cloud
+      secretName: grocy-tls-certificate
+  rules:
+    - host: tribz.cloud
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: grocy
+                port:
+                  number: 8080
