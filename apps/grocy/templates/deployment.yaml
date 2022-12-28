@@ -23,7 +23,7 @@ spec:
         - name: grocy
           image: lscr.io/linuxserver/grocy:latest
           ports:
-            - containerPort: 80
+            - containerPort: 9283
           env:
             - name: PUID
               value: "1000"
