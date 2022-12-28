@@ -29,7 +29,7 @@ spec:
               value: "1000"
             - name: PGID
               value: "1000"
-            - name: PGID
+            - name: TZ
               value: Europe/London
           volumeMounts:
           - mountPath: /config
