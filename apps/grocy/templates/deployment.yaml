@@ -15,6 +15,10 @@ spec:
       labels:
         app: grocy
     spec:
+      volumes:
+        - name: grocy-config
+          persistentVolumeClaim:
+           claimName: grocy-config
       containers:
         - name: grocy
           image: lscr.io/linuxserver/grocy:latest
@@ -30,12 +34,3 @@ spec:
           volumeMounts:
           - mountPath: /config
             name: grocy-config
-  volumeClaimTemplates:
-  - metadata:
-      name: grocy-config
-    spec:
-      accessModes:
-        - ReadWriteOnce
-      resources:
-        requests:
-          storage: 1Gi

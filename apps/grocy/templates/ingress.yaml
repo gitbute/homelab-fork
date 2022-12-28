@@ -14,7 +14,7 @@ spec:
         - grocy.tribz.cloud
       secretName: grocy-tls-certificate
   rules:
-    - host: tribz.cloud
+    - host: grocy.tribz.cloud
       http:
         paths:
           - path: /
