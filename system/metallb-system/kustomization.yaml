@@ -1,17 +1,17 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-resources:
-  - https://raw.githubusercontent.com/metallb/metallb/v0.13.7/config/manifests/metallb-native.yaml
+# resources:
+#   - https://raw.githubusercontent.com/metallb/metallb/v0.13.7/config/manifests/metallb-native.yaml
 
-# helmCharts:
-# - name: metallb
-#   repo: https://metallb.github.io/metallb
-#   version: 0.*.*
-#   releaseName: metallb-system
-#   namespace: metallb-system
-#   valuesFile: values.yaml
-#   includeCRDs: true
+helmCharts:
+- name: metallb
+  repo: https://metallb.github.io/metallb
+  version: 0.*.*
+  releaseName: metallb-system
+  namespace: metallb-system
+  valuesFile: values.yaml
+  includeCRDs: true
 
 patchesJson6902:
   - target:
