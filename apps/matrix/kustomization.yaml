@@ -7,14 +7,14 @@ helmCharts:
   version: 0.0.3
   releaseName: matrix
   namespace: matrix
-  valuesFile: values.yaml
+  valuesFile: values-element.yaml
   includeCRDs: true
 - name: dendrite
   repo: https://locmai.github.io/charts
   version: 0.0.3
   releaseName: matrix
   namespace: matrix
-  valuesFile: values.yaml
+  valuesFile: values-dendrite.yaml
   includeCRDs: true
 
 patchesJson6902:
