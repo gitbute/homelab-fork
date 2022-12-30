@@ -33,11 +33,19 @@ patchesJson6902:
   - target:
       group: apps
       version: v1
+      kind: Deployment
+      name: matrix-elementweb
+    patch: |-
+      - op: replace
+        path: "/spec/template/spec/containers/0/image"
+        value: "vectorim/element-web:latest"
+  - target:
+      group: apps
+      version: v1
       kind: StatefulSet
       name: matrix-nats
     patch: |-
       - op: replace
         path: "/spec/template/spec/containers/0/image"
         value: "nats:2.9.10-alpine"
-
 
