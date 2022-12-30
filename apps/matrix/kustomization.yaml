@@ -1,0 +1,33 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- secret.yaml
+- matrix-alertmanager.yaml
+
+helmCharts:
+- name: elementweb
+  repo: https://locmai.github.io/charts
+  version: 0.0.3
+  releaseName: matrix
+  namespace: matrix
+  valuesFile: values.yaml
+  includeCRDs: true
+- name: dendrite
+  repo: https://locmai.github.io/charts
+  version: 0.0.3
+  releaseName: matrix
+  namespace: matrix
+  valuesFile: values.yaml
+  includeCRDs: true
+
+patchesJson6902:
+  - target:
+      group: apps
+      version: v1
+      kind: Deployment
+      name: monolith
+    patch: |-
+      - op: add
+        path: "/spec/template/spec/containers/args"
+        value: "-really-enable-open-registration"
