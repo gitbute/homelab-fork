@@ -37,7 +37,7 @@ patchesJson6902:
       name: metallb-system-controller
     patch: |-
       - op: add
-        path: "/rules"
+        path: "/rules/-"
         value: 
           - verbs:
               - create
