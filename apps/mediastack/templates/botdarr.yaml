@@ -26,7 +26,7 @@ spec:
           - name: SONARR_URL
             value: https://sonarr.tribz.cloud
           - name: SONARR_TOKEN
-            value: "a97228fd3a8046499af2541eeb32be80"
+            value: "e318852e124c4d8dae1d7135d0d84194"
           - name: SONARR_DEFAULT_PROFILE
             value: Any
           - name: SONARR_PATH
@@ -34,7 +34,7 @@ spec:
           - name: RADARR_URL
             value: https://radarr.tribz.cloud
           - name: RADARR_TOKEN
-            value: "80b58a9140a4425592dd1803f9434376"
+            value: "7b5ae599d7374f1f9e77874a03d5107a"
           - name: RADARR_DEFAULT_PROFILE
             value: Any
           - name: RADARR_PATH
