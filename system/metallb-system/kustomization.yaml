@@ -33,21 +33,18 @@ patchesJson6902:
   - target:
       group: rbac.authorization.k8s.io
       version: v1
-      kind: Role
-      name: metallb-system-controller
+      kind: ClusterRoleBinding
+      name: metallb-system:controller
     patch: |-
-      - op: add
-        path: "/rules/-"
-        value: 
-          verbs:
-            - create
-            - delete
-            - get
-            - list
-            - patch
-            - update
-            - watch
-          apiGroups:
-            - 'apiextensions.k8s.io'
-          resources:
-            - customresourcedefinitions
+      - op: replace
+        path: "/subjects/0/namespace"
+        value: "metallb-system"
+  - target:
+      group: rbac.authorization.k8s.io
+      version: v1
+      kind: ClusterRoleBinding
+      name: metallb-system:speaker
+    patch: |-
+      - op: replace
+        path: "/subjects/0/namespace"
+        value: "metallb-system"
