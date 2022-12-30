@@ -13,12 +13,12 @@ helmCharts:
   valuesFile: values.yaml
   includeCRDs: true
 
-patchesJson6902:
-  - target:
-      version: v1
-      kind: Service
-      name: metallb-system-speaker-monitor-service
-    patch: |-
-      - op: replace
-        path: "/spec/ports/0/name"
-        value: "monitoring"
+# patchesJson6902:
+#   - target:
+#       version: v1
+#       kind: Service
+#       name: metallb-system-speaker-monitor-service
+#     patch: |-
+#       - op: replace
+#         path: "/spec/ports/0/name"
+#         value: "monitoring"
