@@ -40,7 +40,7 @@ spec:
           - name: RADARR_PATH
             value: /data/media/radarr/
           - name: MATRIX_ROOM
-            value: '!SJUyGAU028lzEpIb:matrix.tribz.cloud'
+            value: '!0iOXsjHEdYFnZd2i:matrix.tribz.cloud'
           - name: MATRIX_USERNAME
             value: botdarr
           - name: MATRIX_PASSWORD
