@@ -1,6 +1,6 @@
 prometheus:
   serviceAccount: "monitoring-system-kube-pro-prometheus"
-
+  rbacPrometheus: false
   # the namespace where prometheus is deployed
   # required when " .Values.prometheus.rbacPrometheus == true " and " .Values.prometheus.podMonitor.enabled=true or prometheus.serviceMonitor.enabled=true "
   namespace: "monitoring-system"
