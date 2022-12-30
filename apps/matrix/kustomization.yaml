@@ -7,7 +7,7 @@ helmCharts:
   version: 0.0.3
   releaseName: matrix
   namespace: matrix
-  valuesFile: values-element.yaml
+  valuesFile: values-elementweb.yaml
   includeCRDs: true
 - name: dendrite
   repo: https://locmai.github.io/charts
