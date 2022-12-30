@@ -25,5 +25,5 @@ patchesJson6902:
       name: monolith
     patch: |-
       - op: add
-        path: "/spec/template/spec/containers/args/-"
+        path: "/spec/template/spec/containers/args"
         value: "really-enable-open-registration"
