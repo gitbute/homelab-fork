@@ -30,3 +30,24 @@ patchesJson6902:
       - op: replace
         path: "/spec/ports/0/name"
         value: "monitoring"
+  - target:
+      group: rbac.authorization.k8s.io
+      version: v1
+      kind: Role
+      name: metallb-system-controller
+    patch: |-
+      - op: add
+        path: "/rules
+        value: 
+            - verbs:
+                - create
+                - delete
+                - get
+                - list
+                - patch
+                - update
+                - watch
+              apiGroups:
+                - 'apiextensions.k8s.io'
+              resources:
+                - customresourcedefinitions
