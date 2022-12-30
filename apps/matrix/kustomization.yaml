@@ -27,3 +27,6 @@ patchesJson6902:
       - op: add
         path: "/spec/template/spec/containers/0/args/-"
         value: "-really-enable-open-registration"
+      - op: add
+        path: "/spec/template/spec/containers/0/args/-"
+        value: "--skip-db-sanity"
