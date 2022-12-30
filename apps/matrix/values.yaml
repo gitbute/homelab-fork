@@ -29,7 +29,8 @@ dendrite:
     TZ: Europe/Zurich
   polylith: false
   image:
-    name: "locmai/dendrite-monolith:010922"  # TODO switch to official image
+    # name: "locmai/dendrite-monolith:010922"  # TODO switch to official image
+    name: "matrixdotorg/dendrite-monolith:latest"  # TODO switch to official image
     pullPolicy: IfNotPresent
   configuration:
     version: 2
