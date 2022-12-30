@@ -1,35 +1,34 @@
-metallb:
-  prometheus:
-    serviceAccount: "monitoring-system-kube-pro-prometheus"
+prometheus:
+  serviceAccount: "monitoring-system-kube-pro-prometheus"
 
-    # the namespace where prometheus is deployed
-    # required when " .Values.prometheus.rbacPrometheus == true " and " .Values.prometheus.podMonitor.enabled=true or prometheus.serviceMonitor.enabled=true "
-    namespace: "monitoring-system"
+  # the namespace where prometheus is deployed
+  # required when " .Values.prometheus.rbacPrometheus == true " and " .Values.prometheus.podMonitor.enabled=true or prometheus.serviceMonitor.enabled=true "
+  namespace: "monitoring-system"
 
-    # Prometheus Operator PodMonitors
-    podMonitor:
-      # enable support for Prometheus Operator
-      enabled: true
-      # relabelings: 
-      #   - sourceLabels: [__meta_kubernetes_pod_node_name]
-      #     separator: ;
-      #     regex: ^(.*)$
-      #     target_label: nodename
-      #     replacement: $1
-      #     action: replace
+  # Prometheus Operator PodMonitors
+  podMonitor:
+    # enable support for Prometheus Operator
+    enabled: true
+    # relabelings: 
+    #   - sourceLabels: [__meta_kubernetes_pod_node_name]
+    #     separator: ;
+    #     regex: ^(.*)$
+    #     target_label: nodename
+    #     replacement: $1
+    #     action: replace
 
-    serviceMonitor:
-      # enable support for Prometheus Operator
-      enabled: true
-      # relabelings:
-      #   - sourceLabels: [__meta_kubernetes_pod_node_name]
-      #     separator: ;
-      #     regex: ^(.*)$
-      #     target_label: nodename
-      #     replacement: $1
-      #     action: replace
+  serviceMonitor:
+    # enable support for Prometheus Operator
+    enabled: true
+    # relabelings:
+    #   - sourceLabels: [__meta_kubernetes_pod_node_name]
+    #     separator: ;
+    #     regex: ^(.*)$
+    #     target_label: nodename
+    #     replacement: $1
+    #     action: replace
 
-    # Prometheus Operator alertmanager alerts
-    prometheusRule:
-      # enable alertmanager alerts
-      enabled: true
+  # Prometheus Operator alertmanager alerts
+  prometheusRule:
+    # enable alertmanager alerts
+    enabled: true
