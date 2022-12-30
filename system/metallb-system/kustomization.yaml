@@ -31,21 +31,21 @@ patchesJson6902:
       - op: replace
         path: "/spec/ports/0/name"
         value: "monitoring"
-  - target:
-      group: rbac.authorization.k8s.io
-      version: v1
-      kind: ClusterRoleBinding
-      name: metallb-system:controller
-    patch: |-
-      - op: replace
-        path: "/subjects/0/namespace"
-        value: "metallb-system"
-  - target:
-      group: rbac.authorization.k8s.io
-      version: v1
-      kind: ClusterRoleBinding
-      name: metallb-system:speaker
-    patch: |-
-      - op: replace
-        path: "/subjects/0/namespace"
-        value: "metallb-system"
+  # - target:
+  #     group: rbac.authorization.k8s.io
+  #     version: v1
+  #     kind: ClusterRoleBinding
+  #     name: metallb-system:controller
+  #   patch: |-
+  #     - op: replace
+  #       path: "/subjects/0/namespace"
+  #       value: "metallb-system"
+  # - target:
+  #     group: rbac.authorization.k8s.io
+  #     version: v1
+  #     kind: ClusterRoleBinding
+  #     name: metallb-system:speaker
+  #   patch: |-
+  #     - op: replace
+  #       path: "/subjects/0/namespace"
+  #       value: "metallb-system"
