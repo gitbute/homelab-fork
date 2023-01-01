@@ -5,7 +5,7 @@ seafile:
     pullPolicy: IfNotPresent
   env:
     TZ: Europe/Zurich
-    SEAFILE_SERVER_HOSTNAME: https://seafile.tribz.cloud
+    SEAFILE_SERVER_HOSTNAME: &host seafile.tribz.cloud
   ingress:
     main:
       enabled: true
@@ -18,7 +18,7 @@ seafile:
         hajimari.io/icon: google-drive
         nginx.ingress.kubernetes.io/proxy-body-size: "10g"
       hosts:
-        - host: &host seafile.tribz.cloud
+        - host: *host
           paths:
             - path: /
               pathType: Prefix
