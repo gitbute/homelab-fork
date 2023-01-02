@@ -1,30 +1,64 @@
 seafile:
-  image:
-    repository: seafileltd/seafile-mc
-    tag: latest
-    pullPolicy: IfNotPresent
-  env:
-    TZ: Europe/Zurich
-    SEAFILE_SERVER_HOSTNAME: &host seafile.tribz.cloud
+  # Default values for seafile-server.
+  # This is a YAML-formatted file.
+  # Declare variables to be passed into your templates.
+
+  clusterDomain: cluster.local
+
+  # see Bitnami MariaDB Chart Values
+  # https://artifacthub.io/packages/helm/bitnami/mariadb
+  # mariadb:
+    # auth:
+    #   rootPassword: generated-pw-needed-for-chart-upgrade
+    # primary:
+    #   extraVolumes:
+    #   - name: mnt-data-db
+    #     persistentVolumeClaim:
+    #       claimName: mnt-data-db
+    #   extraVolumeMounts:
+    #   - mountPath: "/mnt/data/db"
+    #     name: mnt-data-db
+    #   livenessProbe:
+    #     enabled: false
+    #   readinessProbe:
+    #     enabled: false
+
+  # see Bitnami Memcached Chart Values
+  # https://artifacthub.io/packages/helm/bitnami/memcached
+  # memcached: {}
+
+  seafile:
+    image: seafileltd/seafile-mc:latest
+    persistence:
+      size: 10Gi
+    environment:
+    - name: TIME_ZONE
+      value: Europe/Zurich
+    - name: SEAFILE_ADMIN_EMAIL
+      value: "seafileadmin@example.com"
+    - name: SEAFILE_ADMIN_PASSWORD
+      value: "secretpassword"
+      # !!! update the service and seahub URL to https in the Web-UI !!!
+    - name: SEAFILE_SERVER_HOSTNAME
+      value: &host seafile.tribz.cloud
+    # extraVolumes:
+    # - name: mnt-data-seafile
+    #   persistentVolumeClaim:
+    #     claimName: mnt-data-seafile
+    # extraVolumeMounts:
+    # - mountPath: "/mnt/data/seafile"
+    #   name: mnt-data-seafile
+
   ingress:
-    main:
-      enabled: true
-      ingressClassName: nginx
-      annotations:
-        cert-manager.io/cluster-issuer: letsencrypt-prod
-        external-dns.alpha.kubernetes.io/target: "homelab-tunnel.tribz.cloud"
-        external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
-        hajimari.io/appName: Seafile
-        hajimari.io/icon: google-drive
-        nginx.ingress.kubernetes.io/proxy-body-size: "10g"
-      hosts:
-        - host: *host
-          paths:
-            - path: /
-              pathType: Prefix
-      tls:
-        - secretName: seafile-tls-certificate
-          hosts:
-            - *host
-  mariadb:
-    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: "nginx"
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      external-dns.alpha.kubernetes.io/target: "homelab-tunnel.tribz.cloud"
+      external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
+      hajimari.io/appName: Seafile
+      hajimari.io/icon: google-drive
+      nginx.ingress.kubernetes.io/proxy-body-size: "10g"
+    host: *host
+  tls:
+    host: *host
+    secretName: seafile-tls-certificate

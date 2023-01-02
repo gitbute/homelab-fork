@@ -1,0 +1,30 @@
+seafile:
+  image:
+    repository: seafileltd/seafile-mc
+    tag: latest
+    pullPolicy: IfNotPresent
+  env:
+    TZ: Europe/Zurich
+    SEAFILE_SERVER_HOSTNAME: &host seafile.tribz.cloud
+  ingress:
+    main:
+      enabled: true
+      ingressClassName: nginx
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+        external-dns.alpha.kubernetes.io/target: "homelab-tunnel.tribz.cloud"
+        external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
+        hajimari.io/appName: Seafile
+        hajimari.io/icon: google-drive
+        nginx.ingress.kubernetes.io/proxy-body-size: "10g"
+      hosts:
+        - host: *host
+          paths:
+            - path: /
+              pathType: Prefix
+      tls:
+        - secretName: seafile-tls-certificate
+          hosts:
+            - *host
+  mariadb:
+    enabled: true
