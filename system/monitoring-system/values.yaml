@@ -25,7 +25,7 @@ grafana:
       url: https://influxdb.tribz.cloud
       secureJsonData:
         token: token
-        password: kSIeaF8cZmHmcJ0IzqOPFFBe4p_x7n0d1lq1ECH2jcK_1oGNbtg4C0zqbjJMgqLzy1WI7Y_FWk524T3fUap6rg==
+        password: 59i8kcKcMdrrnVQPgoZkHNAH8dkICQe_mHgySsY1JFzqeb9CJDwWSo3C81nTzGyx_6TnPHfPpd9207n9OA3Dlg==
       jsonData:
         version: Flux
         organization: opnsense
