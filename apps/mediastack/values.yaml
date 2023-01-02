@@ -43,6 +43,7 @@ radarr:
   persistence:
     config:
       enabled: true
+      size: 2Gi
     data:
       enabled: true
       mountPath: /data
