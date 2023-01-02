@@ -1,4 +1,4 @@
-influxdb:
+influxdb2:
   ingress:
     enabled: true
     tls: true
