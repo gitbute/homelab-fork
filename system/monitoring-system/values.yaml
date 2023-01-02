@@ -48,9 +48,9 @@ prometheus:
            requests:
              storage: 50Gi
     additionalScrapeConfigs:
-    - job_name: 'opnsense-telegraf'
-      static_configs:
-        - targets: ['opnsense.tribz.cloud:9273']
+    # - job_name: 'opnsense-telegraf'
+    #   static_configs:
+    #     - targets: ['opnsense.tribz.cloud:9273']
     # - job_name: 'truenas-graphite-exporter'
     #   static_configs:
     #     - targets: ['dummy-ops-cluster-dummy-master.mysql:9125']
