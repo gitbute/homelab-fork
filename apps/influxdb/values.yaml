@@ -25,7 +25,7 @@ influxdb:
   ## Ref: https://hub.docker.com/_/influxdb/
   env:
     - name: INFLUXDB_ADMIN_ENABLED
-      value: "true"
+      value: true
     - name: TZ
       value: Europe/Zurich
 
