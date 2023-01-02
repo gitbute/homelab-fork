@@ -34,7 +34,7 @@ qbittorrent:
             - *host
 radarr:
   controller:
-    replicas: 0
+    replicas: 1
   env:
     TZ: Europe/Zurich
   image:
