@@ -23,6 +23,7 @@ grafana:
       type: influxdb
       access: proxy
       url: https://influxdb.tribz.cloud
+      user: grafana
       secureJsonData:
         token: token
         password: 59i8kcKcMdrrnVQPgoZkHNAH8dkICQe_mHgySsY1JFzqeb9CJDwWSo3C81nTzGyx_6TnPHfPpd9207n9OA3Dlg==
