@@ -1,8 +1,10 @@
 elasticsearch:
   volumeClaimTemplate:
+    accessModes:
+    - ReadWriteOnce
     resources:
       requests:
-        storage: "5Gi"  # default 30Gi
+        storage: 5Gi
   extraEnvs:
     - name: TZ
       value: Europe/Zurich
