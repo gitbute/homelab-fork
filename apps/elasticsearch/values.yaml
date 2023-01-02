@@ -1,0 +1,4 @@
+elasticsearch:
+  extraEnvs:
+    - name: TZ
+      value: Europe/Zurich
