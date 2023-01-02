@@ -1,4 +1,8 @@
 elasticsearch:
+  volumeClaimTemplate:
+    resources:
+      requests:
+        storage: 5Gi  # default 30Gi
   extraEnvs:
     - name: TZ
       value: Europe/Zurich
@@ -15,7 +19,3 @@ elasticsearch:
     limits:
       cpu: "1000m"
       memory: "512M"
-  volumeClaimTemplate:
-    resources:
-      requests:
-        storage: 5Gi  # default 30Gi
