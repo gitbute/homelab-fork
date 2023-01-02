@@ -23,9 +23,11 @@ influxdb:
   ## The InfluxDB image uses several environment variables to automatically
   ## configure certain parts of the server.
   ## Ref: https://hub.docker.com/_/influxdb/
-  env: {}
-    # - name: INFLUXDB_DB
-    #   value: "demo"
+  env:
+    - name: INFLUXDB_ADMIN_ENABLED
+      value: "true"
+    - name: TZ
+      value: Europe/Zurich
 
   ## InfluxDB configuration
   ## ref: https://docs.influxdata.com/influxdb/v1.8/administration/config
