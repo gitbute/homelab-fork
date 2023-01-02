@@ -24,14 +24,11 @@ grafana:
       access: proxy
       url: https://influxdb.tribz.cloud
       secureJsonData:
-        token: token
-        password: 59i8kcKcMdrrnVQPgoZkHNAH8dkICQe_mHgySsY1JFzqeb9CJDwWSo3C81nTzGyx_6TnPHfPpd9207n9OA3Dlg==
-        httpHeaderValue1: "Token 59i8kcKcMdrrnVQPgoZkHNAH8dkICQe_mHgySsY1JFzqeb9CJDwWSo3C81nTzGyx_6TnPHfPpd9207n9OA3Dlg=="
+        token: 59i8kcKcMdrrnVQPgoZkHNAH8dkICQe_mHgySsY1JFzqeb9CJDwWSo3C81nTzGyx_6TnPHfPpd9207n9OA3Dlg==
       jsonData:
         version: Flux
         organization: opnsense
         defaultBucket: opnsense
-        httpHeaderName1: "Authorization"
   envFromSecret: grafana-secrets
   grafana.ini:
     server:
