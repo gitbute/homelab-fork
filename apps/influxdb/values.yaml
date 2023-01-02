@@ -18,7 +18,7 @@ influxdb2:
     bucket: "default"
     user: "admin"
     retention_policy: "0s"
-    password: "admin"
+    password: "adminadmin"
   persistence:
     enabled: true
     accessMode: ReadWriteOnce
