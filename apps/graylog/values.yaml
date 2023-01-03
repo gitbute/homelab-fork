@@ -11,6 +11,7 @@ graylog:
       ##
       # hosts: http://elasticsearch-client.graylog.svc.cluster.local:9200
       hosts: "https://elasticsearch.tribz.cloud"
+      uriSSL: true
   persistence:
     enabled: true
     accessMode: ReadWriteOnce
