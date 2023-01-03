@@ -34,8 +34,9 @@ grafana:
       access: proxy
       url: https://elasticsearch.tribz.cloud
       jsonData:
+        # indexName: 
         interval: Daily
-        timeField: "@timestamp"
+        timeField: "timestamp"
         esVersion: 7.17.3
         # timeInterval: "10s"
         # logMessageField: message

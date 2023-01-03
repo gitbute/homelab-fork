@@ -1,5 +1,20 @@
 graylog:
   graylog: 
+    input:
+      tcp:
+        service:
+          name: graylog-syslog-tcp
+          type: ClusterIP
+        ports:
+          - name: gelf
+            port: 514
+      udp:
+        service:
+          name: graylog-syslog-udp
+          type: ClusterIP
+        ports:
+          - name: syslog
+            port: 514
     elasticsearch:
       version: "7"
       hosts: "https://elasticsearch.tribz.cloud"
