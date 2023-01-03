@@ -37,7 +37,7 @@ grafana:
       jsonData:
         interval: Daily
         timeField: "timestamp"
-        esVersion: 7.10+
+        esVersion: "7.17.3"
         # timeInterval: "10s"
         # logMessageField: message
         # logLevelField: fields.level
