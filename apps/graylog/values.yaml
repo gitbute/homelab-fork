@@ -30,5 +30,6 @@ graylog:
             - *host
       pathType: Prefix
       path: /
+    externalUri: *host
 tags:
   install-elasticsearch: false
