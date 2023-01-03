@@ -21,3 +21,19 @@ elasticsearch:
     limits:
       cpu: "1000m"
       memory: "512M"
+  ingress:
+    enabled: true
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      hajimari.io/appName: elasticearch
+      hajimari.io/icon: multimedia
+    className: "nginx"
+    pathtype: ImplementationSpecific
+    hosts:
+      - host: &host elasticsearch.tribz.cloud
+        paths:
+          - path: /
+    tls:
+     - secretName: elasticsearch-tls-certificate
+       hosts:
+         - *host
