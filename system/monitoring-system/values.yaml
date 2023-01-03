@@ -29,6 +29,17 @@ grafana:
         version: Flux
         organization: opnsense
         defaultBucket: opnsense
+    - name: Elasticsearch
+      type: elasticsearch
+      access: proxy
+      url: https://elasticsearch.tribz.cloud
+      jsonData:
+        interval: Daily
+        timeField: "@timestamp"
+        esVersion: 7.17.3
+        # timeInterval: "10s"
+        # logMessageField: message
+        # logLevelField: fields.level
   envFromSecret: grafana-secrets
   grafana.ini:
     server:
