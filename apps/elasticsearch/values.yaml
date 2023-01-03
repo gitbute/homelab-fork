@@ -1,4 +1,7 @@
 elasticsearch:
+  esConfig:
+   elasticsearch.yml: |
+     USE_SSL: "false"
   volumeClaimTemplate:
     accessModes:
     - ReadWriteOnce
