@@ -6,7 +6,7 @@ graylog:
           name: graylog-syslog-tcp
           type: ClusterIP
         ports:
-          - name: gelf
+          - name: syslog
             port: 514
       udp:
         service:
