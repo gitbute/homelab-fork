@@ -30,6 +30,6 @@ graylog:
             - *host
       pathType: Prefix
       path: /
-    externalUri: *host
+    externalUri: https://graylog.tribz.cloud
 tags:
   install-elasticsearch: false
