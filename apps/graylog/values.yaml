@@ -20,7 +20,7 @@ graylog:
     enabled: true
     ## If true, mmdbUri points to the URI where to find the DB
     # https://blog.maxmind.com/2019/12/18/significant-changes-to-accessing-and-using-geolite2-databases/
-    mmdbUri: ""
+    mmdbUri: "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=XRWrq0GbEsyJP012&suffix=tar.gz"
   rootUsername: "admin"
   rootPassword: "admin"
   rootTimezone: "Europe/Zurich"
