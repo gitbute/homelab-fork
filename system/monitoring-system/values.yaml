@@ -35,7 +35,7 @@ grafana:
       url: https://elasticsearch.tribz.cloud
       database: graylog_0
       jsonData:
-        interval: Daily
+        # interval: Daily
         timeField: "timestamp"
         esVersion: "7.17.3"
         # timeInterval: "10s"
