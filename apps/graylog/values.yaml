@@ -17,13 +17,13 @@ graylog:
       ## If true, mmdbUri points to the URI where to find the DB
       # https://blog.maxmind.com/2019/12/18/significant-changes-to-accessing-and-using-geolite2-databases/
       mmdbUri: "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=XRWrq0GbEsyJP012&suffix=tar.gz"
-  persistence:
-    enabled: true
-    accessMode: ReadWriteOnce
-    size: "5Gi"
-  rootUsername: "admin"
-  rootPassword: "admin"
-  rootTimezone: "Europe/Zurich"
+    persistence:
+      enabled: true
+      accessMode: ReadWriteOnce
+      size: "5Gi"
+    rootUsername: "admin"
+    rootPassword: "admin"
+    rootTimezone: "Europe/Zurich"
 tags:
   # If true, this chart will install Elasticsearch from requirement dependencies
   install-elasticsearch: false
