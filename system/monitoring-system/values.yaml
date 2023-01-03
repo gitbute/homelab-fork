@@ -33,8 +33,8 @@ grafana:
       type: elasticsearch
       access: proxy
       url: https://elasticsearch.tribz.cloud
+      indexName: opnsense_filterlog_0
       jsonData:
-        indexName: opnsense_filterlog_0
         interval: Daily
         timeField: "timestamp"
         esVersion: 7.17.3
