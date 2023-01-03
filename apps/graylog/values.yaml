@@ -22,7 +22,7 @@ graylog:
       accessMode: ReadWriteOnce
       size: "5Gi"
     rootUsername: "admin"
-    rootPassword: "admin"
+    rootPassword: "adminadminadminadmin"
     rootTimezone: "Europe/Zurich"
 tags:
   # If true, this chart will install Elasticsearch from requirement dependencies
