@@ -1,12 +1,12 @@
 graylog:
   graylog: 
     input:
-      tcp:
+      udp:
         service:
-          name: graylog-syslog-tcp
+          name: graylog-syslog-udp
           type: ClusterIP
         ports:
-          - name: syslogtcp
+          - name: syslogudp
             port: 514
     elasticsearch:
       version: "7"
