@@ -15,6 +15,8 @@ grafana:
       - secretName: grafana-general-tls
         hosts:
           - *host
+  plugins:
+    - grafana-worldmap-panel
   additionalDataSources:
     - name: Loki
       type: loki
