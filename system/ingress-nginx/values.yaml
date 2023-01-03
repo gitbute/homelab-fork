@@ -11,3 +11,4 @@ ingress-nginx:
         enabled: true
   tcp:
     22: gitea/gitea-ssh:22
+    514: graylog/graylog-syslog-tcp:514
