@@ -9,7 +9,9 @@ graylog:
     ## requires authentication.
     ##
     # hosts: http://elasticsearch-client.graylog.svc.cluster.local:9200
-    hosts: "http://test.ch,http://test2.ch"
+    hosts: 
+     - "http://test.ch"
+     - "http://test2.ch"
   persistence:
     enabled: true
     accessMode: ReadWriteOnce
