@@ -1,21 +1,11 @@
 graylog:
   graylog: 
     elasticsearch:
-      ## Major version of the Elasticsearch version used.
-      ## It is required by Graylog 4. See https://docs.graylog.org/en/4.0/pages/configuration/elasticsearch.html#available-elasticsearch-configuration-tunables
       version: "7"
-      ## List of Elasticsearch hosts Graylog should connect to.
-      ## Need to be specified as a comma-separated list of valid URIs for the http ports of your elasticsearch nodes.
-      ## If one or more of your elasticsearch hosts require authentication, include the credentials in each node URI that
-      ## requires authentication.
-      ##
-      # hosts: http://elasticsearch-client.graylog.svc.cluster.local:9200
       hosts: "https://elasticsearch.tribz.cloud"
       uriSSL: true
     geoip:
       enabled: true
-      ## If true, mmdbUri points to the URI where to find the DB
-      # https://blog.maxmind.com/2019/12/18/significant-changes-to-accessing-and-using-geolite2-databases/
       mmdbUri: "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=XRWrq0GbEsyJP012&suffix=tar.gz"
     persistence:
       enabled: true
@@ -24,6 +14,21 @@ graylog:
     rootUsername: "admin"
     rootPassword: "adminadminadminadmin"
     rootTimezone: "Europe/Zurich"
+
+    ingress:
+      enabled: true
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+        hajimari.io/appName: graylog
+        hajimari.io/icon: multimedia
+      ingressClassName: "nginx"
+      hosts:
+        - &host graylog.tribz.cloud
+      tls:
+        - secretName: graylog-tls-certificate
+          hosts:
+            - *host
+      pathType: Prefix
+      path: /
 tags:
-  # If true, this chart will install Elasticsearch from requirement dependencies
   install-elasticsearch: false
