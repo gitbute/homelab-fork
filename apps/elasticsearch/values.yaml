@@ -1,7 +1,7 @@
 elasticsearch:
-  esConfig:
-   elasticsearch.yml: |
-     searchguard.ssl.http.enabled: false
+  # esConfig:
+  #  elasticsearch.yml: |
+  #    searchguard.ssl.http.enabled: false
   volumeClaimTemplate:
     accessModes:
     - ReadWriteOnce
