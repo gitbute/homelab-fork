@@ -21,6 +21,6 @@ spec:
             pathType: ImplementationSpecific
             backend:
               service:
-                name: graylog-syslog-udp
+                name: graylog-syslog-tcp
                 port:
                   number: 514

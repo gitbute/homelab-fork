@@ -8,13 +8,6 @@ graylog:
         ports:
           - name: syslogtcp
             port: 514
-      udp:
-        service:
-          name: graylog-syslog-udp
-          type: ClusterIP
-        ports:
-          - name: syslogudp
-            port: 514
     elasticsearch:
       version: "7"
       hosts: "https://elasticsearch.tribz.cloud"
