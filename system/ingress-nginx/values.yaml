@@ -12,4 +12,4 @@ ingress-nginx:
   tcp:
     22: gitea/gitea-ssh:22
   udp:
-    514: graylog/graylog-syslog-udp:514
+    1514: graylog/graylog-syslog-udp:1514

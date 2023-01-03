@@ -7,7 +7,7 @@ graylog:
           type: ClusterIP
         ports:
           - name: syslogudp
-            port: 514
+            port: 1514
     elasticsearch:
       version: "7"
       hosts: "https://elasticsearch.tribz.cloud"
