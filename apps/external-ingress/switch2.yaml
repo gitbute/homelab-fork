@@ -1,0 +1,35 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: switch2
+  namespace: external-ingress
+spec:
+  type: ExternalName
+  externalName: "192.168.1.4"
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name:  switch2
+  namespace: external-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    hajimari.io/appName: switch2
+    hajimari.io/icon: multimedia
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - switch2.tribz.cloud
+      secretName: switch2-tls-certificate
+  rules:
+    - host: switch2.tribz.cloud
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: switch2
+                port:
+                  number: 80
