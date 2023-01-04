@@ -45,7 +45,7 @@ grafana:
     - name: InfluxDB
       type: influxdb
       access: proxy
-      url: https://influxdb.tribz.cloud
+      url: https://influxdb2.tribz.cloud
       secureJsonData:
         token: 59i8kcKcMdrrnVQPgoZkHNAH8dkICQe_mHgySsY1JFzqeb9CJDwWSo3C81nTzGyx_6TnPHfPpd9207n9OA3Dlg==
       jsonData:
@@ -60,12 +60,12 @@ grafana:
       jsonData:
         timeField: "timestamp"
         esVersion: "7.17.3"
-    - name: graphite
-      type: graphite
-      access: proxy
-      url: https://graphite.tribz.cloud
-      jsonData:
-        graphiteVersion: "1.1"
+    # - name: graphite
+    #   type: graphite
+    #   access: proxy
+    #   url: https://graphite.tribz.cloud
+    #   jsonData:
+    #     graphiteVersion: "1.1"
   envFromSecret: grafana-secrets
   grafana.ini:
     server:
