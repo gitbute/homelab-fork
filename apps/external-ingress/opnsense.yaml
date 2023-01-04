@@ -1,0 +1,36 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: opnsense
+  namespace: external-ingress
+spec:
+  type: ExternalName
+  externalName: "192.168.1.1"
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name:  opnsense
+  namespace: external-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    hajimari.io/appName: opnsense
+    hajimari.io/icon: multimedia
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - opnsense.tribz.cloud
+      secretName: opnsense-tls-certificate
+  rules:
+    - host: opnsense.tribz.cloud
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: opnsense
+                port:
+                  number: 443
