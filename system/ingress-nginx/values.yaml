@@ -11,5 +11,6 @@ ingress-nginx:
         enabled: true
   tcp:
     22: gitea/gitea-ssh:22
+    2003: graphite/graphite:2003
   udp:
     1514: graylog/graylog-syslog-udp:1514
