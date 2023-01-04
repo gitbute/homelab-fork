@@ -32,9 +32,12 @@ grafana:
   # dashboards:
   #   default:
   #     OPNsense:
-  #       url: https://raw.githubusercontent.com/bsmithio/OPNsense-Dashboard/master/OPNsense-Grafana-Dashboard.json
-  #     Longhorn:
-  #       gnetId: 13032
+  #       json: |
+  #         $RAW_JSON
+      # OPNsense:
+      #   url: https://raw.githubusercontent.com/bsmithio/OPNsense-Dashboard/master/OPNsense-Grafana-Dashboard.json
+      # Longhorn:
+      #   gnetId: 13032
   additionalDataSources:
     - name: Loki
       type: loki
@@ -55,12 +58,14 @@ grafana:
       url: https://elasticsearch.tribz.cloud
       database: graylog_0
       jsonData:
-        # interval: Daily
         timeField: "timestamp"
         esVersion: "7.17.3"
-        # timeInterval: "10s"
-        # logMessageField: message
-        # logLevelField: fields.level
+    - name: graphite
+      type: graphite
+      access: proxy
+      url: https://graphite.tribz.cloud
+      jsonData:
+        graphiteVersion: "1.1"
   envFromSecret: grafana-secrets
   grafana.ini:
     server:
