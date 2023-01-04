@@ -1,0 +1,27 @@
+influxdb2:
+  ingress:
+    enabled: true
+    tls: true
+    secretName: influxdb-tls-certificate
+    hostname: influxdb.tribz.cloud
+    annotations:
+      kubernetes.io/ingress.class: "nginx"
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      hajimari.io/appName: InfluxDB
+      hajimari.io/icon: google-drive
+    path: /
+  env:
+    - name: TZ
+      value: Europe/Zurich
+  adminUser:
+    organization: "influxdata"
+    bucket: "default"
+    user: "admin"
+    retention_policy: "0s"
+    password: "adminadmin"
+  persistence:
+    enabled: true
+    accessMode: ReadWriteOnce
+    size: 5Gi
+    mountPath: /var/lib/influxdb2
+    subPath: ""
