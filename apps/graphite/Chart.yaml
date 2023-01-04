@@ -1,7 +1,0 @@
-apiVersion: v2
-name: graphite
-version: 0.0.0
-dependencies:
-  - name: graphite
-    version: 1.1.*
-    repository: https://kiwigrid.github.io
