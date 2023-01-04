@@ -47,7 +47,7 @@ grafana:
       access: proxy
       url: https://influxdb2.tribz.cloud
       secureJsonData:
-        token: 59i8kcKcMdrrnVQPgoZkHNAH8dkICQe_mHgySsY1JFzqeb9CJDwWSo3C81nTzGyx_6TnPHfPpd9207n9OA3Dlg==
+        token: 4iDZfjN4RjHtTPYYipf6zNvUz6Te5eeeuB_Zl0ucAVLMl2giCZ6gpvv3O51Cof-jTmf0HsaO6VM7G3SPNJMNag==
       jsonData:
         version: Flux
         organization: opnsense
