@@ -42,7 +42,7 @@ grafana:
     - name: Loki
       type: loki
       url: http://loki.loki:3100
-    - name: InfluxDB
+    - name: InfluxDB2
       type: influxdb
       access: proxy
       url: https://influxdb2.tribz.cloud
