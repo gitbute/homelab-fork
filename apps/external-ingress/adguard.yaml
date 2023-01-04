@@ -1,0 +1,35 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: adguard
+  namespace: external-ingress
+spec:
+  type: ExternalName
+  externalName: "192.168.1.1"
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name:  adguard
+  namespace: external-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    hajimari.io/appName: adguard
+    hajimari.io/icon: multimedia
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - adguard.tribz.cloud
+      secretName: adguard-tls-certificate
+  rules:
+    - host: adguard.tribz.cloud
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: adguard
+                port:
+                  number: 8080

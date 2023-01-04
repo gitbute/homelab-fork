@@ -1,0 +1,36 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: truenas
+  namespace: external-ingress
+spec:
+  type: ExternalName
+  externalName: "192.168.1.3"
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name:  truenas
+  namespace: external-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    hajimari.io/appName: truenas
+    hajimari.io/icon: multimedia
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - truenas.tribz.cloud
+      secretName: truenas-tls-certificate
+  rules:
+    - host: truenas.tribz.cloud
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: truenas
+                port:
+                  number: 443
