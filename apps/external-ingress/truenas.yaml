@@ -5,7 +5,7 @@ metadata:
   namespace: external-ingress
 spec:
   type: ExternalName
-  externalName: "192.168.1.3"
+  externalName: truenas-backend.tribz.cloud
   ports:
     - name: ssh
       protocol: TCP

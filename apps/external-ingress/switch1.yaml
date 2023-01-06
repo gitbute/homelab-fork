@@ -5,7 +5,7 @@ metadata:
   namespace: external-ingress
 spec:
   type: ExternalName
-  externalName: "192.168.1.2"
+  externalName: switch1-backend.tribz.cloud
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
