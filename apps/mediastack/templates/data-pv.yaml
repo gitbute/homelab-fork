@@ -15,7 +15,7 @@ spec:
     volumeAttributes:
       node_attach_driver: nfs
       provisioner_driver: freenas-nfs
-      server: truenas.tribz.cloud
+      server: "192.168.1.3"
       share: /mnt/tank/k8s/nfs/vols/pvc-56cd033e-c12f-425f-8c87-dbaaf4785386
       storage.kubernetes.io/csiProvisionerIdentity: 1670578125074-8081-org.democratic-csi.nfs
     controllerPublishSecretRef:
