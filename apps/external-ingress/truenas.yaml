@@ -18,6 +18,11 @@ metadata:
     hajimari.io/icon: multimedia
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 spec:
+  ports:
+    - name: ssh
+      protocol: TCP
+      port: 22
+      targetPort: 22
   ingressClassName: nginx
   tls:
     - hosts:
