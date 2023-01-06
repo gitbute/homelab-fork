@@ -11,6 +11,10 @@ spec:
       protocol: TCP
       port: 22
       targetPort: 22
+    - name: nfs
+      protocol: TCP
+      port: 2049
+      targetPort: 2049
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
