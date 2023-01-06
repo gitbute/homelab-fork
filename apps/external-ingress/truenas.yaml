@@ -28,7 +28,6 @@ metadata:
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
     nginx.ingress.kubernetes.io/server-snippet: |
       set $http_upgrade '';
-      set $connection_upgrade '';
 spec:
   ingressClassName: nginx
   tls:
