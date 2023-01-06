@@ -25,7 +25,7 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     hajimari.io/appName: truenas
     hajimari.io/icon: multimedia
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    # nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 spec:
   ingressClassName: nginx
   tls:
