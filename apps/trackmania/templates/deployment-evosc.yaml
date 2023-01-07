@@ -27,6 +27,7 @@ spec:
               else mkdir /datainit/gitseed; 
               git clone https://github.com/EvoTM/EvoSC.git /datainit/gitseed;
               cp -r /datainit/gitseed/. /datainit;
+              touch /controller/config/default/evosc.config.json;
               rm -rf /datainit/gitseed;
             fi;
             ls -la /datainit;
@@ -41,7 +42,7 @@ spec:
           args: 
           # - "touch /controller/config/default/evosc.config.json && php esc run"
           # first run: then do php esc run manually
-          - "touch /controller/config/default/evosc.config.json && sleep infinity"
+          - "sleep infinity"
           env:
             - name: TZ
               value: Europe/Zurich
