@@ -59,7 +59,7 @@ spec:
             - name: SAVE_ALL_INDIVIDUAL_RUNS
               value: "false"
             - name: FORCE_IP_ADDRESS
-              value: 77.57.81.123:2350
+              value: "77.57.81.123"
           ports:
             - containerPort: 2350
               protocol: UDP
