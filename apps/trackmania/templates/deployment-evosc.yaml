@@ -42,7 +42,6 @@ spec:
           runAsUser: 9999
           runAsGroup: 9999
           allowPrivilegeEscalation: true
-          privileged: true
       containers:
         - name: evosc
           image: evotm/evosc:latest
