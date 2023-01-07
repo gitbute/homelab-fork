@@ -5,6 +5,5 @@ resources:
   - deployment-trackmania.yaml
   - deployment-evosc.yaml
   - service-trackmania.yaml
-  - ingress-trackmania.yaml
   - pvc-trackmania-serverdata.yaml
   - pvc-evosc-config.yaml
