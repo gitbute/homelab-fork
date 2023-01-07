@@ -1,1 +1,5 @@
-mariadb:
+auth:
+  rootPassword: evosc
+  database: evosc
+  username: evosc
+  password: evosc
