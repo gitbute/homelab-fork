@@ -30,7 +30,8 @@ spec:
             ls -la /datainit;
             if [ -d /datainit/config ];
               then echo already preseeded;
-              else cp -r /controller/. /datainit;
+              else touch /controller/config/default/evosc.config.json;
+              cp -r /controller/. /datainit;
             fi;
             ls -la /datainit;
             echo done;
@@ -49,7 +50,7 @@ spec:
           args: 
           # - "touch /controller/config/default/evosc.config.json && php esc run"
           # first run: then do php esc run manually
-          - "touch /controller/config/default/evosc.config.json && sleep infinity"
+          - " && sleep infinity"
           env:
             - name: TZ
               value: Europe/Zurich
