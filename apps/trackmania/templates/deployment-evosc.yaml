@@ -20,7 +20,7 @@ spec:
           image: evotm/evosc:latest
           command: ["/bin/sh", "-c"]
           args: 
-          - sleep infinity"
+          - "sleep infinity"
           env:
             - name: TZ
               value: Europe/Zurich
