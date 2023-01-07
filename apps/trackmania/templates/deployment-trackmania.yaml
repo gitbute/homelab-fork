@@ -58,8 +58,8 @@ spec:
               value: "false"
             - name: SAVE_ALL_INDIVIDUAL_RUNS
               value: "false"
-            # - name: FORCE_IP_ADDRESS
-            #   value: "trackmania.tribz.cloud:2350"
+            - name: FORCE_IP_ADDRESS
+              value: trackmania.tribz.cloud
           ports:
             - containerPort: 2350
               protocol: UDP
