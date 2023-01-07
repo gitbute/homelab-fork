@@ -25,7 +25,8 @@ spec:
             ls -la /datainit;
             if [ -d /datainit/config ];
               then echo already preseeded;
-              else git clone https://github.com/EvoTM/EvoSC.git /datainit;
+              else rm -rf /datainit; 
+              git clone https://github.com/EvoTM/EvoSC.git /datainit;
             fi;
             ls -la /datainit;
             echo done;
