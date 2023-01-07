@@ -21,7 +21,7 @@ spec:
         command: ["/bin/sh", "-c"]
         args:
           - echo starting datainit;
-            ls -la /server/UserData;
+            ls -la /controller;
             ls -la /datainit;
             if [ -d /datainit/Config ];
               then echo already preseeded;
