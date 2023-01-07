@@ -26,7 +26,6 @@ spec:
             if [ -d /datainit/config ];
               then echo already preseeded;
               else git pull https://github.com/EvoTM/EvoSC.git /datainit;
-              # else sudo cp -r /controller/. /datainit;
             fi;
             ls -la /datainit;
             echo done;
