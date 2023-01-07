@@ -42,7 +42,7 @@ influxdb:
     logging: {}
     subscriber: {}
     graphite:
-      enabled: true
+      enabled: false
       database: "graphitedb"
       retention-policy: ""
       bind-address: ":2003"
