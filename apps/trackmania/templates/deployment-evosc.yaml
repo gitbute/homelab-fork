@@ -15,9 +15,6 @@ spec:
       labels:
         app: evosc
     spec:
-      securityContext:
-        runAsUser: 9999
-        runAsGroup: 9999
       initContainers:
       - name: evosc-datainit
         image: evotm/evosc:latest
@@ -28,7 +25,8 @@ spec:
             ls -la /datainit;
             if [ -d /datainit/config ];
               then echo already preseeded;
-              else touch /controller/config/default/evosc.config.json;
+              else sleep infinity
+              touch /controller/config/default/evosc.config.json;
               cp -r /controller/. /datainit;
             fi;
             ls -la /datainit;
