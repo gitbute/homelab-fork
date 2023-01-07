@@ -23,7 +23,10 @@ spec:
           - echo starting datainit;
             ls -la /server/UserData;
             ls -la /datainit;
-            cp -r /server/UserData/. /datainit;
+            if [-d /datainit/Config];
+              then echo already preseeded;
+              else cp -r /server/UserData/. /datainit;
+            fi;
             ls -la /datainit;
             echo done;
         volumeMounts:
