@@ -26,6 +26,7 @@ spec:
             if [ -d /datainit/Config ];
               then echo already preseeded;
               else cp -r /server/UserData/. /datainit;
+              cp /datainit/Maps/MatchSettings/default.txt /datainit/Maps/MatchSettings/maplist.txt;
             fi;
             ls -la /datainit;
             echo done;
@@ -41,10 +42,14 @@ spec:
           env:
             - name: TZ
               value: Europe/Zurich
+            # - name: MASTER_LOGIN
+            #   value: Phorgasmic
+            # - name: MASTER_PASSWORD
+            #   value: v%tr7,)w?h5<p}5S
             - name: MASTER_LOGIN
-              value: Phorgasmic
+              value: Zucky10Bucky
             - name: MASTER_PASSWORD
-              value: v%tr7,)w?h5<p}5S
+              value: ceXFZ3[bFgEwSl2(
             - name: SERVER_NAME
               value: Ridiculous
             - name: XMLRPC_ALLOWREMOTE
