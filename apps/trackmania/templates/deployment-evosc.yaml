@@ -35,6 +35,7 @@ spec:
         securityContext:
           runAsUser: 9999
           runAsGroup: 9999
+          privileged: true
       containers:
         - name: evosc
           image: evotm/evosc:latest
