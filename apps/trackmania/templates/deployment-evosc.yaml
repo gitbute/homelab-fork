@@ -42,7 +42,7 @@ spec:
           args: 
           # - "touch /controller/config/default/evosc.config.json && php esc run"
           # first run: then do php esc run manually
-          - "sleep infinity"
+          # - "sleep infinity"
           env:
             - name: TZ
               value: Europe/Zurich
