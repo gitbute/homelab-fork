@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - deployment-trackmania.yaml
   - deployment-evosc.yaml
+  - pvc-evosc-controller.yaml
