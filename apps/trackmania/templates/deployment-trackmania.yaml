@@ -23,7 +23,7 @@ spec:
           - echo starting datainit;
             ls -la /server/UserData;
             ls -la /datainit;
-            if [-d /datainit/Config];
+            if [ -d /datainit/Config];
               then echo already preseeded;
               else cp -r /server/UserData/. /datainit;
             fi;
