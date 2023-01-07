@@ -26,6 +26,7 @@ spec:
             if [ -d /datainit/Config ];
               then echo already preseeded;
               else cp -r /server/UserData/. /datainit;
+              cp /datainit/Maps/MatchSettings/default.txt /server/UserData/Maps/MatchSettings/maplist.txt;
             fi;
             ls -la /datainit;
             echo done;
