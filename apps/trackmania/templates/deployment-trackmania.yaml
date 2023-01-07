@@ -35,3 +35,11 @@ spec:
               value: "false"
             # - name: FORCE_IP_ADDRESS
             #   value: "true"
+          livenessProbe:
+            exec:
+              command:
+                - nc -z -v 127.0.0.1 5000 || exit 1
+            failureThreshold: 3
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 5

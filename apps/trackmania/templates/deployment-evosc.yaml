@@ -37,3 +37,11 @@ spec:
               value: SuperAdmin
             - name: RPC_PASSWORD
               value: SuperAdmin
+          livenessProbe:
+            exec:
+              command:
+                - pgrep -x php || exit 1
+            failureThreshold: 3
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 5
