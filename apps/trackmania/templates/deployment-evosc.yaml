@@ -50,10 +50,10 @@ spec:
           #   initialDelaySeconds: 10
           #   periodSeconds: 5
           #   timeoutSeconds: 5
-      #     volumeMounts:
-      #     - mountPath: /controller
-      #       name: evosc-controller
-      # volumes:
-      #   - name: evosc-controller
-      #     persistentVolumeClaim:
-      #      claimName: evosc-controller
+          volumeMounts:
+          - mountPath: /controller
+            name: evosc-config
+      volumes:
+        - name: evosc-config
+          persistentVolumeClaim:
+           claimName: evosc-config
