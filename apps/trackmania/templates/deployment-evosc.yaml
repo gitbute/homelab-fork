@@ -20,7 +20,7 @@ spec:
           image: evotm/evosc:latest
           command: ["/bin/sh", "-c"]
           args: 
-          - "touch /controller/config/default/evosc.config.json && php esc run && qwe && wer && ert && rtz"
+          - "touch /controller/config/default/evosc.config.json && php esc run"
           env:
             - name: TZ
               value: Europe/Zurich
