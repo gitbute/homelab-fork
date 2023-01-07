@@ -33,8 +33,9 @@ spec:
         - mountPath: /datainit
           name: evosc-config
         securityContext:
-          runAsUser: 9999
-          runAsGroup: 9999
+          # runAsUser: 9999
+          # runAsGroup: 9999
+          allowPrivilegeEscalation: true
           privileged: true
       containers:
         - name: evosc
