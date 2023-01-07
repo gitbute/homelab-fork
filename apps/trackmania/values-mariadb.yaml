@@ -2,3 +2,6 @@ auth:
   database: evosc
   username: evosc
   password: evosc
+primary:
+  persistance:
+    enabled: false
