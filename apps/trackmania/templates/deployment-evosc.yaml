@@ -17,11 +17,10 @@ spec:
     spec:
       initContainers:
       - name: evosc-datainit
-        image: evotm/evosc:latest
+        image: busybox:latest
         command: ["/bin/sh", "-c"]
         args:
           - echo starting datainit;
-            ls -la /controller;
             ls -la /datainit;
             if [ -d /datainit/config ];
               then echo already preseeded;
