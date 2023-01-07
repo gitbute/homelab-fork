@@ -22,9 +22,9 @@ spec:
             - name: TZ
               value: Europe/Zurich
             - name: MASTER_LOGIN
-              value: YourMasterserverLogin
+              value: Phorgasmic
             - name: MASTER_PASSWORD
-              value: YourMasterserverPassword
+              value: v%tr7,)w?h5<p}5S
             - name: SERVER_NAME
               value: Ridiculous
             - name: XMLRPC_ALLOWREMOTE

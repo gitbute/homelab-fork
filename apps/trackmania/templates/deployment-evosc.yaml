@@ -29,13 +29,13 @@ spec:
             - name: MASTER_LOGIN
               value: YourMasterAdminIdIThink
             - name: DB_HOST
-              value: trackmania-mariadb.trackmania.svc.cluster.local
+              value: trackmania-mariadb.trackmania.svc.cluster.local:3306
             - name: DB_NAME
               value: evosc
             - name: DB_USER
-              value: root
+              value: evosc
             - name: DB_PASSWORD
-              value: rootpassword
+              value: evosc
             - name: RPC_IP
               value: server
             - name: RPC_LOGIN
