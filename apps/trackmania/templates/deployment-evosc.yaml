@@ -28,7 +28,7 @@ spec:
               else mkdir /datainit/gitseed; 
               git clone https://github.com/EvoTM/EvoSC.git /datainit/gitseed;
               cp -r /datainit/gitseed/. /datainit;
-              rm -rf /datainit/gitseed 
+              rm -rf /datainit/gitseed;
             fi;
             ls -la /datainit;
             echo done;
