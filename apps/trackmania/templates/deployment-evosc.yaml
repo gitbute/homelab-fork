@@ -47,7 +47,7 @@ spec:
           args: 
           # - "touch /controller/config/default/evosc.config.json && php esc run"
           # first run: then do php esc run manually
-          - "sleep infinity"
+          - "cp /server/UserData/Maps/MatchSettings/default.txt /server/UserData/Maps/MatchSettings/maplist.txt && sleep infinity"
           env:
             - name: TZ
               value: Europe/Zurich

@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name:  trackmania
+  namespace: trackmania
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    hajimari.io/appName: trackmania
+    hajimari.io/icon: multimedia
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - trackmania.tribz.cloud
+      secretName: trackmania-tls-certificate
+  rules:
+    - host: trackmania.tribz.cloud
+      # http:
+      #   paths:
+      #     - path: /
+      #       pathType: ImplementationSpecific
+      #       backend:
+      #         service:
+      #           name: trackmania
+      #           port:
+      #             number: 8080
