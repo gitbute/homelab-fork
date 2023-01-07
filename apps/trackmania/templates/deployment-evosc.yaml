@@ -25,18 +25,19 @@ spec:
             ls -la /datainit;
             if [ -d /datainit/config ];
               then echo already preseeded;
-              else sudo cp -r /controller/. /datainit;
+                else git pull https://github.com/EvoTM/EvoSC.git /datainit;
+              # else sudo cp -r /controller/. /datainit;
             fi;
             ls -la /datainit;
             echo done;
         volumeMounts:
         - mountPath: /datainit
           name: evosc-config
-        securityContext:
+        # securityContext:
           # runAsUser: 9999
           # runAsGroup: 9999
-          allowPrivilegeEscalation: true
-          privileged: true
+          # allowPrivilegeEscalation: true
+          # privileged: true
       containers:
         - name: evosc
           image: evotm/evosc:latest
