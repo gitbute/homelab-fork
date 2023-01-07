@@ -25,8 +25,10 @@ spec:
             ls -la /datainit;
             if [ -d /datainit/config ];
               then echo already preseeded;
-              else rm -rf /datainit/lost+found; 
-              git clone https://github.com/EvoTM/EvoSC.git /datainit;
+              else mkdir /datainit/gitseed; 
+              git clone https://github.com/EvoTM/EvoSC.git /datainit/gitseed;
+              cp -r /datainit/gitseed/. /datainit;
+              rm -rf /datainit/gitseed 
             fi;
             ls -la /datainit;
             echo done;
