@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trackmania
+  labels:
+    app: trackmania
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: trackmania
+  template:
+    metadata:
+      labels:
+        app: trackmania
+    spec:
+      containers:
+        - name: trackmania
+          image: evotm/trackmania:latest

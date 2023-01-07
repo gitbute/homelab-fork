@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: evosc
+  labels:
+    app: evosc
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: evosc
+  template:
+    metadata:
+      labels:
+        app: evosc
+    spec:
+      containers:
+        - name: evosc
+          image: evotm/evosc:latest
