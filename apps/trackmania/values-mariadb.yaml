@@ -3,5 +3,5 @@ auth:
   username: evosc
   password: evosc
 primary:
-  persistance:
+  persistence:
     enabled: false
