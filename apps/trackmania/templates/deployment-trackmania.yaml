@@ -15,9 +15,26 @@ spec:
       labels:
         app: trackmania
     spec:
+      initContainers:
+      - name: trackmania-datainit
+        image: evotm/trackmania:latest
+        command: ["/bin/sh", "-c"]
+        args:
+          - echo starting datainit;
+            ls -la /server/UserData;
+            ls -la /datainit;
+            cp /server/Userdata. /dataini;
+            ls -la /datainit;
+            echo done;
+        volumeMounts:
+        - mountPath: /datainit
+          name: trackmania-serverdata
       containers:
         - name: trackmania
           image: evotm/trackmania:latest
+          # postStart:
+          #   exec:
+          #     command: ["/bin/sh", "-c", "cp "]
           env:
             - name: TZ
               value: Europe/Zurich
