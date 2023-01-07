@@ -12,5 +12,8 @@ spec:
     - name: 2350-tcp
       port: 2350
       targetPort: 2350
+    - name: 5000-tcp
+      port: 5000
+      targetPort: 5000
   selector:
     app: trackmania
