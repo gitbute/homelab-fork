@@ -14,6 +14,7 @@ ingress-nginx:
     2049: external-ingress/truenas:2049
     2003: influxdb/influxdb:2003
     trackmania: trackmania/trackmania:2350
+    trackmania-rpc: trackmania/trackmania:5000
   udp:
     1514: graylog/graylog-syslog-udp:1514
     trackmania: trackmania/trackmania:2350
