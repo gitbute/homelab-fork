@@ -17,6 +17,8 @@ grafana:
           - *host
   plugins:
     - grafana-worldmap-panel
+    - grafana-clock-panel
+    - grafana-piechart-panel
   dashboardProviders:
     dashboardproviders.yaml:
       apiVersion: 1
