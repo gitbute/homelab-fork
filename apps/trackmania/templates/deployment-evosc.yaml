@@ -18,7 +18,9 @@ spec:
       containers:
         - name: evosc
           image: evotm/evosc:latest
-          command: ["sleep infinity"]
+          command: ["/bin/sh", "-c"]
+          args: 
+          - sleep infinity"
           env:
             - name: TZ
               value: Europe/Zurich
