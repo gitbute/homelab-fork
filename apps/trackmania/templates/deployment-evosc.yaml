@@ -18,3 +18,22 @@ spec:
       containers:
         - name: evosc
           image: evotm/evosc:latest
+          env:
+            - name: TZ
+              value: Europe/Zurich
+            - name: MASTER_LOGIN
+              value: YourMasterAdminIdIThink
+            - name: DB_HOST
+              value: trackmania-mariadb.trackmania.svc.cluster.local
+            - name: DB_NAME
+              value: evosc
+            - name: DB_USER
+              value: root
+            - name: DB_PASSWORD
+              value: rootpassword
+            - name: RPC_IP
+              value: server
+            - name: RPC_LOGIN
+              value: SuperAdmin
+            - name: RPC_PASSWORD
+              value: SuperAdmin

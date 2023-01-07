@@ -18,3 +18,20 @@ spec:
       containers:
         - name: trackmania
           image: evotm/trackmania:latest
+          env:
+            - name: TZ
+              value: Europe/Zurich
+            - name: MASTER_LOGIN
+              value: YourMasterserverLogin
+            - name: MASTER_PASSWORD
+              value: YourMasterserverPassword
+            - name: SERVER_NAME
+              value: Ridiculous
+            - name: XMLRPC_ALLOWREMOTE
+              value: "true"
+            - name: DISABLE_REPLAY_RECORDING
+              value: "false"
+            - name: SAVE_ALL_INDIVIDUAL_RUNS
+              value: "false"
+            # - name: FORCE_IP_ADDRESS
+            #   value: "true"
