@@ -23,7 +23,7 @@ spec:
           - echo starting datainit;
             ls -la /server/UserData;
             ls -la /datainit;
-            cp /server/Userdata. /dataini;
+            cp /server/UserData/. /datainit;
             ls -la /datainit;
             echo done;
         volumeMounts:
