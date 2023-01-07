@@ -15,6 +15,23 @@ spec:
       labels:
         app: evosc
     spec:
+      initContainers:
+      - name: evosc-datainit
+        image: evotm/evosc:latest
+        command: ["/bin/sh", "-c"]
+        args:
+          - echo starting datainit;
+            ls -la /server/UserData;
+            ls -la /datainit;
+            if [ -d /datainit/Config ];
+              then echo already preseeded;
+              else cp -r /controller/. /datainit;
+            fi;
+            ls -la /datainit;
+            echo done;
+        volumeMounts:
+        - mountPath: /datainit
+          name: evosc-config
       containers:
         - name: evosc
           image: evotm/evosc:latest
@@ -53,7 +70,12 @@ spec:
           volumeMounts:
           - mountPath: /controller
             name: evosc-config
+          - mountPath: /server/UserData
+            name: trackmania-serverdata
       volumes:
         - name: evosc-config
           persistentVolumeClaim:
            claimName: evosc-config
+        - name: trackmania-serverdata
+          persistentVolumeClaim:
+           claimName: trackmania-serverdata
