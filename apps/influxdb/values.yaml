@@ -41,9 +41,20 @@ influxdb:
     http: {}
     logging: {}
     subscriber: {}
-    graphite: {}
+    graphite:
+      enabled: true
+      database: "graphitedb"
+      retention-policy: ""
+      bind-address: ":2003"
+      protocol: "tcp"
+      consistency-level: "one"
+      templates: 
+        - "*.app env.service.resource.measurement"
+        - "servers.* .host.resource.measurement.field*"
     collectd: {}
     opentsdb: {}
     udp: {}
     continuous_queries: {}
     tls: {}
+
+    
