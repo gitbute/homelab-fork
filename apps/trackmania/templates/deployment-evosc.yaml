@@ -27,7 +27,8 @@ spec:
               then echo already preseeded;
               else cp -r /controller/. /datainit;
               touch /datainit/config/default/evosc.config.json;
-              chown -R evosc /datainit
+              chown -R evosc /datainit;
+              chgrp -R evosc /datainit;
             fi;
             ls -la /datainit;
             echo done;
