@@ -59,12 +59,10 @@ grafana:
       jsonData:
         timeField: "timestamp"
         esVersion: "7.17.3"
-    # - name: graphite
-    #   type: graphite
-    #   access: proxy
-    #   url: https://graphite.tribz.cloud
-    #   jsonData:
-    #     graphiteVersion: "1.1"
+    - name: InfluxDB
+      type: influxdb
+      url: https://influxdb.tribz.cloud
+      database: graphitedb
   envFromSecret: grafana-secrets
   grafana.ini:
     server:
