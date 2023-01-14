@@ -4,4 +4,4 @@ auth:
   password: evosc
 primary:
   persistence:
-    enabled: false
+    existingClaim: mariadb

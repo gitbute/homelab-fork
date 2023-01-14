@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: trackmania-serverdata
+  name: mariadb
 spec:
   storageClassName: longhorn-retain
   # dataSource:
   #  name: xyz # for restore purposes --> make pvc from old pv in longhorn
   #  kind: PersistentVolumeClaim
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
