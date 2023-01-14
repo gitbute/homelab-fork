@@ -45,16 +45,16 @@ spec:
           image: evotm/evosc:latest
           command: ["/bin/sh", "-c"]
           args: 
-          # - "touch /controller/config/default/evosc.config.json && php esc run"
+          - "php esc run"
           # first run: then do php esc run manually
-          - "sleep infinity"
+          # - "sleep infinity"
           env:
             - name: TZ
               value: Europe/Zurich
             - name: MASTER_LOGIN
               value: YourMasterAdminIdIThink
             - name: DB_HOST
-              value: trackmania-mariadb.trackmania.svc.cluster.local:3306
+              value: trackmania-mariadb.trackmania.svc.cluster.local
             - name: DB_NAME
               value: evosc
             - name: DB_USER
