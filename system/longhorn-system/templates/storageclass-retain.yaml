@@ -1,0 +1,15 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: longhorn-retain
+provisioner: driver.longhorn.io
+defaultClass: false
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+allowVolumeExpansion: true
+parameters:
+  dataLocality: disabled
+  fromBackup: ''
+  fsType: ext4
+  numberOfReplicas: '3'
+  staleReplicaTimeout: '30'
