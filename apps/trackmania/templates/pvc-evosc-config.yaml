@@ -4,9 +4,9 @@ metadata:
   name: evosc-config
 spec:
   storageClassName: longhorn-retain
-  dataSource:
-   name: pvc-f8469456-f44a-4ef8-806b-75e30db578a8
-   kind: PersistentVolumeClaim
+  # dataSource:
+  #  name: pvc-f8469456-f44a-4ef8-806b-75e30db578a8
+  #  kind: PersistentVolumeClaim
   accessModes:
     - ReadWriteOnce
   resources:
