@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: evosc-config
 spec:
+  storageClassName: longhorn-retain
   accessModes:
     - ReadWriteOnce
   resources:
