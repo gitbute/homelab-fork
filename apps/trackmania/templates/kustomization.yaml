@@ -7,3 +7,4 @@ resources:
   - service-trackmania.yaml
   - pvc-trackmania-serverdata.yaml
   - pvc-evosc-config.yaml
+  - pvc-mariadb.yaml
