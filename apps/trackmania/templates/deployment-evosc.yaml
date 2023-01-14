@@ -45,9 +45,9 @@ spec:
           image: evotm/evosc:latest
           command: ["/bin/sh", "-c"]
           args: 
-          # - "php esc run"
-          # first run: then do php esc run manually
-          - "sleep infinity"
+            - "php esc run"
+          # first run: then do php esc run --> above
+          # - "sleep infinity"
           env:
             - name: TZ
               value: Europe/Zurich
