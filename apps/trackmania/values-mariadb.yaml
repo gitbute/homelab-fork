@@ -8,7 +8,3 @@ primary:
     existingClaim: mariadb
 diagnosticMode:
   enabled: false
-# initdbScripts:
-#   my_init_script.sh: |
-#      #!/bin/bash
-#      sleep infinity
