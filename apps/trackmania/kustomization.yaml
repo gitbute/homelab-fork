@@ -7,7 +7,7 @@ resources:
 helmCharts:
 - name: mariadb
   repo: https://charts.bitnami.com/bitnami
-  version: 11.4.2
+  version: 11.4.3
   releaseName: trackmania
   namespace: trackmania
   valuesFile: values-mariadb.yaml
