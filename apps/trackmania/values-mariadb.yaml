@@ -2,13 +2,13 @@ auth:
   database: evosc
   username: evosc
   password: evosc
-  rootPassword: 1pv5zq9XNG
+  # rootPassword: 1pv5zq9XNG
 primary:
   persistence:
     existingClaim: mariadb
 diagnosticMode:
-  enabled: false
-initdbScripts:
-  my_init_script.sh: |
-     #!/bin/bash
-     sleep infinity
+  enabled: true
+# initdbScripts:
+#   my_init_script.sh: |
+#      #!/bin/bash
+#      sleep infinity
