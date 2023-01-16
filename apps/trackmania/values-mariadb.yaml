@@ -11,4 +11,4 @@ diagnosticMode:
 initdbScripts:
   my_init_script.sh: |
      #!/bin/bash
-     echo "Do something."
+     sleep infinity
