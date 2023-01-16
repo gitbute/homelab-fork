@@ -7,7 +7,7 @@ primary:
   persistence:
     existingClaim: mariadb
 diagnosticMode:
-  enabled: true
+  enabled: false
 # initdbScripts:
 #   my_init_script.sh: |
 #      #!/bin/bash
