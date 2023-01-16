@@ -2,6 +2,7 @@ auth:
   database: evosc
   username: evosc
   password: evosc
+  rootPassword: 1pv5zq9XNG
 primary:
   persistence:
     existingClaim: mariadb
