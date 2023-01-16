@@ -7,9 +7,9 @@ seafile:
 
   # see Bitnami MariaDB Chart Values
   # https://artifacthub.io/packages/helm/bitnami/mariadb
-  # mariadb:
-    # auth:
-    #   rootPassword: generated-pw-needed-for-chart-upgrade
+  mariadb:
+    auth:
+      rootPassword: F1KyjE1quY
     # primary:
     #   extraVolumes:
     #   - name: mnt-data-db
