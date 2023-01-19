@@ -31,6 +31,8 @@ spec:
             value: Any
           - name: SONARR_PATH
             value: /data/media/sonarr/
+          - name: SONARR_V4
+            value: "yes"
           - name: RADARR_URL
             value: https://radarr.tribz.cloud
           - name: RADARR_TOKEN
