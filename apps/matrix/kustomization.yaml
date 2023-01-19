@@ -4,7 +4,7 @@ kind: Kustomization
 helmCharts:
 - name: elementweb
   repo: https://locmai.github.io/charts
-  version: 0.0.3
+  version: 0.0.6
   releaseName: matrix
   namespace: matrix
   valuesFile: values-elementweb.yaml
