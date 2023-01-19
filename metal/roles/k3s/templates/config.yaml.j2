@@ -7,3 +7,6 @@ token-file: {{ k3s_token_file }}
 {% if 'masters' in group_names %}
 {{ k3s_server_config | to_nice_yaml }}
 {% endif %}
+{% if 'workers' in group_names %}
+{{ k3s_agent_config | to_nice_yaml }}
+{% endif %}
