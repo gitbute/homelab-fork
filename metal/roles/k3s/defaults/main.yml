@@ -20,3 +20,7 @@ k3s_server_config:
   kubelet-arg:
   - "image-gc-high-threshold=50"
   - "image-gc-low-threshold=20"
+k3s_agent_config:
+  kubelet-arg:
+  - "image-gc-high-threshold=50"
+  - "image-gc-low-threshold=20"
