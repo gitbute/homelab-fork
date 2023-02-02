@@ -19,7 +19,7 @@ spec:
     - host: tribz.cloud
       http:
         paths:
-          - path: //
+          - path: /
             pathType: ImplementationSpecific
             backend:
               service:
