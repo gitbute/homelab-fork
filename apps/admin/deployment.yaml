@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: admin
-          image: rockylinux:9.1-minimal
+          image: rockylinux:latest
           env:
             - name: TZ
               value: Europe/Zurich
