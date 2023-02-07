@@ -21,7 +21,7 @@ spec:
         command: ["/bin/sh", "-c"]
         args:
           - echo starting init;
-            apk add curl;
+            apk add curl git kubectl=1.24.10;
             curl -LO https://dl.k8s.io/release/v1.24.10/bin/linux/amd64/;
             chmod +x kubectl;
             mkdir -p ~/.local/bin;
