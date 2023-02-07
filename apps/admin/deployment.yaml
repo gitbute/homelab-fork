@@ -25,7 +25,7 @@ spec:
           args:
             - |
               echo starting init;
-              apk add curl gcompat;
+              apk add curl unzip gcompat;
               curl -LO https://dl.k8s.io/v1.24.10/bin/linux/amd64/kubectl;
               chmod +x kubectl;
               mv ./kubectl /bin/kubectl;
@@ -51,5 +51,6 @@ spec:
                   client-key-data: LS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUNEaVhOVW1wM2Qwa2FmaG5JcU85K0tEaGMxdGhwUUVRZ1NRL2w2UkNDWkFvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFblNzL1d0U1Fud1ZkTHJPWHAyRExKTGZnaFB3ZmtoTm05K2Y2cnZDN3RONWRxeEJHNkN2agp0cTduNUJEaGhHR3RuTC9aWnhpQWVZbWhVR2RDN3hkS3ZnPT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo=
               " >~/.kube/config;
               curl -LO https://github.com/Huawei/eSDK_K8S_Plugin/releases/download/V3.2.1/eSDK_Huawei_Storage_Kubernetes_CSI_Plugin_V3.2.1_X86_64.zip;
+              unzip eSDK_Huawei_Storage_Kubernetes_CSI_Plugin_V3.2.1_X86_64.zip;
               echo init done;
               sleep infinity;
