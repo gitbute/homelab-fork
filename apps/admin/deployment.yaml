@@ -29,6 +29,7 @@ spec:
               curl -LO https://dl.k8s.io/v1.24.10/bin/linux/amd64/kubectl;
               chmod +x kubectl;
               mv ./kubectl /bin/kubectl;
+              mkdir ~/.kube;
               cat <<EOT >> ~/.kube/config
               apiVersion: v1
               clusters:
