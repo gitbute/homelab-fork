@@ -22,7 +22,7 @@ spec:
         args:
           - echo starting init;
             apk add curl git;
-            curl -LO https://dl.k8s.io/v1.24.10/bin/linux/amd64/;
+            curl -LO https://dl.k8s.io/v1.24.10/bin/linux/amd64/kubectl;
             chmod +x kubectl;
             mkdir -p ~/.local/bin;
             mv ./kubectl ~/.local/bin/kubectl;
