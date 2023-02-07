@@ -1,15 +1,29 @@
 # Huawei Storage Information
 backends:
-  - storage: "***"
-    name: "***"
+  - storage: "oceanstor-nas"
+    name: "us-cl100sch"
+    metrovStorePairId: "21006c442a82b5d90000000600000009"
+    metroBackend: "us-cl101roe"
     urls:
-      - "https://*.*.*.*:8088"
+      - "https://us-cl100sch.lunet.ch:8088/"
     pools:
-      - "***"
+      - sp01
     parameters:
-      protocol: "***"
+      protocol: nfs
       portals:
-        - "*.*.*.*"
+        - us-cl100sch.lunet.ch
+  - storage: "oceanstor-nas"
+    name: "us-cl101roe"
+    metrovStorePairId: "21006c442a82b5d90000000600000009"
+    metroBackend: "us-cl100sch"
+    urls:
+    - "https://us-cl101roe.lunet.ch:8088/"
+    pools:
+    - sp01
+    parameters:
+      protocol: "nfs"
+      portals:
+      - us-cl101roe.lunet.ch
 
 # If the Kubernetes version is lower than 1.17, set this parameter to false.
 snapshot:
@@ -83,6 +97,3 @@ csi_driver:
     fileSize: 20M
     # Maximum number of log files that can be backed up.
     maxBackups: 9
-
-
-
