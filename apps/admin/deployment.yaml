@@ -15,7 +15,6 @@ spec:
       labels:
         app: admin
     spec:
-      restartPolicy: OnFailure
       containers:
         - name: admin
           image: alpine:latest
