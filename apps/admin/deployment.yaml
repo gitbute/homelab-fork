@@ -17,7 +17,7 @@ spec:
     spec:
       initContainers:
       - name: admin-init
-        image: busybox:latest
+        image: alpine:latest
         command: ["/bin/sh", "-c"]
         args:
           - echo starting init;
@@ -29,7 +29,7 @@ spec:
             echo done;
       containers:
         - name: admin
-          image: busybox:latest
+          image: alpine:latest
           env:
             - name: TZ
               value: Europe/Zurich
