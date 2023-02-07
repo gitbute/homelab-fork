@@ -18,6 +18,7 @@ spec:
       containers:
         - name: admin
           image: alpine:latest
+          restartPolicy: OnFailure
           env:
             - name: TZ
               value: Europe/Zurich
@@ -30,7 +31,7 @@ spec:
               chmod +x kubectl;
               mv ./kubectl /bin/kubectl;
               mkdir ~/.kube;
-              cat <<EOF > ~/.kube/config 
+              tee -a ~/.kube/config <<EOF
               apiVersion: v1
               clusters:
               - cluster:
