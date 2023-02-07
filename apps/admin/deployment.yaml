@@ -27,8 +27,7 @@ spec:
               apk add curl git;
               curl -LO https://dl.k8s.io/v1.24.10/bin/linux/amd64/kubectl;
               chmod +x kubectl;
-              mkdir -p ~/.local/bin;
-              mv ./kubectl ~/.local/bin/kubectl;
+              mv ./kubectl /bin/kubectl;
               git clone https://github.com/Huawei/eSDK_K8S_Plugin.git;
               echo init done;
               sleep infinity;
