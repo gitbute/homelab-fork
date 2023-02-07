@@ -21,12 +21,12 @@ spec:
         command: ["/bin/sh", "-c"]
         args:
           - echo starting init;
-            apk add curl
-            curl -LO https://dl.k8s.io/release/v1.24.10/bin/linux/amd64/
-            chmod +x kubectl
-            mkdir -p ~/.local/bin
-            mv ./kubectl ~/.local/bin/kubectl
-            git clone https://github.com/Huawei/eSDK_K8S_Plugin.git
+            apk add curl;
+            curl -LO https://dl.k8s.io/release/v1.24.10/bin/linux/amd64/;
+            chmod +x kubectl;
+            mkdir -p ~/.local/bin;
+            mv ./kubectl ~/.local/bin/kubectl;
+            git clone https://github.com/Huawei/eSDK_K8S_Plugin.git;
             echo done;
       containers:
         - name: admin
@@ -34,4 +34,4 @@ spec:
           env:
             - name: TZ
               value: Europe/Zurich
-          command: ["/bin/bash", "-c", "sleep infinity"]
+          command: ["/bin/sh", "-c", "sleep infinity"]
