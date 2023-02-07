@@ -30,7 +30,7 @@ spec:
               chmod +x kubectl;
               mv ./kubectl /bin/kubectl;
               mkdir ~/.kube;
-              tee -a ~/.kube/config <<EOF
+              cat <<EOF >>~/.kube/config 
               apiVersion: v1
               clusters:
               - cluster:
