@@ -15,23 +15,20 @@ spec:
       labels:
         app: admin
     spec:
-      initContainers:
-      - name: admin-init
-        image: alpine:latest
-        command: ["/bin/sh", "-c"]
-        args:
-          - echo starting init;
-            apk add curl git;
-            curl -LO https://dl.k8s.io/v1.24.10/bin/linux/amd64/kubectl;
-            chmod +x kubectl;
-            mkdir -p ~/.local/bin;
-            mv ./kubectl ~/.local/bin/kubectl;
-            git clone https://github.com/Huawei/eSDK_K8S_Plugin.git;
-            echo done;
       containers:
         - name: admin
           image: alpine:latest
           env:
             - name: TZ
               value: Europe/Zurich
-          command: ["/bin/sh", "-c", "sleep infinity"]
+          command: ["/bin/sh", "-c"]
+          args:
+            - echo starting init;
+              apk add curl git;
+              curl -LO https://dl.k8s.io/v1.24.10/bin/linux/amd64/kubectl;
+              chmod +x kubectl;
+              mkdir -p ~/.local/bin;
+              mv ./kubectl ~/.local/bin/kubectl;
+              git clone https://github.com/Huawei/eSDK_K8S_Plugin.git;
+              echo init done;
+              sleep infinity;
