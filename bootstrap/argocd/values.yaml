@@ -1,10 +1,10 @@
 argo-cd:
   server:
     containerPorts:
-    # -- Server container port
-    server: 8080
-    # -- Metrics container port
-    metrics: 8083
+      # -- Server container port
+      server: 8080
+      # -- Metrics container port
+      metrics: 8083
     env:
       - name: "TZ"
         value: "Europe/Zurich"
@@ -39,10 +39,18 @@ argo-cd:
         - secretName: argocd-tls-certificate
           hosts:
             - *host
-    metrics: &metrics
+    metrics:
+      # -- Deploy metrics service
       enabled: false
-      serviceMonitor:
-        enabled: false
+      service:
+        # -- Metrics service annotations
+        annotations: {}
+        # -- Metrics service labels
+        labels: {}
+        # -- Metrics service port
+        servicePort: 8083
+        # -- Metrics service port name
+        portName: http-metrics
   dex:
     enabled: false
   # controller:
