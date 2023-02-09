@@ -40,3 +40,4 @@ graylog:
     externalUri: https://graylog.tribz.cloud
 tags:
   install-elasticsearch: false
+  install-opensearch: false
