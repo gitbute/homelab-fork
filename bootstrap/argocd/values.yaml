@@ -40,12 +40,12 @@ argo-cd:
     #     enabled: true
   dex:
     enabled: false
-  controller:
-    metrics: *metrics
+  # controller:
+  #   metrics: *metrics
   repoServer:
     env:
       - name: ARGOCD_EXEC_TIMEOUT
         value: 240s
-    metrics: *metrics
+    # metrics: *metrics
   # redis:
   #   metrics: *metrics
