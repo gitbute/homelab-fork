@@ -34,10 +34,10 @@ argo-cd:
         - secretName: argocd-tls-certificate
           hosts:
             - *host
-    metrics: &metrics
-      enabled: true
-      serviceMonitor:
-        enabled: true
+    # metrics: &metrics
+    #   enabled: true
+    #   serviceMonitor:
+    #     enabled: true
   dex:
     enabled: false
   controller:
@@ -47,13 +47,5 @@ argo-cd:
       - name: ARGOCD_EXEC_TIMEOUT
         value: 240s
     metrics: *metrics
-  redis:
-    metrics: *metrics
-    image:
-      # -- Redis repository
-      repository: public.ecr.aws/docker/library/redis
-      # -- Redis tag
-      tag: 7.0.7-alpine
-      # -- Redis image pull policy
-      # @default -- `""` (defaults to global.image.imagePullPolicy)
-      imagePullPolicy: ""
+  # redis:
+  #   metrics: *metrics
