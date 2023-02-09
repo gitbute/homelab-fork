@@ -47,5 +47,17 @@ argo-cd:
       - name: ARGOCD_EXEC_TIMEOUT
         value: 240s
     # metrics: *metrics
-  # redis:
-  #   metrics: *metrics
+  redis:
+    # metrics: *metrics
+    exporter:
+      # -- Enable Prometheus redis-exporter sidecar
+      enabled: true
+      ## Prometheus redis-exporter image
+      image:
+        # -- Repository to use for the redis-exporter
+        repository: public.ecr.aws/bitnami/redis-exporter
+        # -- Tag to use for the redis-exporter
+        tag: 1.45.0
+        # -- Image pull policy for the redis-exporter
+        # @default -- `""` (defaults to global.image.imagePullPolicy)
+        imagePullPolicy: ""
