@@ -1,5 +1,10 @@
 argo-cd:
   server:
+    containerPorts:
+      # -- Server container port
+      server: 8080
+      # -- Metrics container port
+      metrics: 8083
     env:
       - name: "TZ"
         value: "Europe/Zurich"
@@ -34,30 +39,38 @@ argo-cd:
         - secretName: argocd-tls-certificate
           hosts:
             - *host
-    metrics: &metrics
-      enabled: true
-      serviceMonitor:
-        enabled: true
+    metrics:
+      # -- Deploy metrics service
+      enabled: false
+      service:
+        # -- Metrics service annotations
+        annotations: {}
+        # -- Metrics service labels
+        labels: {}
+        # -- Metrics service port
+        servicePort: 8083
+        # -- Metrics service port name
+        portName: http-metrics
   dex:
     enabled: false
-  controller:
-    metrics: *metrics
+  # controller:
+  #   metrics: *metrics
   repoServer:
     env:
       - name: ARGOCD_EXEC_TIMEOUT
         value: 240s
-    metrics: *metrics
+    # metrics: *metrics
   redis:
-    metrics: *metrics
-    # exporter:
-    #   # -- Enable Prometheus redis-exporter sidecar
-    #   enabled: true
-    #   ## Prometheus redis-exporter image
-    #   image:
-    #     # -- Repository to use for the redis-exporter
-    #     repository: public.ecr.aws/bitnami/redis-exporter
-    #     # -- Tag to use for the redis-exporter
-    #     tag: 1.45.0
-    #     # -- Image pull policy for the redis-exporter
-    #     # @default -- `""` (defaults to global.image.imagePullPolicy)
-    #     imagePullPolicy: ""
+    # metrics: *metrics
+    exporter:
+      # -- Enable Prometheus redis-exporter sidecar
+      enabled: true
+      ## Prometheus redis-exporter image
+      image:
+        # -- Repository to use for the redis-exporter
+        repository: public.ecr.aws/bitnami/redis-exporter
+        # -- Tag to use for the redis-exporter
+        tag: 1.45.0
+        # -- Image pull policy for the redis-exporter
+        # @default -- `""` (defaults to global.image.imagePullPolicy)
+        imagePullPolicy: ""
