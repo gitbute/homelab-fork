@@ -3,5 +3,5 @@ name: vault
 version: 0.0.0
 dependencies:
   - name: vault-operator
-    version: 1.18.*
+    version: 1.19.*
     repository: https://kubernetes-charts.banzaicloud.com
