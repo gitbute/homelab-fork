@@ -63,7 +63,7 @@ grafana:
       type: elasticsearch
       access: proxy
       url: https://elasticsearch.tribz.cloud
-      database: graylog
+      database: graylog_1
       jsonData:
         timeField: "timestamp"
         esVersion: "7.17.3"
