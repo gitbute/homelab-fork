@@ -21,3 +21,7 @@ spec:
         env:
           - name: TZ
             value: "Europe/Zurich"
+          - name: DISCORD_TOKEN
+            value: ""MTA4MTIzNDUzOTQ0OTQzODIxOA.G3thps.UMp_m878qOzS4MKuI38ddsVV0tB_kc2fkCWEzo"
+          - name: DISCORD_ENABLE_TTS_CHANNELS
+            value: "true"
