@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatgpt-discordbot
+  labels:
+    app: chatgpt-discordbot
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: chatgpt-discordbot
+  template:
+    metadata:
+      labels:
+        app: chatgpt-discordbot
+    spec:
+      containers:
+      - name: chatgpt-discordbot
+        image: core.harbor.tribz.cloud/homelab/node-chatgpt-discordbot:latest
+        env:
+          - name: TZ
+            value: "Europe/Zurich"
