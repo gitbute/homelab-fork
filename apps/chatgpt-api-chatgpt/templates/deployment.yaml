@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: chatgpt-api-chatgpt
-        image: core.harbor.tribz.cloud/homelab/chatgpt-api-chatgpt:latest
+        image: core.harbor.tribz.cloud/homelab/node-chatgpt-api-chatgpt:latest
         env:
           - name: TZ
             value: "Europe/Zurich"
