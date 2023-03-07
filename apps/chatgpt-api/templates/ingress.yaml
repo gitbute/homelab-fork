@@ -9,6 +9,8 @@ metadata:
     # external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
     hajimari.io/appName: chatgpt-api
     hajimari.io/icon: multimedia
+    nginx.org/proxy-connect-timeout: "180s"
+    nginx.org/proxy-read-timeout: "180s"
 spec:
   ingressClassName: nginx
   tls:
