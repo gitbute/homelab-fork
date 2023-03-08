@@ -17,9 +17,10 @@ spec:
     spec:
       containers:
       - name: tts-discordbot
-        image: core.harbor.tribz.cloud/homelab/tts-discordbot:latest
+        # image: core.harbor.tribz.cloud/homelab/tts-discordbot:latest
+        image: core.harbor.tribz.cloud/homelab/discord-google-tts:latest
         env:
           - name: TZ
             value: "Europe/Zurich"
-          - name: DISCORD_ENABLE_TTS_CHANNELS
-            value: "true"
+          # - name: DISCORD_ENABLE_TTS_CHANNELS
+          #   value: "true"
