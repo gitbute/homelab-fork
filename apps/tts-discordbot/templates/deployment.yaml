@@ -18,7 +18,7 @@ spec:
       containers:
       - name: tts-discordbot
         # image: core.harbor.tribz.cloud/homelab/tts-discordbot:latest
-        image: harbor-core.harbor.svc.cluster.local/homelab/discord-google-tts:latest
+        image: http://harbor-core.harbor.svc.cluster.local/homelab/discord-google-tts:latest
         env:
           - name: TZ
             value: "Europe/Zurich"
