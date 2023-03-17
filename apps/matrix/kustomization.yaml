@@ -10,42 +10,42 @@ helmCharts:
   valuesFile: values-elementweb.yaml
   includeCRDs: true
 - name: dendrite
-  repo: https://locmai.github.io/charts
-  version: 0.0.3
+  repo: https://github.com/matrix-org/dendrite
+  version: "0.12.0"
   releaseName: matrix
   namespace: matrix
   valuesFile: values-dendrite.yaml
   includeCRDs: true
 
-patchesJson6902:
-  - target:
-      group: apps
-      version: v1
-      kind: Deployment
-      name: monolith
-    patch: |-
-      - op: add
-        path: "/spec/template/spec/containers/0/args/-"
-        value: "-really-enable-open-registration"
-      - op: add
-        path: "/spec/template/spec/containers/0/args/-"
-        value: "--skip-db-sanity"
-  - target:
-      group: apps
-      version: v1
-      kind: Deployment
-      name: matrix-elementweb
-    patch: |-
-      - op: replace
-        path: "/spec/template/spec/containers/0/image"
-        value: "vectorim/element-web:latest"
-  - target:
-      group: apps
-      version: v1
-      kind: StatefulSet
-      name: matrix-nats
-    patch: |-
-      - op: replace
-        path: "/spec/template/spec/containers/0/image"
-        value: "nats:2.9.10-alpine"
+# patchesJson6902:
+#   - target:
+#       group: apps
+#       version: v1
+#       kind: Deployment
+#       name: monolith
+#     patch: |-
+#       - op: add
+#         path: "/spec/template/spec/containers/0/args/-"
+#         value: "-really-enable-open-registration"
+#       - op: add
+#         path: "/spec/template/spec/containers/0/args/-"
+#         value: "--skip-db-sanity"
+#   - target:
+#       group: apps
+#       version: v1
+#       kind: Deployment
+#       name: matrix-elementweb
+#     patch: |-
+#       - op: replace
+#         path: "/spec/template/spec/containers/0/image"
+#         value: "vectorim/element-web:latest"
+#   - target:
+#       group: apps
+#       version: v1
+#       kind: StatefulSet
+#       name: matrix-nats
+#     patch: |-
+#       - op: replace
+#         path: "/spec/template/spec/containers/0/image"
+#         value: "nats:2.9.10-alpine"
 
