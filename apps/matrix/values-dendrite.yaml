@@ -2,6 +2,8 @@ dendrite_config:
   version: 2
   global:
     server_name: &host matrix.tribz.cloud
+persistence:
+  storageClass: longhorn
 postgresql:
   enabled: true
   persistence:
