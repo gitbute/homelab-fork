@@ -42,11 +42,11 @@ spec:
           - name: RADARR_PATH
             value: /data/media/radarr/
           - name: MATRIX_ROOM
-            value: '!VXlmMUbDdWUi226Z:matrix.tribz.cloud'
+            value: '!fG1FleMhBpAvxMoP:matrix.tribz.cloud'
           - name: MATRIX_USERNAME
-            value: botbotdarr
+            value: botdarr
           - name: MATRIX_PASSWORD
-            value: botbotdarr123
+            value: botdarr123
           - name: MATRIX_HOME_SERVER_URL
             value: https://matrix.tribz.cloud
         ports:

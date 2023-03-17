@@ -33,9 +33,9 @@ spec:
           - name: MATRIX_HOMESERVER_URL
             value: https://matrix.tribz.cloud
           - name: MATRIX_ROOMS
-            value: 'matrix/!QIBlsGNJNi6A6cyV:matrix.tribz.cloud'
+            value: 'matrix/!6aOWobTeKQUXAHRU:matrix.tribz.cloud'
           - name: MATRIX_TOKEN
-            value: MrvmHdyxqAAwOfHF0UuK-mBSDfMnrqgzo-qoLuLWcu8
+            value: ciON55kyxLulY85A2VOOIWX7QjCPN8G23dzERsLM_ak
           - name: MATRIX_USER
             value: botalertmanager
           - name: MENTION_ROOM
