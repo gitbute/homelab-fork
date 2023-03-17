@@ -15,6 +15,7 @@ grafana:
       - secretName: grafana-general-tls
         hosts:
           - *host
+  sidecar.dashboards.searchNamespace: ALL
   plugins:
     - grafana-worldmap-panel
     - grafana-clock-panel
