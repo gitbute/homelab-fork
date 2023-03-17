@@ -10,7 +10,7 @@ graylog:
             port: 1514
     elasticsearch:
       version: "7"
-      hosts: "http://elasticsearch-master.elasticsearch.svc.cluster.local"
+      hosts: "http://elasticsearch-master.elasticsearch.svc.cluster.local:9200"
       # uriSSL: true
     geoip:
       enabled: true
