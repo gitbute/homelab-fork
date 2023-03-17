@@ -1,3 +1,15 @@
+dendrite_config:
+  version: 2
+  global:
+    server_name: &host matrix.tribz.cloud
+postgresql:
+  enabled: true
+  persistence:
+    enabled: true
+    storageClass: longhorn
+    accessModes:
+      - ReadWriteOnce
+    size: 5Gi
 ingress:
   enabled: true
   className: nginx
@@ -8,7 +20,7 @@ ingress:
     nginx.ingress.kubernetes.io/proxy-body-size: 32m
     hajimari.io/enable: 'false'
   hosts:
-    - host: &host matrix.tribz.cloud
+    - host: *host
       paths:
         - path: /
           pathType: Prefix
