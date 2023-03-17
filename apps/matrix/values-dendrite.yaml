@@ -43,3 +43,6 @@ prometheus:
     enabled: true
     labels:
       release: "monitoring-system"
+grafana:
+  dashboards:
+    enabled: true
