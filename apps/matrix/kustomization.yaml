@@ -10,7 +10,7 @@ helmCharts:
   valuesFile: values-elementweb.yaml
   includeCRDs: true
 - name: dendrite
-  repo: https://github.com/matrix-org/dendrite
+  repo: https://matrix-org.github.io/dendrite/charts
   version: "0.12.0"
   releaseName: matrix
   namespace: matrix
