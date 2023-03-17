@@ -2,6 +2,8 @@ dendrite_config:
   version: 2
   global:
     server_name: &host matrix.tribz.cloud
+    metrics:
+      enabled: true
   client_api:
     registration_disabled: false
 persistence:
