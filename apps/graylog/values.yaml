@@ -10,8 +10,8 @@ graylog:
             port: 1514
     elasticsearch:
       version: "7"
-      hosts: "https://elasticsearch.tribz.cloud"
-      uriSSL: true
+      hosts: "http://elasticsearch-master.elasticsearch.svc.cluster.local"
+      # uriSSL: true
     geoip:
       enabled: true
       mmdbUri: "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&license_key=XRWrq0GbEsyJP012&suffix=tar.gz"
