@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: landingpage
-          image: core.harbor.tribz.cloud/homelab/landingpage:latest
+          image: core.harbor.tribz.cloud/homelab/homelab-landingpage:latest
           ports:
             - containerPort: 80
