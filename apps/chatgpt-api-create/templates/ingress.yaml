@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name:  chatgpt-api-create
+  namespace: chatgpt-api-create
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    # external-dns.alpha.kubernetes.io/target: "homelab-tunnel.tribz.cloud"
+    # external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
+    hajimari.io/appName: chatgpt-api-create
+    hajimari.io/icon: multimedia
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - chatgpt-api-create.tribz.cloud
+      secretName: chatgpt-api-create-tls-certificate
+  rules:
+    - host: chatgpt-api-create.tribz.cloud
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: chatgpt-api-create
+                port:
+                  number: 3000

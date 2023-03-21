@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatgpt-api-create
+  labels:
+    app: chatgpt-api-create
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: chatgpt-api-create
+  template:
+    metadata:
+      labels:
+        app: chatgpt-api-create
+    spec:
+      containers:
+      - name: chatgpt-api-create
+        image: core.harbor.tribz.cloud/homelab/node-chatgpt-api-create:latest
+        env:
+          - name: TZ
+            value: "Europe/Zurich"
