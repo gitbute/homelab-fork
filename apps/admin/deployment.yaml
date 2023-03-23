@@ -26,7 +26,7 @@ spec:
             - |
               echo starting init;
               yum install unzip -y;
-              curl -LO https://dl.k8s.io/v1.24.10/bin/linux/amd64/kubectl;
+              curl -LO https://dl.k8s.io/v1.25.4/bin/linux/amd64/kubectl;
               chmod +x kubectl;
               mv ./kubectl /bin/kubectl;
               mkdir ~/.kube;
