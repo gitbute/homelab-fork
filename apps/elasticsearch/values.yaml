@@ -27,3 +27,6 @@ elasticsearch:
      - secretName: elasticsearch-tls-certificate
        hosts:
          - *host
+  esConfig:
+    elasticsearch.yml: |
+      xpack.security.enabled: false
