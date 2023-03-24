@@ -20,6 +20,7 @@ nextcloud:
       external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
       hajimari.io/appName: Nextcloud
       hajimari.io/icon: google-drive
+      nginx.ingress.kubernetes.io/proxy-body-size: 8G
   postgresql:
     enabled: true
     global:
