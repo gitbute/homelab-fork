@@ -8,10 +8,10 @@ nextcloud:
   metrics:
     enabled: true
   ingress:
-    enable: true
-    className: nginx
-    hosts:
-      - *host
+    enabled: true
+    # className: nginx
+    # hosts:
+    #   - *host
     tls:
       - secretName: nextcloud-tls-certificate
         hosts:
