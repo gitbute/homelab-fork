@@ -2,9 +2,10 @@ nextcloud:
   nextcloud:
     host: &host nextcloud.tribz.cloud
     username: admin
-    password: admin
+    password: changeme
   persistence:
     enabled: true
+    # size: 5Gi
   metrics:
     enabled: true
   ingress:
@@ -28,3 +29,15 @@ nextcloud:
     #   - secretName: nextcloud-tls-certificate
     #     hosts:
     #       - nextcloud.tribz.cloud
+  postgresql:
+    enabled: true
+    global:
+      postgresql:
+        auth:
+          username: nextcloud
+          password: changeme
+          database: nextcloud
+    primary:
+      persistence:
+        enabled: true
+        # size: 5Gi
