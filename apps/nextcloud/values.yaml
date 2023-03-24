@@ -5,14 +5,10 @@ nextcloud:
     password: changeme
   persistence:
     enabled: true
-    # size: 5Gi
   metrics:
     enabled: true
   ingress:
     enabled: true
-    # className: nginx
-    # hosts:
-    #   - *host
     tls:
       - secretName: nextcloud-tls-certificate
         hosts:
@@ -24,11 +20,6 @@ nextcloud:
       external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
       hajimari.io/appName: Nextcloud
       hajimari.io/icon: google-drive
-      # nginx.ingress.kubernetes.io/proxy-body-size: "10g"
-    # tls:
-    #   - secretName: nextcloud-tls-certificate
-    #     hosts:
-    #       - nextcloud.tribz.cloud
   postgresql:
     enabled: true
     global:
@@ -40,4 +31,3 @@ nextcloud:
     primary:
       persistence:
         enabled: true
-        # size: 5Gi
