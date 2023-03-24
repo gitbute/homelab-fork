@@ -31,3 +31,5 @@ nextcloud:
     primary:
       persistence:
         enabled: true
+  phpClientHttpsFix:
+    enabled: true
