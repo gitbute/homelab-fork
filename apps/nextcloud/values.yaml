@@ -17,7 +17,7 @@ nextcloud:
       hajimari.io/appName: Nextcloud
       hajimari.io/icon: google-drive
       # nginx.ingress.kubernetes.io/proxy-body-size: "10g"
-  tls:
-    - secretName: nextcloud-tls-certificate
-      hosts:
-        - nextcloud.tribz.cloud
+    tls:
+      - secretName: nextcloud-tls-certificate
+        hosts:
+          - nextcloud.tribz.cloud
