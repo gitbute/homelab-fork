@@ -1,7 +1,0 @@
-apiVersion: v2
-name: seafile
-version: 0.0.0
-dependencies:
-  - name: seafile
-    version: "> 0.0.0"
-    repository: https://300481.github.io/charts/

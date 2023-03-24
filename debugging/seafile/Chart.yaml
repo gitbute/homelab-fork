@@ -3,5 +3,5 @@ name: seafile
 version: 0.0.0
 dependencies:
   - name: seafile
-    version: "> 1.0.0"
-    repository: https://k8s-at-home.com/charts
+    version: "> 0.0.0"
+    repository: https://300481.github.io/charts/

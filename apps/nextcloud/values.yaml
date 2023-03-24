@@ -1,0 +1,23 @@
+nextcloud:
+  nextcloud:
+    host: nextcloud.tribz.cloud
+    username: admin
+    password: admin
+  persistence:
+    enabled: true
+  metrics:
+    enabled: true
+  ingress:
+    enable: true
+    annotations:
+      kubernetes.io/ingress.class: "nginx"
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      # external-dns.alpha.kubernetes.io/target: "homelab-tunnel.tribz.cloud"
+      # external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
+      hajimari.io/appName: Nextcloud
+      hajimari.io/icon: google-drive
+      # nginx.ingress.kubernetes.io/proxy-body-size: "10g"
+  tls:
+    - secretName: nextcloud-tls-certificate
+      hosts:
+        - nextcloud.tribz.cloud
