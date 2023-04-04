@@ -1,11 +1,11 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
   name: xmrig
   labels:
     app: xmrig
 spec:
-  replicas: 4
+  # replicas: 4
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -30,10 +30,10 @@ spec:
               value: gulf.moneroocean.stream:10128
             - name: DONATE_LEVEL
               value: "0"
-            # - name: PRIORITY
-            #   value: "0"
-            # - name: THREADS
-            #   value: "4"
+            - name: PRIORITY
+              value: "0"
+            - name: THREADS
+              value: "2"
           resources:
             requests:
               memory: "2048Mi"
