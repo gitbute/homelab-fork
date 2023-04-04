@@ -25,7 +25,7 @@ spec:
             - name: POOL_PASS
               valueFrom:
                 fieldRef:
-                  fieldPath: metadata.name
+                  fieldPath: spec.nodename
             - name: POOL_URL
               value: gulf.moneroocean.stream:10128
             - name: DONATE_LEVEL
@@ -37,10 +37,10 @@ spec:
           resources:
             requests:
               memory: "2048Mi"
-              cpu: "500m"
+              cpu: "1000m"
             limits:
               memory: "6144Mi"
-              cpu: "1000m"
+              cpu: "1500m"
           ports:
             - name: http
               containerPort: 3000
