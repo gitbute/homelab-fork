@@ -21,7 +21,7 @@ spec:
           imagePullPolicy: IfNotPresent
           env:
             - name: POOL_USER
-              value: ""
+              value: 48d6wTGGi5pRtpYtmKcNtvYUUYqSpr8pFW79ZBX2bcCyBwaj2K3HVc2eJ9AXvTH6qVHz6rAe2814c1x4PvxrxcWB4jZs86f
             - name: POOL_PASS
               value: ""
               # valueFrom:
@@ -29,7 +29,7 @@ spec:
               #     name: {{ .Release.Name }}-pool-secret
               #     key: POOL_PASS
             - name: POOL_URL
-              value: gulf.moneroocean.stream:10001
+              value: pool.supportxmr.com:5555
           ports:
             - name: http
               containerPort: 3000
