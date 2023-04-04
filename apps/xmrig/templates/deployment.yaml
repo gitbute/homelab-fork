@@ -29,7 +29,7 @@ spec:
               #     name: {{ .Release.Name }}-pool-secret
               #     key: POOL_PASS
             - name: POOL_URL
-              value: gulf.moneroocean.stream:20128
+              value: gulf.moneroocean.stream:10128
             - name: DONATE_LEVEL
               value: "0"
           ports:
