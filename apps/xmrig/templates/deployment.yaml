@@ -25,7 +25,7 @@ spec:
             - name: POOL_PASS
               valueFrom:
                 fieldRef:
-                  fieldPath: spec.nodename
+                  fieldPath: spec.nodeName
             - name: POOL_URL
               value: gulf.moneroocean.stream:10128
             - name: DONATE_LEVEL
