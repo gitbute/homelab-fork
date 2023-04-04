@@ -35,10 +35,10 @@ spec:
               containerPort: 3000
               protocol: TCP
           livenessProbe:
-            httpGet:
-              path: /
+            tcpSocket:
+              host:
               port: 3000
           readinessProbe:
-            httpGet:
-              path: /
+            tcpSocket:
+              host:
               port: 3000
