@@ -30,6 +30,9 @@ spec:
               #     key: POOL_PASS
             - name: POOL_URL
               value: pool.supportxmr.com:5555
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsUser: 0
           ports:
             - name: http
               containerPort: 3000
