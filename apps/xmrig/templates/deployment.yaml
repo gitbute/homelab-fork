@@ -23,15 +23,20 @@ spec:
             - name: POOL_USER
               value: 48d6wTGGi5pRtpYtmKcNtvYUUYqSpr8pFW79ZBX2bcCyBwaj2K3HVc2eJ9AXvTH6qVHz6rAe2814c1x4PvxrxcWB4jZs86f
             - name: POOL_PASS
-              value: ""
-              # valueFrom:
-              #   secretKeyRef:
-              #     name: {{ .Release.Name }}-pool-secret
-              #     key: POOL_PASS
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
             - name: POOL_URL
               value: gulf.moneroocean.stream:10128
             - name: DONATE_LEVEL
               value: "0"
+          resources:
+            requests:
+              memory: "2048Mi"
+              cpu: "1000m"
+            limits:
+              memory: "6144Mi"
+              cpu: "5000m"
           ports:
             - name: http
               containerPort: 3000
