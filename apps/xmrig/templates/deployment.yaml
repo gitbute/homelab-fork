@@ -33,7 +33,7 @@ spec:
             - name: PRIORITY
               value: "0"
             - name: THREADS
-              value: "2"
+              value: "1"
           resources:
             requests:
               memory: "2048Mi"
