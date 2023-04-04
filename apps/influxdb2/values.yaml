@@ -25,3 +25,5 @@ influxdb2:
     size: 5Gi
     mountPath: /var/lib/influxdb2
     subPath: ""
+  pdb:
+    create: false
