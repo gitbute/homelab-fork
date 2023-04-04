@@ -32,9 +32,6 @@ spec:
               value: gulf.moneroocean.stream:5555
             - name: DONATE_LEVEL
               value: "0"
-          securityContext:
-            allowPrivilegeEscalation: true
-            runAsUser: 0
           ports:
             - name: http
               containerPort: 3000
