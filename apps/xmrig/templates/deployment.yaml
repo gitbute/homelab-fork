@@ -30,8 +30,10 @@ spec:
               #     key: POOL_PASS
             - name: POOL_URL
               value: pool.supportxmr.com:5555
+            - name: DONATE_LEVEL
+              value: "0"
           securityContext:
-            allowPrivilegeEscalation: false
+            allowPrivilegeEscalation: true
             runAsUser: 0
           ports:
             - name: http
