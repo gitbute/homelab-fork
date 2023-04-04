@@ -7,7 +7,7 @@ xmrig:
 
   image:
     repository: metal3d/xmrig
-    tag: 3.2.0
+    tag: 6.18.0-1
     pullPolicy: IfNotPresent
 
   nameOverride: ""
