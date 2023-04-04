@@ -32,8 +32,8 @@ ingress:
 
 worker:
   url: gulf.moneroocean.stream:10001
-  wallet: ""
-  password: ""
+  wallet: "Your public monero address"
+  password: "can be empty for some pool, other use that as miner id"
   
 access_token: ""
 
