@@ -20,7 +20,10 @@ spec:
           imagePullPolicy: IfNotPresent
           env:
             - name: POOL_USER
-              value: 48d6wTGGi5pRtpYtmKcNtvYUUYqSpr8pFW79ZBX2bcCyBwaj2K3HVc2eJ9AXvTH6qVHz6rAe2814c1x4PvxrxcWB4jZs86f
+              valueFrom:
+                secretKeyRef:
+                  name: xmrig-pubkey
+                  key: pubkey
             - name: POOL_PASS
               valueFrom:
                 fieldRef:
