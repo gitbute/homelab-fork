@@ -1,7 +1,0 @@
-apiVersion: v2
-name: xmrig
-version: 0.0.0
-dependencies:
-  - name: xmrig
-    version: 0.3.2
-    repository: https://raw.githubusercontent.com/metal3d/docker-xmrig/master

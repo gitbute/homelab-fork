@@ -1,25 +1,5 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-
-helmCharts:
-- name: xmrig
-  repo: https://raw.githubusercontent.com/metal3d/docker-xmrig/master
-  version: 0.3.2
-  releaseName: xmrig
-  namespace: xmrig
-  valuesFile: values.yaml
-  includeCRDs: true
-
-patchesJson6902:
-  - target:
-      group: ""
-      version: v1
-      kind: Secret
-      name: xmrig-pool-secret
-    patch: |-
-      - op: remove
-        path: ""
-
 resources:
   - templates
