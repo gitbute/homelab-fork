@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xmrig
+  labels:
+    app: xmrig
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: xmrig
+  template:
+    metadata:
+      labels:
+        app: xmrig
+    spec:
+      containers:
+        - name: xmrig
+          image: metal3d/xmrig:6.18.0-1
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: POOL_USER
+              value: ""
+            - name: POOL_PASS
+              value: ""
+              # valueFrom:
+              #   secretKeyRef:
+              #     name: {{ .Release.Name }}-pool-secret
+              #     key: POOL_PASS
+            - name: POOL_URL
+              value: gulf.moneroocean.stream:10001
+          ports:
+            - name: http
+              containerPort: 3000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
