@@ -38,6 +38,12 @@ graylog:
       pathType: Prefix
       path: /
     externalUri: https://graylog.tribz.cloud
+  resources:
+    limits:
+      cpu: "1"
+    requests:
+      cpu: "50m"
+      memory: "512Mi"
 tags:
   install-elasticsearch: false
   install-opensearch: false
