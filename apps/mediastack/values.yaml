@@ -157,7 +157,7 @@ lidarr:
             - *host
 sonarr:
   controller:
-    replicas: 0
+    replicas: 1
   env:
     TZ: Europe/Zurich
   persistence:
@@ -254,7 +254,7 @@ prowlarr:
             - *host
 bazarr:
   controller:
-    replicas: 0
+    replicas: 1
   podSecurityContext:
     runAsUser: 911
     runAsGroup: 911
