@@ -107,7 +107,11 @@ prometheus:
           resources:
             requests:
               storage: 50Gi
-    # additionalScrapeConfigs:
+    additionalScrapeConfigs:
+      - job_name: tribute-pc
+        static_configs:
+          - targets:
+            - 192.168.1.10:9182
     # - job_name: 'opnsense-telegraf'
     #   static_configs:
     #     - targets: ['opnsense.tribz.cloud:9273']
