@@ -111,7 +111,7 @@ prometheus:
             requests:
               storage: 50Gi
     additionalScrapeConfigs:
-      - job_name: tribute-pc
+      - job_name: Windows
         static_configs:
           - targets:
             - 192.168.1.10:9182
