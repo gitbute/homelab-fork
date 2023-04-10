@@ -98,6 +98,7 @@ grafana:
       api_url: https://dex.tribz.cloud/userinfo
 prometheus:
   prometheusSpec:
+    enableAdminAPI: true
     ruleSelectorNilUsesHelmValues: false
     serviceMonitorSelectorNilUsesHelmValues: false
     podMonitorSelectorNilUsesHelmValues: false
