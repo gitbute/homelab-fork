@@ -32,3 +32,6 @@ harbor:
   externalURL: https://core.harbor.tribz.cloud
   updateStrategy:
     type: Recreate
+  persistentVolumeClaim:
+    registry:
+      size: "8589934592"
