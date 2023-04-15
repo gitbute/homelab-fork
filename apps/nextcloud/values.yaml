@@ -34,3 +34,6 @@ nextcloud:
         enabled: true
   phpClientHttpsFix:
     enabled: true
+  cronjob:
+    enabled: true
+
