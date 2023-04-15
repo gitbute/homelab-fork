@@ -1,12 +1,11 @@
 nextcloud:
   nextcloud:
     host: &host nextcloud.tribz.cloud
-    username: admin
     existingSecret:
       enabled: true
       secretName: nextcloudadmin
       passwordKey: password
-      usernameKey: admin
+      usernameKey: username
     extraEnv:
       - name: TRUSTED_PROXIES
         value: '10.42.0.0/16'
