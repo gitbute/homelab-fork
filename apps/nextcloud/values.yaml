@@ -10,6 +10,9 @@ nextcloud:
     enabled: true
   metrics:
     enabled: true
+    https: true
+    serviceMonitor:
+      enabled: true
   ingress:
     enabled: true
     tls:
