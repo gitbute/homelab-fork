@@ -3,6 +3,9 @@ nextcloud:
     host: &host nextcloud.tribz.cloud
     username: admin
     password: changeme
+    extraEnv:
+      - name: TRUSTED_PROXIES
+        value: '10.42.0.0/16'
   persistence:
     enabled: true
   metrics:
