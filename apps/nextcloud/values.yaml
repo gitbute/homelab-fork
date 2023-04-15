@@ -14,6 +14,7 @@ nextcloud:
   metrics:
     enabled: true
     https: true
+    timeout: 15s
     serviceMonitor:
       enabled: true
   ingress:
