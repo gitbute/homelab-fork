@@ -36,4 +36,14 @@ nextcloud:
     enabled: true
   cronjob:
     enabled: true
+  internalDatabase:
+    enabled: false
 
+  externalDatabase:
+    enabled: true
+    type: postgresql
+    host: nextcloud-postgresql.nextcloud.svc.cluster.local
+    user: nextcloud
+    password: changeme
+    database: nextcloud
+  
