@@ -20,7 +20,7 @@ guacamole:
         hosts:
           - *host
   postgresql:
-    hostname: guacamole-postgresql-0
+    hostname:  guacamole-postgresql.guacamole.svc.cluster.local
     # volumeClaimTemplates:
     #   db:
     #     enabled: true
