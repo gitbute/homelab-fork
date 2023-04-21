@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name:  mediastack-jellyseerr
+  namespace: mediastack
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    # external-dns.alpha.kubernetes.io/target: "homelab-tunnel.tribz.cloud"
+    # external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
+    hajimari.io/appName: jellyseerr
+    hajimari.io/icon: multimedia
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - jellyseerr.tribz.cloud
+      secretName: jellyseerr-tls-certificate
+  rules:
+    - host: jellyseerr.tribz.cloud
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: jellyseerr
+                port:
+                  number: 5055

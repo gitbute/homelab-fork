@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mediastack-jellyseerr
+  namespace: mediastack
+spec:
+  ports:
+    - protocol: TCP
+      port: 5055
+      targetPort: http
+  selector:
+    app: jellyseerr

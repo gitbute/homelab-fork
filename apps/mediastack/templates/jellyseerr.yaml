@@ -15,6 +15,10 @@ spec:
       labels:
         app: jellyseerr
     spec:
+      volumes:
+        - name: jellyseerr-config
+          persistentVolumeClaim:
+           claimName: jellyseerr-config
       containers:
       - name: jellyseerr
         image: fallenbagel/jellyseerr:latest
@@ -23,3 +27,6 @@ spec:
             value: Europe/Zurich
         ports:
         - containerPort: 5055
+        volumeMounts:
+          - mountPath: /app/config
+            name: jellyseerr-config
