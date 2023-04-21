@@ -5,3 +5,6 @@ dependencies:
   - name: guacamole
     version: 1.4.*
     repository: https://charts.beryju.org
+  - name: postgresql
+    version: 12.2.*
+    repository: https://charts.bitnami.com/bitnami

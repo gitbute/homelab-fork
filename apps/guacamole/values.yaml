@@ -29,4 +29,4 @@ postgresql:
   auth:
     username: guacamole
     postgresPassword: password
-    database: wait
+    database: guacamole
