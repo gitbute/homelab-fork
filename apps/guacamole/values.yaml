@@ -19,7 +19,7 @@ guacamole:
       - secretName: guacamole-tls-certificate
         hosts:
           - *host
-  postgresql:
+  postgres:
     hostname:  guacamole-postgresql.guacamole.svc.cluster.local
     # volumeClaimTemplates:
     #   db:
