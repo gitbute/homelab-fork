@@ -2,6 +2,9 @@ guacamole:
   # env:
   #   TZ: Europe/Zurich
   #   GUACD_HOSTNAME: guacamole-guacd.guacamole
+  guacamole:
+    settings:
+      POSTGRES_HOSTNAME: guacamole-postgresql.guacamole.svc.cluster.local
   ingress:
     enabled: true
     className: nginx
@@ -20,7 +23,7 @@ guacamole:
         hosts:
           - *host
   postgres:
-    hostname:  guacamole-postgresql.guacamole.svc.cluster.local
+    hostname: guacamole-postgresql.guacamole.svc.cluster.local
     # volumeClaimTemplates:
     #   db:
     #     enabled: true
