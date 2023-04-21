@@ -1,7 +1,4 @@
 guacamole:
-  # env:
-  #   TZ: Europe/Zurich
-  #   GUACD_HOSTNAME: guacamole-guacd.guacamole
   guacamole:
     settings:
       POSTGRES_HOSTNAME: guacamole-postgresql.guacamole.svc.cluster.local
@@ -12,23 +9,16 @@ guacamole:
       cert-manager.io/cluster-issuer: letsencrypt-prod
       hajimari.io/appName: Guacamole
       hajimari.io/icon: remote-desktop
-      # nginx.ingress.kubernetes.io/app-root: /guacamole
     hosts:
       - host: &host guacamole.tribz.cloud
         paths:
           - /
-            # pathType: Prefix
     tls:
       - secretName: guacamole-tls-certificate
         hosts:
           - *host
   postgres:
     hostname: guacamole-postgresql.guacamole.svc.cluster.local
-    # volumeClaimTemplates:
-    #   db:
-    #     enabled: true
-    #     mountPath: "/bitnami/postgresql"
-    #     size: 2Gi
 postgresql:
   auth:
     username: guacamole
