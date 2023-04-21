@@ -19,7 +19,8 @@ guacamole:
       - secretName: guacamole-tls-certificate
         hosts:
           - *host
-  # postgresql:
+  postgresql:
+    hostname: guacamole-postgresql-0
     # volumeClaimTemplates:
     #   db:
     #     enabled: true
