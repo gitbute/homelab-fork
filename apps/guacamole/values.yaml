@@ -12,7 +12,7 @@ guacamole:
       cert-manager.io/cluster-issuer: letsencrypt-prod
       hajimari.io/appName: Guacamole
       hajimari.io/icon: remote-desktop
-      nginx.ingress.kubernetes.io/app-root: /guacamole
+      # nginx.ingress.kubernetes.io/app-root: /guacamole
     hosts:
       - host: &host guacamole.tribz.cloud
         paths:
