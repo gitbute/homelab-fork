@@ -23,6 +23,6 @@ spec:
             pathType: ImplementationSpecific
             backend:
               service:
-                name: jellyseerr
+                name: mediastack-jellyseerr
                 port:
                   number: 8888
