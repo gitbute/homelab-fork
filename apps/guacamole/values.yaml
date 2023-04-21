@@ -25,3 +25,8 @@ guacamole:
     #     enabled: true
     #     mountPath: "/bitnami/postgresql"
     #     size: 2Gi
+postgresql:
+  auth:
+    username: guacamole
+    postgresPassword: password
+    database: wait
