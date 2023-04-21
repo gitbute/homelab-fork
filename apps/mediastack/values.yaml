@@ -94,6 +94,11 @@ jellyfin:
         external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
         hajimari.io/appName: Jellyfin
         hajimari.io/icon: multimedia
+        nginx.ingress.kubernetes.io/server-snippet: |
+          location ~* /metrics {
+              deny all;
+              return 403;
+            }
       hosts:
         - host: &host jellyfin.tribz.cloud
           paths:

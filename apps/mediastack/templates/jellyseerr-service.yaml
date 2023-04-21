@@ -6,7 +6,7 @@ metadata:
 spec:
   ports:
     - protocol: TCP
-      port: 5055
-      targetPort: http
+      port: 8888
+      targetPort: 5055
   selector:
     app: jellyseerr
