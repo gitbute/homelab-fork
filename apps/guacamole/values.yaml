@@ -12,9 +12,9 @@ guacamole:
       nginx.ingress.kubernetes.io/app-root: /guacamole
     hosts:
       - host: &host guacamole.tribz.cloud
-        paths:
-          - path: /
-            pathType: Prefix
+        # paths:
+        #   - path: /
+        #     pathType: Prefix
     tls:
       - secretName: guacamole-tls-certificate
         hosts:
