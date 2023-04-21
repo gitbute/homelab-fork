@@ -25,4 +25,4 @@ spec:
               service:
                 name: jellyseerr
                 port:
-                  number: 5055
+                  number: 8888
