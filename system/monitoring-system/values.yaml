@@ -116,6 +116,10 @@ prometheus:
         static_configs:
           - targets:
             - 192.168.1.10:9182
+      - job_name: dendrite
+        static_configs:
+          - targets: 
+            - matrix-dendrite.matrix.svc.cluster.local
     # - job_name: 'opnsense-telegraf'
     #   static_configs:
     #     - targets: ['opnsense.tribz.cloud:9273']
