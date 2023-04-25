@@ -42,7 +42,8 @@ argo-cd:
         selector: 
           prometheus: monitoring-system
   controller:
-    metrics: *metrics
+    metrics:
+      *metrics
   dex:
     enabled: false
   repoServer:
