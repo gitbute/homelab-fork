@@ -34,13 +34,15 @@ argo-cd:
         - secretName: argocd-tls-certificate
           hosts:
             - *host
-    metrics:
+    metrics: &metrics
       enabled: true
       serviceMonitor:
       # -- Enable a prometheus ServiceMonitor
         enabled: true
         selector: 
           prometheus: monitoring-system
+  controller:
+    metrics: *metrics
   dex:
     enabled: false
   repoServer:
