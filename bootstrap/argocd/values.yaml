@@ -36,6 +36,9 @@ argo-cd:
             - *host
     metrics:
       enabled: true
+      serviceMonitor:
+      # -- Enable a prometheus ServiceMonitor
+        enabled: true
   dex:
     enabled: false
   repoServer:
