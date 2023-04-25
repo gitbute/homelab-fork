@@ -39,6 +39,8 @@ argo-cd:
       serviceMonitor:
       # -- Enable a prometheus ServiceMonitor
         enabled: true
+        selector: 
+          prometheus: monitoring-system
   dex:
     enabled: false
   repoServer:
