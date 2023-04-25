@@ -1,10 +1,5 @@
 argo-cd:
   server:
-    # containerPorts:
-    #   # -- Server container port
-    #   server: 8080
-    #   # -- Metrics container port
-    #   metrics: 8083
     env:
       - name: "TZ"
         value: "Europe/Zurich"
