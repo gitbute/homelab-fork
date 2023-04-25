@@ -11,7 +11,7 @@ helmCharts:
   includeCRDs: true
 - name: dendrite
   repo: https://matrix-org.github.io/dendrite/
-  version: 0.11.2
+  version: 0.12.2
   releaseName: matrix
   namespace: matrix
   valuesFile: values-dendrite.yaml
