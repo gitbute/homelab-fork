@@ -39,9 +39,8 @@ argo-cd:
         - secretName: argocd-tls-certificate
           hosts:
             - *host
-    # metrics:
-    #   # -- Deploy metrics service
-    #   enabled: false
+    metrics:
+      enabled: true
     #   service:
     #     # -- Metrics service annotations
     #     annotations: {}
