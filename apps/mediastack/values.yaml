@@ -75,6 +75,7 @@ jellyfin:
   image:
     repository: lscr.io/linuxserver/jellyfin
     tag: latest
+    pullPolicy: Always
   persistence:
     config:
       enabled: true
