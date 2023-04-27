@@ -38,8 +38,8 @@ radarr:
   env:
     TZ: Europe/Zurich
   image:
-    repository: lscr.io/linuxserver/radarr
-    tag: develop
+    repository: linuxserver/radarr
+    tag: latest
   persistence:
     config:
       enabled: true
@@ -73,7 +73,7 @@ jellyfin:
   env:
     TZ: Europe/Zurich
   image:
-    repository: lscr.io/linuxserver/jellyfin
+    repository: linuxserver/jellyfin
     tag: latest
     pullPolicy: Always
   persistence:
@@ -141,8 +141,8 @@ lidarr:
       mountPath: /data
       existingClaim: mediastack-data
   image:
-    repository: lscr.io/linuxserver/lidarr
-    tag: develop
+    repository: linuxserver/lidarr
+    tag: latest
   ingress:
     main:
       enabled: true
@@ -208,8 +208,8 @@ readarr:
       mountPath: /data
       existingClaim: mediastack-data
   image:
-    repository: lscr.io/linuxserver/readarr
-    tag: develop
+    repository: linuxserver/readarr
+    tag: latest
   ingress:
     main:
       enabled: true
@@ -242,8 +242,8 @@ prowlarr:
       mountPath: /data
       existingClaim: mediastack-data
   image:
-    repository: lscr.io/linuxserver/prowlarr
-    tag: develop
+    repository: linuxserver/prowlarr
+    tag: latest
   ingress:
     main:
       enabled: true
