@@ -263,9 +263,9 @@ prowlarr:
           hosts:
             - *host
 bazarr:
-  image:
-    repository: linuxserver/bazarr
-    tag: latest
+  # image:
+  #   repository: linuxserver/bazarr
+  #   tag: latest
   controller:
     replicas: 1
   podSecurityContext:
