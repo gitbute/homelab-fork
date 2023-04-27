@@ -7,7 +7,7 @@ metadata:
 spec:
   storageClassName: freenas-nfs-csi-retain
   capacity:
-    storage: 2500Gi
+    storage: 4000Gi
   csi:
     driver: org.democratic-csi.nfs
     volumeHandle: pvc-56cd033e-c12f-425f-8c87-dbaaf4785386
