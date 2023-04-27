@@ -209,7 +209,7 @@ readarr:
       existingClaim: mediastack-data
   image:
     repository: linuxserver/readarr
-    tag: latest
+    tag: develop
   ingress:
     main:
       enabled: true
