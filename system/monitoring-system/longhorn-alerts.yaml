@@ -84,7 +84,7 @@ spec:
         description: Longhorn node {{$labels.node}} has CPU Usage / CPU capacity is {{$value}}% for
           more than 5 minutes.
         summary: Longhorn node {{$labels.node}} experiences high CPU pressure for more than 5m.
-      expr: (longhorn_node_cpu_usage_millicpu / longhorn_node_cpu_capacity_millicpu) * 100 > 90
+      expr: (longhorn_node_cpu_usage_millicpu / longhorn_node_cpu_capacity_millicpu) * 100 > 95
       for: 5m
       labels:
         issue: Longhorn node {{$labels.node}} experiences high CPU pressure.
