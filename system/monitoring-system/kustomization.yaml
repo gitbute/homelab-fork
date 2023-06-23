@@ -9,7 +9,7 @@ resources:
 helmCharts:
 - name: kube-prometheus-stack
   repo: https://prometheus-community.github.io/helm-charts
-  version: 46.*.*
+  version: 47.*.*
   releaseName: monitoring-system
   namespace: monitoring-system
   valuesFile: values.yaml
