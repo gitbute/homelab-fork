@@ -22,7 +22,7 @@ spec:
             - name: TZ
               value: Europe/Zurich
             - name: ALWAYS_UPDATE_ON_START
-              value: 1
+              value: "1"
           ports:
             - containerPort: 8766
               protocol: UDP
