@@ -18,3 +18,6 @@ ingress-nginx:
   udp:
     1514: graylog/graylog-syslog-udp:1514
     2350: trackmania/trackmania:2350
+    8766: sons-of-the-forest/sons-of-the-forest:8766
+    27016: sons-of-the-forest/sons-of-the-forest:27016
+    9700: sons-of-the-forest/sons-of-the-forest:9700
