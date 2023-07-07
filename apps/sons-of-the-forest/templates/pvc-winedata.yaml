@@ -8,7 +8,7 @@ spec:
   #  name: xyz # for restore purposes --> make pvc from old pv in longhorn
   #  kind: PersistentVolumeClaim
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 2Gi
