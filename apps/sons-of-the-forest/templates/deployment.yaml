@@ -41,10 +41,8 @@ spec:
           volumeMounts:
           - mountPath: /steamcmd
             name: sons-of-the-forest-steamcmd
-          volumeMounts:
           - mountPath: /sonsoftheforest
             name: sons-of-the-forest-game
-          volumeMounts:
           - mountPath: /winedata
             name: sons-of-the-forest-winedata
       volumes:
