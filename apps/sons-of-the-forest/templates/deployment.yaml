@@ -17,9 +17,6 @@ spec:
     spec:
       containers:
         - name: sons-of-the-forest
-          resources:
-            limits:
-              gpu.intel.com/i915: 1
           image: jammsen/sons-of-the-forest-dedicated-server:latest
           env:
             - name: TZ
