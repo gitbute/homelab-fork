@@ -38,10 +38,22 @@ spec:
           #   initialDelaySeconds: 10
           #   periodSeconds: 5
           #   timeoutSeconds: 5
-          # volumeMounts:
-          # - mountPath: /server/UserData
-          #   name: trackmania-serverdata
-      # volumes:
-      #   - name: trackmania-serverdata
-      #     persistentVolumeClaim:
-      #      claimName: trackmania-serverdata
+          volumeMounts:
+          - mountPath: /steamcmd
+            name: sons-of-the-forest-steamcmd
+          volumeMounts:
+          - mountPath: /sonsoftheforest
+            name: sons-of-the-forest-game
+          volumeMounts:
+          - mountPath: /winedata
+            name: sons-of-the-forest-winedata
+      volumes:
+        - name: sons-of-the-forest-steamcmd
+          persistentVolumeClaim:
+           claimName: sons-of-the-forest-steamcmd
+        - name: sons-of-the-forest-game
+          persistentVolumeClaim:
+           claimName: sons-of-the-forest-game
+        - name: sons-of-the-forest-winedata
+          persistentVolumeClaim:
+           claimName: sons-of-the-forest-winedata

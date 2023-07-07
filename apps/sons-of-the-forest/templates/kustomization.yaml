@@ -4,3 +4,6 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
+  - pvc-game.yaml
+  - pvc-steamcmd.yaml
+  - pvc-winedata.yaml
