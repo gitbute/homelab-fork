@@ -17,6 +17,9 @@ spec:
     spec:
       containers:
         - name: sons-of-the-forest
+          securityContext:
+            allowPrivilegeEscalation: true
+            runAsUser: 0
           image: jammsen/sons-of-the-forest-dedicated-server:latest
           env:
             - name: TZ
