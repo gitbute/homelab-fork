@@ -8,7 +8,7 @@
 # Download and apply manifest
 - name: Download MetalLB manifest to the cluster.
   ansible.builtin.get_url:
-    url: https://raw.githubusercontent.com/metallb/metallb/v0.13.7/config/manifests/metallb-native.yaml
+    url: https://raw.githubusercontent.com/metallb/metallb/v0.13.10/config/manifests/metallb-native.yaml
     dest: ~/metallb-native.yaml
     mode: '0664'
 
