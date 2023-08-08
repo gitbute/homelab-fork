@@ -10,5 +10,5 @@ spec:
   storageClassName: freenas-nfs-csi-retain
   resources:
     requests:
-      storage: 4000Gi
+      storage: 6000Gi
   volumeName: pvc-56cd033e-c12f-425f-8c87-dbaaf4785386
