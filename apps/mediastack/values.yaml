@@ -3,6 +3,9 @@ qbittorrent:
     replicas: 0
   env:
     TZ: Europe/Zurich
+  image:
+    repository: linuxserver/radarr
+    tag: latest
   persistence:
     config:
       enabled: true
