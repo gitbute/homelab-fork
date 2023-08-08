@@ -4,7 +4,7 @@ qbittorrent:
   env:
     TZ: Europe/Zurich
   image:
-    repository: linuxserver/radarr
+    repository: linuxserver/qbittorrent
     tag: latest
   persistence:
     config:
