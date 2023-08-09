@@ -7,4 +7,4 @@ primary:
   persistence:
     existingClaim: mariadb
 diagnosticMode:
-  enabled: false
+  enabled: true
