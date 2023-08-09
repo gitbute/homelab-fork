@@ -9,6 +9,7 @@ zammad:
       external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
       hajimari.io/appName: Zammad
       hajimari.io/icon: google-drive
+      nginx.ingress.kubernetes.io/proxy-body-size: 8G
     hosts:
       - host: &host helpdesk.tribz.cloud
         paths:
