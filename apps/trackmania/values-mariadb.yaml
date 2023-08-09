@@ -8,3 +8,5 @@ primary:
     existingClaim: mariadb
 diagnosticMode:
   enabled: false
+image:
+  debug: true
