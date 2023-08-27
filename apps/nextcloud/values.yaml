@@ -11,6 +11,7 @@ nextcloud:
         value: '10.42.0.0/16'
   persistence:
     enabled: true
+    size: 35Gi
   metrics:
     enabled: true
     https: true
