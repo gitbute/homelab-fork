@@ -18,3 +18,6 @@ authelia:
       redis:
         enabled: true
         host: authelia-redis-headless.authelia.svc.cluster.local
+redis:
+  auth:
+    enabled: false
