@@ -20,7 +20,7 @@ authelia:
         host: authelia-redis-headless.authelia.svc.cluster.local
     storage:
       postgres:
-        host: authelia-postgres.authelia.svc.cluster.local
+        host: authelia-postgresql.authelia.svc.cluster.local
 redis:
   architecture: standalone
   auth:
