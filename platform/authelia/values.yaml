@@ -1,0 +1,16 @@
+authelia:
+  domain: tribz.cloud
+  ingress:
+    enabled: true
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      hajimari.io/appName: Authelia
+      hajimari.io/icon: git
+    certManager: true
+    className: ingress-nginx
+    subdomain: auth
+    tls:
+      enabled: true
+      secret: authelia-tls-certificate
+  configMap:
+    theme: dark
