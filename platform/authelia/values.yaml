@@ -16,4 +16,4 @@ authelia:
     theme: dark
     redis:
       enabled: true
-      host: redis.authelia.svc.cluster.local
+      host: authelia-redis-headless.authelia.svc.cluster.local
