@@ -14,3 +14,6 @@ authelia:
       secret: authelia-tls-certificate
   configMap:
     theme: dark
+    redis:
+      enabled: true
+      host: redis.authelia.svc.cluster.local
