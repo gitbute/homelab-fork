@@ -28,5 +28,5 @@ redis:
 postgresql:
   auth:
     username: authelia
-    password: authelia
+    password: ""
     database: authelia
