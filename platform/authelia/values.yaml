@@ -18,7 +18,15 @@ authelia:
       redis:
         enabled: true
         host: authelia-redis-headless.authelia.svc.cluster.local
+    storage:
+      postgres:
+        host: authelia-postgres.authelia.svc.cluster.local
 redis:
   architecture: standalone
   auth:
     enabled: false
+postgresql:
+  auth:
+    username: authelia
+    password: ""
+    database: authelia
