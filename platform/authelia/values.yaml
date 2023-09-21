@@ -19,5 +19,6 @@ authelia:
         enabled: true
         host: authelia-redis-headless.authelia.svc.cluster.local
 redis:
+  architecture: standalone
   auth:
     enabled: false
