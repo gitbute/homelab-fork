@@ -8,4 +8,10 @@ keycloak:
       hajimari.io/icon: git
     ingressClassName: ingress-nginx
     hostname: keycloak.tribz.cloud
-    tls: true
+    # tls: true
+    hosts:
+      - &host graylog.tribz.cloud
+    tls:
+      - secretName: graylog-tls-certificate
+        hosts:
+          - *host
