@@ -1,0 +1,11 @@
+keycloak:
+  domain: tribz.cloud
+  ingress:
+    enabled: true
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      hajimari.io/appName: Keycloak
+      hajimari.io/icon: git
+    ingressClassName: ingress-nginx
+    hostname: keycloak.tribz.cloud
+    tls: true
