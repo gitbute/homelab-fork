@@ -9,5 +9,3 @@ keycloak:
     ingressClassName: nginx
     hostname: keycloak.tribz.cloud
     tls: true
-    hosts:
-      - &host graylog.tribz.cloud
