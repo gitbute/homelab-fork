@@ -42,7 +42,7 @@ radarr:
     TZ: Europe/Zurich
   image:
     repository: linuxserver/radarr
-    tag: nightly
+    tag: 5.0.3-nightly
   persistence:
     config:
       enabled: true
