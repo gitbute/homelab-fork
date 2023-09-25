@@ -42,7 +42,7 @@ radarr:
     TZ: Europe/Zurich
   image:
     repository: linuxserver/radarr
-    tag: develop
+    tag: latest
   persistence:
     config:
       enabled: true
