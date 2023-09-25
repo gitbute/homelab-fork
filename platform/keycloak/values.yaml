@@ -12,5 +12,5 @@ keycloak:
   postgresql:
     auth:
       password: "pass"
-  externalDatabas:
+  externalDatabase:
     password: "pass"
