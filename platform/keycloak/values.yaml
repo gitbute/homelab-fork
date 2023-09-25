@@ -9,3 +9,8 @@ keycloak:
     ingressClassName: nginx
     hostname: keycloak.tribz.cloud
     tls: true
+  postgresql:
+    auth:
+      password: "pass"
+  externalDatabas:
+    password: "pass"
