@@ -19,7 +19,7 @@ spec:
               image: golang:1.17-alpine
               env:
                 - name: GITEA_HOST
-                  value: http://gitea-http:3000
+                  value: http://gitea-http.gitea.svc.cluster.local:3000
                 - name: GITEA_USER
                   valueFrom:
                     secretKeyRef:
