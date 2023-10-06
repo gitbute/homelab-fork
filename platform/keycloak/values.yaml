@@ -17,3 +17,4 @@ keycloak:
   extraEnvVars:
     - name: KC_HOSTNAME_ADMIN_URL
       value: https://keycloak.tribz.cloud
+  proxy: reencrypt
