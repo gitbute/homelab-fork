@@ -19,4 +19,4 @@ keycloak:
   #     value: https://keycloak.tribz.cloud
   proxy: reencrypt
   auth:
-    adminUser: admin
+    adminUser: user
