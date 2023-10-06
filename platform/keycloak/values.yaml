@@ -14,9 +14,9 @@ keycloak:
       password: "pass"
   externalDatabase:
     password: "pass"
-  # extraEnvVars:
-  #   - name: KC_HOSTNAME_ADMIN_URL
-  #     value: https://keycloak.tribz.cloud
+  extraEnvVars:
+    - name: KEYCLOAK_ADMIN
+      value: user
   proxy: reencrypt
   auth:
     adminUser: user
