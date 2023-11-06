@@ -12,8 +12,7 @@ guacamole:
     hosts:
       - host: &host guacamole.tribz.cloud
         paths:
-          - path: /guacamole
-            pathType: Prefix
+          - /guacamole
     tls:
       - secretName: guacamole-tls-certificate
         hosts:
