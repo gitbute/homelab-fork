@@ -27,6 +27,7 @@ home-assistant:
       enabled: true
       type: configMap
       mountPath: /config/configuration.yaml
+      nameOverride: home-assistant-config
   configmap:
     config:
       enabled: true
