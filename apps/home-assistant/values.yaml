@@ -23,11 +23,10 @@ home-assistant:
     config:
       enabled: true
       size: 2Gi
-    config-file:
+    configfile:
       enabled: true
       type: configMap
       mountPath: /config/configuration.yaml
-      nameOverride: home-assistant-config
   configmap:
     config:
       enabled: true
