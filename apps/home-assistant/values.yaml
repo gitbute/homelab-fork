@@ -31,6 +31,7 @@ home-assistant:
           path: configuration.yaml
       type: configMap
       mountPath:  /config
+      subPath: configuration.yaml
   configmap:
     configfile:
       enabled: true
