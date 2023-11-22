@@ -25,6 +25,7 @@ home-assistant:
       size: 2Gi
     configfile:
       enabled: true
+      name: home-assistant-config
       type: configMap
       mountPath: /config/configuration.yaml
   configmap:
