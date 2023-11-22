@@ -27,15 +27,15 @@ home-assistant:
       enabled: true
       name: home-assistant-configfile
       items:
-        - key: configuration.yaml
+        - key: configuration
           path: configuration.yaml
       type: configMap
-      mountPath:  /config/
+      mountPath:  /config
   configmap:
     configfile:
       enabled: true
       data:
-        configuration.yaml: |
+        configuration: |
           # Loads default set of integrations. Do not remove.
           default_config:
 
