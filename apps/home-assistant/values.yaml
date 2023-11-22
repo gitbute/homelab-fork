@@ -28,7 +28,7 @@ home-assistant:
       name: home-assistant-config
       type: configMap
   configmap:
-    home-assistant-config:
+    config:
       enabled: true
       data:
         configuration.yaml: |
