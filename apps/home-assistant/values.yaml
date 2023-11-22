@@ -30,7 +30,7 @@ home-assistant:
         - key: configuration
           path: configuration.yaml
       type: configMap
-      mountPath:  /config
+      mountPath:  /config/configuration.yaml
       subPath: configuration.yaml
   configmap:
     configfile:
