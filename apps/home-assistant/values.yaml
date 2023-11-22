@@ -25,17 +25,13 @@ home-assistant:
       size: 2Gi
     configfile:
       enabled: true
-      name: home-assistant-configfile
-      items:
-        - key: home-assistant-config
-          path: configuration.yaml
+      name: home-assistant-config
       type: configMap
-      mountPath: /config
   configmap:
-    config:
+    home-assistant-config:
       enabled: true
       data:
-        home-assistant-config: |
+        configuration.yaml: |
           # Loads default set of integrations. Do not remove.
           default_config:
 
