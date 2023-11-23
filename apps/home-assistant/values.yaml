@@ -20,19 +20,19 @@ home-assistant:
   postgresql:
     enabled: true
     postgresqlUsername: home-assistant
-    postgresqlPassword: home-assistant
+    postgresqlPassword: password
     postgresqlDatabase: home-assistant
   lifecycle:
-        postStart:
-          exec:
-            command:
-             - "/bin/sh"
-             - "-c"
-             - "rm configuration.yaml"
-             - "mv configuration.yaml_new configuration.yaml"
-        # preStop:
-        #   exec:
-        #     command: ["/bin/sh","-c","nginx -s quit; while killall -0 nginx; do sleep 1; done"]
+    postStart:
+      exec:
+        command:
+         - "/bin/sh"
+         - "-c"
+         - "rm configuration.yaml;"
+         - "mv configuration.yaml_new configuration.yaml;"
+    # preStop:
+    #   exec:
+    #     command: ["/bin/sh","-c","nginx -s quit; while killall -0 nginx; do sleep 1; done"]
   # initContainers:
   #   home-assistant-datainit:
   #     image: ghcr.io/home-assistant/home-assistant:2023.8.4
@@ -62,7 +62,7 @@ home-assistant:
 
           # Load frontend themes from the themes folder
           frontend:
-          themes: !include_dir_merge_named themes
+            themes: !include_dir_merge_named themes
 
           automation: !include automations.yaml
           script: !include scripts.yaml
@@ -77,7 +77,7 @@ home-assistant:
           
           # Database
           recorder:
-            db_url: "postgresql://home-assistant:home-assistant@home-assistant-postgresql.home-assistant/home-assistant"
+            db_url: "postgresql://home-assistant:password@home-assistant-postgresql.home-assistant/home-assistant"
             db_retry_wait: 15 # Wait 15 seconds before retrying
             exclude:
               domains:
