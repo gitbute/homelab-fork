@@ -91,4 +91,3 @@ home-assistant:
                 - sensor.date
               event_types:
                 - call_service # Don't record service calls
-postgresql:
