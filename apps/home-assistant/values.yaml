@@ -22,12 +22,23 @@ home-assistant:
     postgresqlUsername: home-assistant
     postgresqlPassword: home-assistant
     postgresqlDatabase: home-assistant
-  initContainers:
-    home-assistant-datainit:
-      image: ghcr.io/home-assistant/home-assistant:2023.8.4
-      volumeMounts:
-      - mountPath: /config
-        name: config
+  lifecycle:
+        postStart:
+          exec:
+            command:
+             - "/bin/sh"
+             - "-c"
+             - "rm configuration.yaml"
+             - "mv configuration.yaml_new configuration.yaml"
+        # preStop:
+        #   exec:
+        #     command: ["/bin/sh","-c","nginx -s quit; while killall -0 nginx; do sleep 1; done"]
+  # initContainers:
+  #   home-assistant-datainit:
+  #     image: ghcr.io/home-assistant/home-assistant:2023.8.4
+  #     volumeMounts:
+  #     - mountPath: /config
+  #       name: config
   persistence:
     config:
       enabled: true
@@ -37,10 +48,10 @@ home-assistant:
       name: home-assistant-configfile
       items:
         - key: configuration
-          path: configuration.yaml
+          path: configuration.yaml_new
       type: configMap
-      mountPath:  /config/configuration.yaml
-      subPath: configuration.yaml
+      mountPath:  /config/configuration.yaml_new
+      subPath: configuration.yaml_new
   configmap:
     configfile:
       enabled: true
