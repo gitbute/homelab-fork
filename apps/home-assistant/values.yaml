@@ -20,7 +20,7 @@ home-assistant:
   postgresql:
     enabled: true
   initContainers:
-    - name: home-assistant-datainit
+    home-assistant-datainit:
       image: ghcr.io/home-assistant/home-assistant:2023.8.4
       # command: ["/bin/sh", "-c"]
       # args:
