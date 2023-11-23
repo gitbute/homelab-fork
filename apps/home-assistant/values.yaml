@@ -25,10 +25,6 @@ home-assistant:
   initContainers:
     home-assistant-datainit:
       image: ghcr.io/home-assistant/home-assistant:2023.8.4
-      lifecycle:
-        postStart:
-          exec:
-            command: ["/bin/sh", "-c", "echo finished init"]
       volumeMounts:
       - mountPath: /config
         name: config
