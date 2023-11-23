@@ -25,6 +25,9 @@ home-assistant:
       command: ["/bin/sh", "-c"]
       args:
         - sleep 2;
+          echo executing config-data initialization, letting it run 10 seconds;
+          sleep 10;
+          echo finished, exiting now;
       volumeMounts:
       - mountPath: /config
         name: config
@@ -83,5 +86,5 @@ home-assistant:
 postgresql:
   auth:
     username: home-assistant
-    password: home-assistant
+    password: password
     database: home-assistant
