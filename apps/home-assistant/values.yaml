@@ -19,9 +19,6 @@ home-assistant:
             - *host
   postgresql:
     enabled: true
-    postgresqlUsername: home-assistant
-    postgresqlPassword: home-assistant
-    postgresqlDatabase: home-assistant
   lifecycle:
     postStart:
       exec:
@@ -90,3 +87,8 @@ home-assistant:
                 - sensor.date
               event_types:
                 - call_service # Don't record service calls
+postgresql:
+  auth:
+    username: home-assistant
+    password: password
+    database: home-assistant
