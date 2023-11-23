@@ -77,7 +77,7 @@ home-assistant:
           
           # Database
           recorder:
-            db_url: "postgresql://home-assistant:home-assistant@home-assistant-postgresql.home-assistant/home-assistant"
+            db_url: "postgresql://home-assistant:password@home-assistant-postgresql.home-assistant/home-assistant"
             db_retry_wait: 15 # Wait 15 seconds before retrying
             exclude:
               domains:
