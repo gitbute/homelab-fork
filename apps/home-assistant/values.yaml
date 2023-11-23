@@ -22,9 +22,13 @@ home-assistant:
     postgresqlUsername: home-assistant
     postgresqlPassword: home-assistant
     postgresqlDatabase: home-assistant
-  initContainers:
+  additionalContainers:
     home-assistant-datainit:
       image: ghcr.io/home-assistant/home-assistant:2023.8.4
+      lifecycle:
+        postStart:
+          exec:
+            command: ["/bin/sh", "-c", "echo finished init"]
       volumeMounts:
       - mountPath: /config
         name: config
