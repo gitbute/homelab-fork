@@ -23,7 +23,7 @@ home-assistant:
     postgresqlPassword: password
     postgresqlDatabase: home-assistant
   lifecycle:
-    preStop:
+    postStart:
       exec:
         command: ["/bin/sh","-c","rm /config/configuration.yaml; mv /config/configuration.yaml_new /config/configuration.yaml; echo finished"]
     # preStop:
