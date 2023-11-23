@@ -1,4 +1,6 @@
 home-assistant:
+  hostNetwork: true
+  dnsPolicy: ClusterFirstWithHostNet
   ingress:
     main:
       enabled: true
@@ -30,15 +32,6 @@ home-assistant:
          - "/bin/sh"
          - "-c"
          - "cp -f configuration.yaml_new configuration.yaml"
-    # preStop:
-    #   exec:
-    #     command: ["/bin/sh","-c","nginx -s quit; while killall -0 nginx; do sleep 1; done"]
-  # initContainers:
-  #   home-assistant-datainit:
-  #     image: ghcr.io/home-assistant/home-assistant:2023.8.4
-  #     volumeMounts:
-  #     - mountPath: /config
-  #       name: config
   persistence:
     config:
       enabled: true
