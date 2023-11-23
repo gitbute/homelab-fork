@@ -23,15 +23,15 @@ home-assistant:
     config:
       enabled: true
       size: 2Gi
-    # configfile:
-    #   enabled: true
-    #   name: home-assistant-configfile
-    #   items:
-    #     - key: configuration
-    #       path: configuration.yaml
-    #   type: configMap
-    #   mountPath:  /config/configuration.yaml
-    #   subPath: configuration.yaml
+    configfile:
+      enabled: true
+      name: home-assistant-configfile
+      items:
+        - key: configuration
+          path: configuration.yaml
+      type: configMap
+      mountPath:  /config/configuration.yaml
+      subPath: configuration.yaml
   configmap:
     configfile:
       enabled: true
