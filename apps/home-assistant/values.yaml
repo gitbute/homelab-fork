@@ -25,7 +25,7 @@ home-assistant:
   lifecycle:
     postStart:
       exec:
-        command:
+        command: 
          - "/bin/sh"
          - "-c"
          - "rm configuration.yaml;"
