@@ -22,18 +22,9 @@ home-assistant:
   initContainers:
     home-assistant-datainit:
       image: ghcr.io/home-assistant/home-assistant:2023.8.4
-      # command: ["/bin/sh", "-c"]
-      # args:
-      #   - echo starting datainit;
-      #     ls -la /server/UserData;
-      #     ls -la /datainit;
-      #     if [ -d /datainit/Config ];
-      #       then echo already preseeded;
-      #       else cp -r /server/UserData/. /datainit;
-      #       cp /datainit/Maps/MatchSettings/default.txt /datainit/Maps/MatchSettings/maplist.txt;
-      #     fi;
-      #     ls -la /datainit;
-      #     echo done;
+      command: ["/bin/sh", "-c"]
+      args:
+        - sleep 2;
       volumeMounts:
       - mountPath: /config
         name: config
