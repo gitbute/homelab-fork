@@ -23,7 +23,7 @@ home-assistant:
     postgresqlPassword: password
     postgresqlDatabase: home-assistant
   lifecycle:
-    postStart:
+    preStop:
       exec:
         command: 
          - "/bin/sh"
