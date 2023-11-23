@@ -40,37 +40,37 @@ home-assistant:
           # Loads default set of integrations. Do not remove.
           default_config:
 
-          # # Load frontend themes from the themes folder
-          # frontend:
-          # themes: !include_dir_merge_named themes
+          # Load frontend themes from the themes folder
+          frontend:
+          themes: !include_dir_merge_named themes
 
-          # automation: !include automations.yaml
-          # script: !include scripts.yaml
-          # scene: !include scenes.yaml
-          # http:
-          #   server_host: 0.0.0.0
-          #   ip_ban_enabled: true
-          #   login_attempts_threshold: 5
-          #   use_x_forwarded_for: true
-          #   trusted_proxies:
-          #     - 10.42.0.0/16
+          automation: !include automations.yaml
+          script: !include scripts.yaml
+          scene: !include scenes.yaml
+          http:
+            server_host: 0.0.0.0
+            ip_ban_enabled: true
+            login_attempts_threshold: 5
+            use_x_forwarded_for: true
+            trusted_proxies:
+              - 10.42.0.0/16
           
-          # # Database
-          # recorder:
-          #   db_url: "postgresql://home-assistant:home-assistant@home-assistant-postgresql.home-assistant/home-assistant"
-          #   db_retry_wait: 15 # Wait 15 seconds before retrying
-          #   exclude:
-          #     domains:
-          #       - automation
-          #       - updater
-          #     entity_globs:
-          #       - sensor.weather_*
-          #     entities:
-          #       - sun.sun # Don't record sun data
-          #       - sensor.last_boot # Comes from 'systemmonitor' sensor platform
-          #       - sensor.date
-          #     event_types:
-          #       - call_service # Don't record service calls
+          # Database
+          recorder:
+            db_url: "postgresql://home-assistant:home-assistant@home-assistant-postgresql.home-assistant/home-assistant"
+            db_retry_wait: 15 # Wait 15 seconds before retrying
+            exclude:
+              domains:
+                - automation
+                - updater
+              entity_globs:
+                - sensor.weather_*
+              entities:
+                - sun.sun # Don't record sun data
+                - sensor.last_boot # Comes from 'systemmonitor' sensor platform
+                - sensor.date
+              event_types:
+                - call_service # Don't record service calls
 postgresql:
   auth:
     username: home-assistant
