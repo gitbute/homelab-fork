@@ -28,8 +28,7 @@ home-assistant:
         command:
          - "/bin/sh"
          - "-c"
-         - "rm configuration.yaml"
-         - "mv configuration.yaml_new configuration.yaml"
+         - "cp -f configuration.yaml_new configuration.yaml"
     # preStop:
     #   exec:
     #     command: ["/bin/sh","-c","nginx -s quit; while killall -0 nginx; do sleep 1; done"]
