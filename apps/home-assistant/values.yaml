@@ -25,11 +25,7 @@ home-assistant:
   lifecycle:
     preStop:
       exec:
-        command: 
-         - "/bin/sh"
-         - "-c"
-         - "rm configuration.yaml;"
-         - "mv configuration.yaml_new configuration.yaml;"
+        command: ["/bin/sh","-c","rm configuration.yaml; mv configuration.yaml_new configuration.yaml; echo finished"]
     # preStop:
     #   exec:
     #     command: ["/bin/sh","-c","nginx -s quit; while killall -0 nginx; do sleep 1; done"]
