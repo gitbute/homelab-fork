@@ -54,3 +54,25 @@ home-assistant:
             use_x_forwarded_for: true
             trusted_proxies:
               - 10.42.0.0/16
+          
+          # Database
+          recorder:
+            db_url: "postgresql://home-assistant:home-assistant@home-assistant.postgresql.svc.cluster.local/home-assistant"
+            db_retry_wait: 15 # Wait 15 seconds before retrying
+            exclude:
+              domains:
+                - automation
+                - updater
+              entity_globs:
+                - sensor.weather_*
+              entities:
+                - sun.sun # Don't record sun data
+                - sensor.last_boot # Comes from 'systemmonitor' sensor platform
+                - sensor.date
+              event_types:
+                - call_service # Don't record service calls
+postgresql:
+  auth:
+    username: home-assistant
+    password: home-assistant
+    database: home-assistant
