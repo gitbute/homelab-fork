@@ -24,7 +24,7 @@ home-assistant:
       password: password
       database: home-assistant
   lifecycle:
-    postStart:
+    preStop:
       exec:
         command:
          - "/bin/sh"
