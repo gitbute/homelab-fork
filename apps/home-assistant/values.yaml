@@ -26,14 +26,14 @@ home-assistant:
     home-assistant-datainit:
       image: ghcr.io/home-assistant/home-assistant:2023.8.4
       lifecycle:
-      postStart:
-        exec:
-          command: ["/bin/sh", "-c"]
-          args:
-            - sleep 2;
-              echo executing config-data initialization, letting it run 10 seconds;
-              sleep 10;
-              echo finished, exiting now;
+        postStart:
+          exec:
+            command: ["/bin/sh", "-c"]
+            args:
+              - sleep 2;
+                echo executing config-data initialization, letting it run 10 seconds;
+                sleep 10;
+                echo finished, exiting now;
       volumeMounts:
       - mountPath: /config
         name: config
