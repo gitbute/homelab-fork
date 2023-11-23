@@ -28,12 +28,7 @@ home-assistant:
       lifecycle:
         postStart:
           exec:
-            command: ["/bin/sh", "-c"]
-            args:
-              - sleep 2;
-                echo executing config-data initialization, letting it run 10 seconds;
-                sleep 10;
-                echo finished, exiting now;
+            command: ["/bin/sh", "-c", "echo finished init"]
       volumeMounts:
       - mountPath: /config
         name: config
