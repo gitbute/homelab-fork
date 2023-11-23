@@ -19,6 +19,9 @@ home-assistant:
             - *host
   postgresql:
     enabled: true
+    postgresqlUsername: home-assistant
+    postgresqlPassword: home-assistant
+    postgresqlDatabase: home-assistant
   initContainers:
     home-assistant-datainit:
       image: ghcr.io/home-assistant/home-assistant:2023.8.4
@@ -83,8 +86,3 @@ home-assistant:
                 - sensor.date
               event_types:
                 - call_service # Don't record service calls
-postgresql:
-  auth:
-    username: home-assistant
-    password: password
-    database: home-assistant
