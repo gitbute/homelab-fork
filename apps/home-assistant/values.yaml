@@ -36,7 +36,7 @@ home-assistant:
       #     echo done;
       volumeMounts:
       - mountPath: /config
-        name: home-assistant-config
+        name: config
   persistence:
     config:
       enabled: true
