@@ -36,6 +36,7 @@ home-assistant:
            if [ ! -n media/ ]; then
              mkdir media
            fi;
+           echo done;
   persistence:
     config:
       enabled: true
