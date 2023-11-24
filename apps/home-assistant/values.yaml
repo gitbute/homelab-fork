@@ -33,7 +33,7 @@ home-assistant:
          - "-c"
          - cp -f configuration.yaml_new configuration.yaml;
            wget -O - https://get.hacs.xyz | bash -;
-           if [ ! -n media/ ];
+           if [ ! -n media/ ]; then
              mkdir media
            fi;
   persistence:
