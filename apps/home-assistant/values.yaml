@@ -34,9 +34,8 @@ home-assistant:
          - cp -f configuration.yaml_new configuration.yaml;
            wget -O - https://get.hacs.xyz | bash -;
            if [ ! -n media/ ]; then
-             mkdir media
+             mkdir media;
            fi;
-           echo done;
   persistence:
     config:
       enabled: true
