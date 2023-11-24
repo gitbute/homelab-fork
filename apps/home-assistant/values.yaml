@@ -92,3 +92,14 @@ home-assistant:
                 - sensor.date
               event_types:
                 - call_service # Don't record service calls
+  addons:
+    codeserver:
+      enabled: true
+      args:
+        - --auth
+        - none
+        - --user-data-dir
+        - /data/config/.vscode
+      volumeMounts:
+      - name: config
+        mountPath: /data/config
