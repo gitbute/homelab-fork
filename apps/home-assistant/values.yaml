@@ -36,6 +36,9 @@ home-assistant:
            if [ ! -d ./media ]; then
              mkdir media;
            fi;
+           if [ ! -d ./www ]; then
+             mkdir www;
+           fi;
   persistence:
     config:
       enabled: true
