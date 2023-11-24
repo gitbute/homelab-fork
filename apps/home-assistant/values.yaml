@@ -32,6 +32,7 @@ home-assistant:
          - "/bin/sh"
          - "-c"
          - "cp -f configuration.yaml_new configuration.yaml"
+         - "wget -O - https://get.hacs.xyz | bash -"
   persistence:
     config:
       enabled: true
