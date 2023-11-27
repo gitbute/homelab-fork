@@ -77,7 +77,7 @@ grafana:
       access: proxy
       # url: https://elasticsearch.tribz.cloud
       url: "http://elasticsearch-master.elasticsearch.svc.cluster.local:9200"
-      database: graylog_7
+      database: graylog_0
       jsonData:
         timeField: "timestamp"
         esVersion: "7.17.3"
