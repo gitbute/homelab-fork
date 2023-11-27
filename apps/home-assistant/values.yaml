@@ -92,6 +92,10 @@ home-assistant:
                 - sensor.date
               event_types:
                 - call_service # Don't record service calls
+          sensor:
+            - platform: swiss_public_transport
+              from: 8589763
+              to: 8508450
   addons:
     codeserver:
       enabled: true
