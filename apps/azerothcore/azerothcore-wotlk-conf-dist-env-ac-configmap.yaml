@@ -1,0 +1,16 @@
+apiVersion: v1
+data:
+  AC_CCACHE: "true"
+  AC_RESTARTER_BINFILE: ""
+  AC_RESTARTER_BINPATH: ""
+  AC_RESTARTER_WITHGDB: ""
+  CSCRIPTS: static
+  CTYPE: RelWithDebInfo
+  DATAPATH: /azerothcore/env/dist/data
+  USER_CONF_PATH: /azerothcore/apps/docker/config-docker.sh
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: ac-authserver-azerothcore-wotlk-conf-dist-env-ac
+  name: azerothcore-wotlk-conf-dist-env-ac

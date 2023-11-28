@@ -3,13 +3,13 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    io.kompose.service: ac-authserver
-  name: ac-authserver
+    io.kompose.service: ac-worldserver
+  name: ac-worldserver
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: ac-authserver
+      io.kompose.service: ac-worldserver
   strategy:
     type: Recreate
   template:
@@ -17,7 +17,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.network/azerothcore-wotlk-ac-network: "true"
-        io.kompose.service: ac-authserver
+        io.kompose.service: ac-worldserver
     spec:
       containers:
         - env:
@@ -26,6 +26,10 @@ spec:
                 configMapKeyRef:
                   key: AC_CCACHE
                   name: azerothcore-wotlk-conf-dist-env-ac
+            - name: AC_CHARACTER_DATABASE_INFO
+              value: ac-database;3306;root;password;acore_characters
+            - name: AC_DATA_DIR
+              value: /azerothcore/env/dist/data
             - name: AC_LOGIN_DATABASE_INFO
               value: ac-database;3306;root;password;acore_auth
             - name: AC_LOGS_DIR
@@ -45,8 +49,8 @@ spec:
                 configMapKeyRef:
                   key: AC_RESTARTER_WITHGDB
                   name: azerothcore-wotlk-conf-dist-env-ac
-            - name: AC_TEMP_DIR
-              value: /azerothcore/env/dist/temp
+            - name: AC_WORLD_DATABASE_INFO
+              value: ac-database;3306;root;password;acore_world
             - name: CSCRIPTS
               valueFrom:
                 configMapKeyRef:
@@ -67,25 +71,36 @@ spec:
                 configMapKeyRef:
                   key: USER_CONF_PATH
                   name: azerothcore-wotlk-conf-dist-env-ac
-          image: acore/ac-wotlk-authserver:master
-          name: ac-authserver
+          image: acore/ac-wotlk-worldserver:master
+          name: ac-worldserver
           ports:
-            - containerPort: 3724
-              hostPort: 3724
+            - containerPort: 8085
+              hostPort: 8085
+              protocol: TCP
+            - containerPort: 7878
+              hostPort: 7878
               protocol: TCP
           resources: {}
+          stdin: true
           tty: true
           volumeMounts:
             - mountPath: /azerothcore/env/dist/etc
-              name: ac-authserver-claim0
+              name: ac-worldserver-claim0
             - mountPath: /azerothcore/env/dist/logs
-              name: ac-authserver-claim1
+              name: ac-worldserver-claim1
+            - mountPath: /azerothcore/env/dist/data
+              name: ac-client-data
+              readOnly: true
       restartPolicy: Always
       volumes:
-        - name: ac-authserver-claim0
+        - name: ac-worldserver-claim0
           persistentVolumeClaim:
-            claimName: ac-authserver-claim0
-        - name: ac-authserver-claim1
+            claimName: ac-worldserver-claim0
+        - name: ac-worldserver-claim1
           persistentVolumeClaim:
-            claimName: ac-authserver-claim1
+            claimName: ac-worldserver-claim1
+        - name: ac-client-data
+          persistentVolumeClaim:
+            claimName: ac-client-data
+            readOnly: true
 status: {}

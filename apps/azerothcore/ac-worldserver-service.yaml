@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: ac-worldserver
+  name: ac-worldserver
+spec:
+  ports:
+    - name: "8085"
+      port: 8085
+      targetPort: 8085
+    - name: "7878"
+      port: 7878
+      targetPort: 7878
+  selector:
+    io.kompose.service: ac-worldserver
+status:
+  loadBalancer: {}

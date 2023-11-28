@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: ac-client-data-init
+  name: ac-client-data-init
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: ac-client-data-init
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.network/azerothcore-wotlk-default: "true"
+        io.kompose.service: ac-client-data-init
+    spec:
+      containers:
+        - image: acore/ac-wotlk-client-data:master
+          name: ac-client-data-init
+          resources: {}
+          volumeMounts:
+            - mountPath: /azerothcore/env/dist/data
+              name: ac-client-data
+      restartPolicy: Always
+      volumes:
+        - name: ac-client-data
+          persistentVolumeClaim:
+            claimName: ac-client-data
+status: {}

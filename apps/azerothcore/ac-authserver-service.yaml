@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: ac-authserver
+  name: ac-authserver
+spec:
+  ports:
+    - name: "3724"
+      port: 3724
+      targetPort: 3724
+  selector:
+    io.kompose.service: ac-authserver
+status:
+  loadBalancer: {}
