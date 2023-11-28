@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     io.kompose.service: ac-authserver
   name: ac-authserver
@@ -14,7 +13,6 @@ spec:
     type: Recreate
   template:
     metadata:
-      creationTimestamp: null
       labels:
         io.kompose.network/azerothcore-wotlk-ac-network: "true"
         io.kompose.service: ac-authserver
@@ -88,4 +86,3 @@ spec:
         - name: ac-authserver-claim1
           persistentVolumeClaim:
             claimName: ac-authserver-claim1
-status: {}
