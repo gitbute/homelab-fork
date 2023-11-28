@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin
+  labels:
+    app: admin
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: admin
+  template:
+    metadata:
+      labels:
+        app: admin
+    spec:
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: prometheus-monitoring-system-kube-pro-prometheus-db-prometheus-monitoring-system-kube-pro-prometheus-0
+      containers:
+      - name: admin
+        env:
+          - name: TZ
+            value: Europe/Zurich
+        image: rockylinux:9.0.20220720-minimal
+        command: ["/bin/bash", "-c", "sleep infinity"]
+        volumeMounts:
+          - mountPath: /data
+            name: data
+        securityContext:
+          privileged: true
