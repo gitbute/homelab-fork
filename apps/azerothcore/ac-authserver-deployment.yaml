@@ -80,7 +80,7 @@ spec:
               name: ac-authserver-claim0
             - mountPath: /azerothcore/env/dist/logs
               name: ac-authserver-claim1
-      restartPolicy: Always
+      restartPolicy: Never
       volumes:
         - name: ac-authserver-claim0
           persistentVolumeClaim:
