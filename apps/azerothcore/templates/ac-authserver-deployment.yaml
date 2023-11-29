@@ -29,7 +29,7 @@ spec:
                   key: AC_CCACHE
                   name: azerothcore-wotlk-conf-dist-env-ac
             - name: AC_LOGIN_DATABASE_INFO
-              value: ac-database;3306;root;password;acore_auth
+              value: azerothcore-mysql;3306;root;password;acore_auth
             - name: AC_LOGS_DIR
               value: /azerothcore/env/dist/logs
             - name: AC_RESTARTER_BINFILE
