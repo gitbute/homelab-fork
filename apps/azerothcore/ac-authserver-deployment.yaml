@@ -19,6 +19,8 @@ spec:
         io.kompose.network/azerothcore-wotlk-ac-network: "true"
         io.kompose.service: ac-authserver
     spec:
+      securityContext:
+        fsGroup: 1000
       containers:
         - env:
             - name: AC_CCACHE
@@ -69,8 +71,6 @@ spec:
                   name: azerothcore-wotlk-conf-dist-env-ac
           image: acore/ac-wotlk-authserver:master
           # command: ["/bin/bash", "-c", "sleep infinity"]
-          securityContext:
-            fsGroup: 1000
           name: ac-authserver
           ports:
             - containerPort: 3724
