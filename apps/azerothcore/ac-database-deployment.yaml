@@ -37,12 +37,12 @@ spec:
               hostPort: 3306
               protocol: TCP
           resources: {}
+          args:
+            - "--ignore-db-dir=lost+found"
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: ac-database
       restartPolicy: Always
-      args:
-        - "--ignore-db-dir=lost+found"
       volumes:
         - name: ac-database
           persistentVolumeClaim:
