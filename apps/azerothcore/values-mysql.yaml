@@ -3,4 +3,3 @@ auth:
   ## ref: https://github.com/bitnami/containers/tree/main/bitnami/mysql#setting-the-root-password-on-first-run
   ##
   rootPassword: "password"
-  database: ""
