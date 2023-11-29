@@ -39,9 +39,10 @@ spec:
           resources: {}
           volumeMounts:
             - mountPath: /var/lib/mysql
-              subPath: mysql
               name: ac-database
       restartPolicy: Always
+      args:
+        - "--ignore-db-dir=lost+found"
       volumes:
         - name: ac-database
           persistentVolumeClaim:
