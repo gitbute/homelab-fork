@@ -8,9 +8,6 @@ resources:
   - ac-authserver-service.yaml
   - ac-client-data-init-deployment.yaml
   - ac-client-data-persistentvolumeclaim.yaml
-  - ac-database-deployment.yaml
-  - ac-database-persistentvolumeclaim.yaml
-  - ac-database-service.yaml
   - ac-db-import-claim0-persistentvolumeclaim.yaml
   - ac-db-import-claim1-persistentvolumeclaim.yaml
   - ac-db-import-deployment.yaml
