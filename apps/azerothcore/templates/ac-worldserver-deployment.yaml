@@ -104,5 +104,5 @@ spec:
         - name: ac-client-data
           persistentVolumeClaim:
             claimName: ac-client-data
-            readOnly: true
+            # readOnly: true
 status: {}
