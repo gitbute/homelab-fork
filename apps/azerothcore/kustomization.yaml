@@ -7,7 +7,7 @@ helmCharts:
   version: 9.14.4
   releaseName: azerothcore
   namespace: azerothcore
-  valuesFile: values-elementweb.yaml
+  valuesFile: values-mysql.yaml
   includeCRDs: true
 
 resources:
