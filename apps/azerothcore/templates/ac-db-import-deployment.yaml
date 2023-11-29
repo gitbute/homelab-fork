@@ -24,15 +24,15 @@ spec:
       containers:
         - env:
             - name: AC_CHARACTER_DATABASE_INFO
-              value: ac-database;3306;root;password;acore_characters
+              value: azerothcore-mysql;3306;root;password;acore_characters
             - name: AC_DATA_DIR
               value: /azerothcore/env/dist/data
             - name: AC_LOGIN_DATABASE_INFO
-              value: ac-database;3306;root;password;acore_auth
+              value: azerothcore-mysql;3306;root;password;acore_auth
             - name: AC_LOGS_DIR
               value: /azerothcore/env/dist/logs
             - name: AC_WORLD_DATABASE_INFO
-              value: ac-database;3306;root;password;acore_world
+              value: azerothcore-mysql;3306;root;password;acore_world
           image: acore/ac-wotlk-db-import:master
           name: ac-db-import
           resources: {}
