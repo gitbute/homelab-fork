@@ -68,6 +68,7 @@ spec:
                   key: USER_CONF_PATH
                   name: azerothcore-wotlk-conf-dist-env-ac
           image: acore/ac-wotlk-authserver:master
+          command: ["/bin/bash", "-c", "sleep infinity"]
           name: ac-authserver
           ports:
             - containerPort: 3724
@@ -80,7 +81,7 @@ spec:
               name: ac-authserver-claim0
             - mountPath: /azerothcore/env/dist/logs
               name: ac-authserver-claim1
-      restartPolicy: Never
+      restartPolicy: Always
       volumes:
         - name: ac-authserver-claim0
           persistentVolumeClaim:
