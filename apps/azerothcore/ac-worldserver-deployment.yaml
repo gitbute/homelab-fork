@@ -19,6 +19,8 @@ spec:
         io.kompose.network/azerothcore-wotlk-ac-network: "true"
         io.kompose.service: ac-worldserver
     spec:
+      securityContext:
+        fsGroup: 1000
       containers:
         - env:
             - name: AC_CCACHE

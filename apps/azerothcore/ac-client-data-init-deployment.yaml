@@ -19,6 +19,8 @@ spec:
         io.kompose.network/azerothcore-wotlk-default: "true"
         io.kompose.service: ac-client-data-init
     spec:
+      securityContext:
+        fsGroup: 1000
       containers:
         - image: acore/ac-wotlk-client-data:master
           name: ac-client-data-init
