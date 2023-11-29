@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+helmCharts:
+- name: mysql
+  repo: https://charts.bitnami.com/bitnami
+  version: 9.14.4
+  releaseName: azerothcore
+  namespace: azerothcore
+  valuesFile: values-elementweb.yaml
+  includeCRDs: true
+
+resources:
+  - templates

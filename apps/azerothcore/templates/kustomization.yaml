@@ -1,0 +1,22 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ac-authserver-claim0-persistentvolumeclaim.yaml
+  - ac-authserver-claim1-persistentvolumeclaim.yaml
+  - ac-authserver-deployment.yaml
+  - ac-authserver-service.yaml
+  - ac-client-data-init-deployment.yaml
+  - ac-client-data-persistentvolumeclaim.yaml
+  - ac-database-deployment.yaml
+  - ac-database-persistentvolumeclaim.yaml
+  - ac-database-service.yaml
+  - ac-db-import-claim0-persistentvolumeclaim.yaml
+  - ac-db-import-claim1-persistentvolumeclaim.yaml
+  - ac-db-import-deployment.yaml
+  - ac-worldserver-claim0-persistentvolumeclaim.yaml
+  - ac-worldserver-claim1-persistentvolumeclaim.yaml
+  - ac-worldserver-deployment.yaml
+  - ac-worldserver-service.yaml
+  - admin.yaml
+  - azerothcore-wotlk-conf-dist-env-ac-configmap.yaml
