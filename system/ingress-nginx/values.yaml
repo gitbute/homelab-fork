@@ -15,9 +15,8 @@ ingress-nginx:
     2003: influxdb/influxdb:2003
     2350: trackmania/trackmania:2350
     5000: trackmania/trackmania:5000
+    3724: azerothcore/ac-authserver:3724
+    8085: azerothcore/ac-worldserver:8085
   udp:
     1514: graylog/graylog-syslog-udp:1514
     2350: trackmania/trackmania:2350
-    8766: sons-of-the-forest/sons-of-the-forest:8766
-    27016: sons-of-the-forest/sons-of-the-forest:27016
-    9700: sons-of-the-forest/sons-of-the-forest:9700
