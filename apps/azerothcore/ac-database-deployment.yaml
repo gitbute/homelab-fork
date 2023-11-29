@@ -39,6 +39,7 @@ spec:
           resources: {}
           volumeMounts:
             - mountPath: /var/lib/mysql
+              subPath: mysql
               name: ac-database
       restartPolicy: Always
       volumes:
