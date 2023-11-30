@@ -6,7 +6,7 @@ metadata:
     io.kompose.service: ac-worldserver
   name: ac-worldserver
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       io.kompose.service: ac-worldserver

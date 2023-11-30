@@ -6,7 +6,7 @@ metadata:
     io.kompose.service: ac-client-data-init
   name: ac-client-data-init
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       io.kompose.service: ac-client-data-init
