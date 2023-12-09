@@ -96,6 +96,11 @@ home-assistant:
             - platform: swiss_public_transport
               from: 8589763
               to: 8508450
+            - platform: swiss_public_transport_mod
+              name: Rönnimoosrain
+              limit: 4
+              stationboard:
+              - Luzern, Rönnimoosrain
   addons:
     codeserver:
       enabled: true
