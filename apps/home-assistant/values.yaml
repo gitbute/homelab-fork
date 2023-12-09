@@ -100,7 +100,7 @@ home-assistant:
               name: Rönnimoosrain
               limit: 4
               stationboard:
-              - Luzern, Rönnimoosrain
+              - Littau, Rönnimoosrain
   addons:
     codeserver:
       enabled: true
