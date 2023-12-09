@@ -98,7 +98,7 @@ home-assistant:
               to: 8508450
             - platform: swiss_public_transport_mod
               name: Rönnimoosrain
-              limit: 4
+              limit: 8
               stationboard:
               - Littau, Rönnimoosrain
   addons:
