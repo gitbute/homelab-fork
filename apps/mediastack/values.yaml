@@ -324,7 +324,7 @@ bazarr:
       existingClaim: mediastack-data
   image:
     repository: linuxserver/bazarr
-    tag: latest
+    tag: 1.4.1-development
   ingress:
     main:
       enabled: true
