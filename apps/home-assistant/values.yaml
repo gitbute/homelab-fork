@@ -100,17 +100,7 @@ home-assistant:
               name: Rönnimoosrain
               limit: 8
               stationboard:
-              - Littau, Rönnimoosrain
-            - platform: swiss_public_transport_mod
-              name: test1
-              limit: 8
-              stationboard:
               - Luzern, Rönnimoosrain
-            - platform: swiss_public_transport_mod
-              name: test2
-              limit: 8
-              stationboard:
-              - Luzern, Bahnhof
   addons:
     codeserver:
       enabled: true
