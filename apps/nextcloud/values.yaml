@@ -1,4 +1,7 @@
 nextcloud:
+  lifecycle:
+    postStartCommand:
+      - "php occ maintenance:mode --off"
   nextcloud:
     host: &host nextcloud.tribz.cloud
     existingSecret:
