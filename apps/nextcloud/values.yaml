@@ -35,7 +35,6 @@ nextcloud:
       hajimari.io/appName: Nextcloud
       hajimari.io/icon: google-drive
       nginx.ingress.kubernetes.io/proxy-body-size: 8G
-      nginx.ingress.kubernetes.io/use-proxy-protocol: "true"
   postgresql:
     enabled: true
     global:
