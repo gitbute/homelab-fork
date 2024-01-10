@@ -13,3 +13,4 @@ k10:
   auth:
     basicAuth:
       enabled: true
+      htpasswd: admin:$apr1$w2s05lun$cFD/SiheMpzIi7fr/STsC0
