@@ -1,25 +1,24 @@
-k10:
-  grafana:
-    enabled: false
-  eula:
-    accept: true
-    company: Personal
-    email: michi.zimmerli@gmail.com
-  global:
-    persistence:
-      size: 5Gi
-  ingress:
-    create: true
-    class: nginx
-    annotations:
-      cert-manager.io/cluster-issuer: letsencrypt-prod
-      hajimari.io/appName: Kasten K10
-      hajimari.io/icon: google-drive
-    host: k10.tribz.cloud
-    tls:
-      enabled: true
-      secretName: k10-tls-certificate
-  auth:
-    basicAuth:
-      enabled: true
-      htpasswd: admin:$apr1$w2s05lun$cFD/SiheMpzIi7fr/STsC0
+grafana:
+  enabled: false
+eula:
+  accept: true
+  company: Personal
+  email: michi.zimmerli@gmail.com
+global:
+  persistence:
+    size: 5Gi
+ingress:
+  create: true
+  class: nginx
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    hajimari.io/appName: Kasten K10
+    hajimari.io/icon: google-drive
+  host: k10.tribz.cloud
+  tls:
+    enabled: true
+    secretName: k10-tls-certificate
+auth:
+  basicAuth:
+    enabled: true
+    htpasswd: admin:$apr1$w2s05lun$cFD/SiheMpzIi7fr/STsC0
