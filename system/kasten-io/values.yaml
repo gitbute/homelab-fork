@@ -1,4 +1,6 @@
 k10:
+  grafana:
+    enabled: false
   eula:
     accept: true
     company: Personal
