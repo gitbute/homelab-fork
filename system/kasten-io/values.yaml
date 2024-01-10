@@ -10,3 +10,6 @@ k10:
     tls:
       enabled: true
       secretName: k10-tls-certificate
+  auth:
+    basicAuth:
+      enabled: true
