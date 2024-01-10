@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- templates
+- https://github.com/kubernetes-csi/external-snapshotter/tree/v6.2.1/client/config/crd
+- https://github.com/kubernetes-csi/external-snapshotter/tree/v6.2.1/deploy/kubernetes/snapshot-controller
+
+helmCharts:
+- name: k10
+  repo: https://charts.kasten.io/
+  version: 6.5.*
+  releaseName: kasten-io
+  namespace: kasten-io
+  valuesFile: values.yaml
+  includeCRDs: true
