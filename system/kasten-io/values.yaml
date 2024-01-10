@@ -1,0 +1,12 @@
+k10:
+  ingress: 
+    create: true
+    class: nginx
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      hajimari.io/appName: Kasten K10
+      hajimari.io/icon: google-drive
+    host: k10.tribz.cloud
+    tls:
+      enabled: true
+      secretName: k10-tls-certificate
