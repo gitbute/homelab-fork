@@ -1,9 +1,12 @@
 k10:
+  eula:
+    accept: true
+    company: Personal
+    email: michi.zimmerli@gmail.com
   global:
     persistence:
       size: 5Gi
-  ingress: 
-    urlPath: null
+  ingress:
     create: true
     class: nginx
     annotations:
