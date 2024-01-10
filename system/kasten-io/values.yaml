@@ -1,4 +1,7 @@
 k10:
+  global:
+    persistence:
+      size: 5Gi
   ingress: 
     urlPath: ""
     create: true
