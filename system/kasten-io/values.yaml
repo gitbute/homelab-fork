@@ -3,7 +3,7 @@ k10:
     persistence:
       size: 5Gi
   ingress: 
-    urlPath: "/"
+    urlPath: ""
     create: true
     class: nginx
     annotations:
