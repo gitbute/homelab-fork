@@ -3,8 +3,8 @@ kind: Kustomization
 
 resources:
 - templates
-- https://github.com/kubernetes-csi/external-snapshotter/tree/v6.2.1/client/config/crd
-- https://github.com/kubernetes-csi/external-snapshotter/tree/v6.2.1/deploy/kubernetes/snapshot-controller
+- https://github.com/kubernetes-csi/external-snapshotter/client/config/crd/?ref=v6.2.1
+- https://github.com/kubernetes-csi/external-snapshotter/deploy/kubernetes/snapshot-controller/?ref=v6.2.1
 
 helmCharts:
 - name: k10
