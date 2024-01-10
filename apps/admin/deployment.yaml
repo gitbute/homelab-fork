@@ -54,3 +54,10 @@ spec:
               unzip eSDK_Huawei_Storage_Kubernetes_CSI_Plugin_V3.2.1_X86_64.zip;
               echo init done;
               sleep infinity;
+          volumeMounts:
+          - mountPath: /test
+            name: admin-pvc
+      volumes:
+        - name: admin-pvc
+          persistentVolumeClaim:
+           claimName: admin-pvc
