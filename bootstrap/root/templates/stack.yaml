@@ -6,6 +6,9 @@ metadata:
   name: {{ $stack.name }}
   namespace: {{ $.Release.Namespace }}
 spec:
+  ignoreApplicationDifferences:
+    - jsonPointers:
+        - /spec/syncPolicy
   generators:
     - git:
         repoURL: {{ $.Values.gitops.repo }}
