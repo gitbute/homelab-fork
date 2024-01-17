@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sydneyqtbot
+  labels:
+    app: sydneyqtbot
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: sydneyqtbot
+  template:
+    metadata:
+      labels:
+        app: sydneyqtbot
+    spec:
+      containers:
+      - name: sydneyqtbot
+        image: core.harbor.tribz.cloud/homelab/sydneyqtbot:latest
+        env:
+          - name: TZ
+            value: "Europe/Zurich"
