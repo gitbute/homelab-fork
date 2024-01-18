@@ -3,7 +3,7 @@ name: guacamole
 version: 0.1.0
 dependencies:
   - name: guacamole
-    version: 1.4.*
+    version: 1.4.0
     repository: https://charts.beryju.org
   - name: postgresql
     version: 12.2.*
