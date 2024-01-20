@@ -19,9 +19,9 @@ spec:
         fsGroup: 1000
       containers:
         - name: palworld
-          securityContext:
-            allowPrivilegeEscalation: true
-            runAsUser: 0
+          # securityContext:
+          #   allowPrivilegeEscalation: true
+            # runAsUser: 0
           image: kagurazakanyaa/palworld:latest
           env:
             - name: TZ
