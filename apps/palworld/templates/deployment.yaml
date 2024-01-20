@@ -30,8 +30,8 @@ spec:
               value: Biohazard
             - name: ADMIN_PASSWORD
               value: bioadmin
-            - name: SERVER_PASSWORD
-              value: bioplayer
+            # - name: SERVER_PASSWORD
+            #   value: bioplayer
             - name: RCON_ENABLED
               value: "true"
             # - name: ALWAYS_UPDATE_ON_START
