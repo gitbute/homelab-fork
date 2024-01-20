@@ -33,7 +33,7 @@ spec:
             - name: SERVER_PASSWORD
               value: bioplayer
             - name: RCON_ENABLED
-              value: true
+              value: "true"
             # - name: ALWAYS_UPDATE_ON_START
             #   value: "1"
           ports:
