@@ -4,11 +4,13 @@ metadata:
   name: palworld
   namespace: palworld
 spec:
+  type: NodePort
   ports:
     - name: 8211-udp
       port: 8211
       protocol: UDP
       targetPort: 8211
+      nodePort: 8211
     # - name: 27016-udp
     #   port: 27016
     #   protocol: UDP
