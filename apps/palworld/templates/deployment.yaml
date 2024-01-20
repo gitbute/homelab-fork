@@ -27,7 +27,7 @@ spec:
             # - name: ALWAYS_UPDATE_ON_START
             #   value: "1"
           ports:
-            - containerPort: 8221
+            - containerPort: 8211
               protocol: UDP
             # - containerPort: 27016
             #   protocol: UDP

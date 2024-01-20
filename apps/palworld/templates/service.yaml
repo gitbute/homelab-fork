@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: sons-of-the-forest
+  name: palworld
   namespace: palworld
 spec:
   ports:
-    - name: 8221-udp
-      port: 8221
+    - name: 8211-udp
+      port: 8211
       protocol: UDP
-      targetPort: 8221
+      targetPort: 8211
     # - name: 27016-udp
     #   port: 27016
     #   protocol: UDP
