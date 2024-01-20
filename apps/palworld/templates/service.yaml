@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sons-of-the-forest
+  namespace: palworld
+spec:
+  ports:
+    - name: 8221-udp
+      port: 8221
+      protocol: UDP
+      targetPort: 8221
+    # - name: 27016-udp
+    #   port: 27016
+    #   protocol: UDP
+    #   targetPort: 27016
+    # - name: 9700-udp
+    #   port: 9700
+    #   protocol: UDP
+    #   targetPort: 9700
+  selector:
+    app: palworld

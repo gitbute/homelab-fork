@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: palworld-game
+spec:
+  storageClassName: longhorn-retain
+  # dataSource:
+  #  name: xyz # for restore purposes --> make pvc from old pv in longhorn
+  #  kind: PersistentVolumeClaim
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
