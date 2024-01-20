@@ -20,3 +20,4 @@ ingress-nginx:
   udp:
     1514: graylog/graylog-syslog-udp:1514
     2350: trackmania/trackmania:2350
+    8211: palworld/palworld:8211
