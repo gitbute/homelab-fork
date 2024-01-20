@@ -20,7 +20,7 @@ spec:
           securityContext:
             allowPrivilegeEscalation: true
             runAsUser: 0
-          image: qmarchi/palworld:latest
+          image: kagurazakanyaa/palworld:latest
           env:
             - name: TZ
               value: Europe/Zurich
