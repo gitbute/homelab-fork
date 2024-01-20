@@ -10,7 +10,7 @@ spec:
       port: 8211
       protocol: UDP
       targetPort: 8211
-      nodePort: 8211
+      nodePort: 30001
     # - name: 27016-udp
     #   port: 27016
     #   protocol: UDP
