@@ -30,7 +30,7 @@ spec:
         - name: palworld
           resources:
             requests:
-              memory: "6Gi"
+              memory: "4Gi"
               cpu: "1000m"
             limits:
               memory: "8Gi"
