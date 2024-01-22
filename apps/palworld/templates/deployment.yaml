@@ -68,7 +68,7 @@ spec:
           #   periodSeconds: 5
           #   timeoutSeconds: 5
           volumeMounts:
-          - mountPath: /op/palworld/Pal/Saved
+          - mountPath: /opt/palworld/Pal/Saved
             name: palworld-game
       volumes:
         - name: palworld-game
