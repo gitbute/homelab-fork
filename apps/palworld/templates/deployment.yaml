@@ -14,11 +14,27 @@ spec:
     metadata:
       labels:
         app: palworld
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchExpressions:
+            - key: name
+              operator: In
+              values:
+              - metal1  
     spec:
       securityContext:
         fsGroup: 1000
       containers:
         - name: palworld
+          resources:
+            requests:
+              memory: "6Gi"
+              cpu: "3000m"
+            limits:
+              memory: "8Gi"
+              cpu: "4000m"
           # securityContext:
           #   allowPrivilegeEscalation: true
             # runAsUser: 0
