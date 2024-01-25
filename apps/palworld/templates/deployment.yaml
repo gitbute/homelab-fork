@@ -33,7 +33,7 @@ spec:
               memory: "6Gi"
               cpu: "1000m"
             limits:
-              memory: "14Gi"
+              memory: "10Gi"
               cpu: "4000m"
           # securityContext:
           #   allowPrivilegeEscalation: true
