@@ -23,7 +23,7 @@ spec:
               - key: kubernetes.io/hostname
                 operator: In
                 values:
-                - metal1  
+                - metal3 
       securityContext:
         fsGroup: 1000
       containers:
