@@ -30,10 +30,10 @@ spec:
         - name: palworld
           resources:
             requests:
-              memory: "4Gi"
-              cpu: "1000m"
+              memory: "6Gi"
+              cpu: "2000m"
             limits:
-              memory: "8Gi"
+              memory: "14Gi"
               cpu: "4000m"
           # securityContext:
           #   allowPrivilegeEscalation: true
