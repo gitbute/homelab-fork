@@ -1,0 +1,12 @@
+odoo:
+  env:
+    TZ: Europe/Zurich
+  service:
+    type: ClusterIP
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+    hostname: odoo.tribz.cloud
+    tls: true
