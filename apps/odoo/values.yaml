@@ -10,3 +10,4 @@ odoo:
       cert-manager.io/cluster-issuer: letsencrypt-prod
     hostname: odoo.tribz.cloud
     tls: true
+  odooEmail: michi.zimmerli@gmail.com
