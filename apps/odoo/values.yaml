@@ -11,3 +11,4 @@ odoo:
     hostname: odoo.tribz.cloud
     tls: true
   odooEmail: michi.zimmerli@gmail.com
+  odooPassword: password
