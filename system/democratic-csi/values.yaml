@@ -2,7 +2,8 @@ democratic-csi:
   csiDriver:
     # should be globally unique for a given cluster
     name: "org.democratic-csi.nfs"
-  
+    attachRequired: false
+
   # add note here about volume expansion requirements
   storageClasses:
   - name: freenas-nfs-csi-retain
