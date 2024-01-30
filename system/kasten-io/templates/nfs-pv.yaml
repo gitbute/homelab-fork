@@ -14,5 +14,5 @@ spec:
       - hard
       - nfsvers=4.1
    nfs:
-      path: /mnt/tank/k8s/nfs/k10-backup
+      path: /mnt/tank/k8s/nfs/k10-backup-2
       server: truenas.tribz.cloud
