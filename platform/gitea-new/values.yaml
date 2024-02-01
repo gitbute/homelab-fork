@@ -5,7 +5,7 @@ gitea:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
     hosts:
-      - host: &host git-new.khuedoan.com
+      - host: &host git-new.tribz.cloud
         paths:
           - path: /
             pathType: Prefix
