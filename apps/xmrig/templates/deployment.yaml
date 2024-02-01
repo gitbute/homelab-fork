@@ -22,7 +22,10 @@ spec:
               - key: kubernetes.io/hostname
                 operator: NotIn
                 values:
-                - metal3 
+                - metal0
+                - metal1
+                - metal2
+                - metal3
       containers:
         - name: xmrig
           image: metal3d/xmrig:6.18.0-1
