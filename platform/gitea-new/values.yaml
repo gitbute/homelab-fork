@@ -19,7 +19,7 @@ gitea:
     config:
       server:
         LANDING_PAGE: explore
-        ROOT_URL: https://git.tribz.cloud
+        ROOT_URL: https://git-new.tribz.cloud
         OFFLINE_MODE: true
       repository:
         DISABLED_REPO_UNITS: repo.wiki,repo.projects,repo.packages
@@ -41,6 +41,6 @@ gitea:
     enabled: false
   postgresql:
     enabled: true
-  redis-cluster:
-    cluster:
-      nodes: 1
+  # redis-cluster:
+  #   cluster:
+  #     nodes: 1
