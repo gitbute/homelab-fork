@@ -22,6 +22,19 @@ argo-cd:
           end
         end
         return hs
+    ingress:
+      enabled: true
+      ingressClassName: nginx
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+        hajimari.io/appName: ArgoCD
+        hajimari.io/icon: robot
+      hosts:
+        - *host
+      tls:
+        - secretName: argocd-tls-certificate
+          hosts:
+            - *host
     metrics: &metrics
       enabled: true
       serviceMonitor:
@@ -50,16 +63,3 @@ argo-cd:
   redis:
     exporter:
       enabled: true
-  ingress:
-    enabled: true
-    ingressClassName: nginx
-    annotations:
-      cert-manager.io/cluster-issuer: letsencrypt-prod
-      hajimari.io/appName: ArgoCD
-      hajimari.io/icon: robot
-    hosts:
-      - *host
-    tls:
-      - secretName: argocd-tls-certificate
-        hosts:
-          - *host
