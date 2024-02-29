@@ -1,4 +1,5 @@
 argo-cd:
+  domain: &host argocd.tribz.cloud
   server:
     env:
       - name: "TZ"
@@ -29,7 +30,7 @@ argo-cd:
         hajimari.io/appName: ArgoCD
         hajimari.io/icon: robot
       hosts:
-        - &host argocd.tribz.cloud
+        - *host
       tls:
         - secretName: argocd-tls-certificate
           hosts:
