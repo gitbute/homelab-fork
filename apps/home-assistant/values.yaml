@@ -1,7 +1,6 @@
 home-assistant:
   hostNetwork: true
   dnsPolicy: ClusterFirstWithHostNet
-  replicas: 0
   ingress:
     main:
       enabled: true
