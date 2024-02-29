@@ -199,7 +199,7 @@ sonarr:
             - *host
 readarr:
   controller:
-    replicas: 1
+    replicas: 0
   env:
     TZ: Europe/Zurich
   persistence:
