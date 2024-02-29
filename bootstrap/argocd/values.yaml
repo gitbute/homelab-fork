@@ -29,12 +29,11 @@ argo-cd:
         cert-manager.io/cluster-issuer: letsencrypt-prod
         hajimari.io/appName: ArgoCD
         hajimari.io/icon: robot
-      hosts:
-        - *host
-      tls:
-        - secretName: argocd-tls-certificate
-          hosts:
-            - *host
+      hostname: *host
+      tls: true
+        # - secretName: argocd-tls-certificate
+        #   hosts:
+        #     - *host
     metrics: &metrics
       enabled: true
       serviceMonitor:
