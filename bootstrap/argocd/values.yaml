@@ -31,9 +31,6 @@ argo-cd:
         hajimari.io/icon: robot
       hostname: *host
       tls: true
-        # - secretName: argocd-tls-certificate
-        #   hosts:
-        #     - *host
     metrics: &metrics
       enabled: true
       serviceMonitor:
